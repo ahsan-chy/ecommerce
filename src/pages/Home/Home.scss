@@ -1,0 +1,10 @@
+.home-container {
+  .collection-featured-img {
+    img {
+      height: 100%;
+      position: fixed;
+      top: 0;
+      z-index: -1;
+    }
+  }
+}

@@ -1,0 +1,174 @@
+.navbar-container {
+  height: 100vh;
+
+  .leftbar {
+    height: 100%;
+    display: flex;
+    position: sticky;
+    top: 0;
+
+    .leftbar-1 {
+      height: 100%;
+      width: 160px;
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+
+      > div:first-child {
+        margin-top: 54px;
+        cursor: pointer;
+      }
+      > div:last-child {
+        margin-bottom: 40px;
+      }
+
+      .dot-icons-list {
+        height: 170px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        div {
+          width: 10px;
+          height: 10px;
+          border: 1px solid black;
+          border-radius: 50%;
+          box-sizing: border-box;
+          cursor: pointer;
+        }
+      }
+    }
+
+    @keyframes openLeftbar {
+      0% {
+        width: 0;
+        opacity: 0;
+      }
+      100% {
+        width: 270px;
+      }
+    }
+    @keyframes closeLeftbar {
+      0% {
+        width: 270px;
+      }
+      100% {
+        width: 0;
+        opacity: 0;
+      }
+    }
+
+    .leftbar-2 {
+      // width: 270px;
+      background-color: var(--primary-color);
+
+      h3 {
+        white-space: nowrap;
+      }
+    }
+
+    .leftbar-2-open {
+      animation: openLeftbar 0.3s linear forwards;
+    }
+    .leftbar-2-close {
+      animation: closeLeftbar 0.3s linear forwards;
+      overflow: hidden;
+    }
+  }
+
+  .rightbar {
+    height: 100%;
+    width: 320px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+
+    .nav-item {
+      height: 143px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      cursor: pointer;
+    }
+
+    .store-nav:nth-child(1) {
+      background-color: #35363a;
+      gap: 20px;
+      img {
+        width: 35px;
+        height: 36px;
+      }
+      p {
+        font-size: 19px;
+      }
+    }
+    .store-nav:nth-child(2) {
+      background-color: #4f9098;
+      gap: 20px;
+      img {
+        width: 41px;
+        height: 38px;
+      }
+      p {
+        font-size: 14px;
+      }
+      h3 {
+        margin-top: 5px;
+        font-size: 22px;
+      }
+    }
+
+    .collection-nav {
+      position: relative;
+
+      img {
+        margin-left: auto;
+        height: 100%;
+      }
+      div {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 35px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+      h3 {
+        margin-top: 5px;
+        font-size: 22px;
+      }
+    }
+    .collection-nav:nth-child(3) {
+      margin-top: auto;
+      background-color: #4f9098;
+
+      div {
+        background-color: rgba(241, 153, 66, 0.7);
+      }
+    }
+    .collection-nav:nth-child(4) {
+      background-color: #254549;
+
+      div {
+        background-color: rgba(64, 69, 73, 0.7);
+      }
+    }
+    .collection-nav:nth-child(5) {
+      background-color: #254549;
+
+      div {
+        background-color: rgba(53, 54, 58, 0.7);
+      }
+    }
+  }
+}
