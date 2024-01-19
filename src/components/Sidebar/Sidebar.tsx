@@ -5,6 +5,7 @@ import CollectionUrban from "@/assets/images/collection-urban.png";
 import CollectionApril from "@/assets/images/collection-april.png";
 import CollectionBlack from "@/assets/images/collection-black.png";
 import Cart from "@/assets/icons/cart.svg";
+import MenuBurger from "@/assets/icons/menu-burger.svg";
 
 const collectionNav = [
   {
@@ -43,7 +44,9 @@ const Sidebar = () => {
     <div className="navbar-container">
       <div className="leftbar">
         <div className="leftbar-1">
-          <div onClick={() => setIsMenuOpen((prev) => !prev)}>{!isMenuOpen ? "Menu" : "x"}</div>
+          <div onClick={() => setIsMenuOpen((prev) => !prev)}>
+            {!isMenuOpen ? <img src={MenuBurger} alt="" /> : <img src={MenuBurger} alt="" /> }
+          </div>
           <div className="dot-icons-list">
             <div />
             <div />
@@ -72,7 +75,7 @@ const Sidebar = () => {
           </div>
         </div>
 
-        {collectionNav.map((navData) => (
+        {/* {collectionNav.map((navData) => (
           <div
             className="nav-item collection-nav"
             onClick={() => {
@@ -85,7 +88,7 @@ const Sidebar = () => {
               <h3>{navData.heading}</h3>
             </div>
           </div>
-        ))}
+        ))} */}
 
         {/* <div className="nav-item collection-nav">
           <img src={collectionNav[0].mainImage} alt="" />
