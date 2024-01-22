@@ -1,39 +1,41 @@
 import React, { useState } from "react";
 import "./Sidebar.scss";
 
-import CollectionUrban from "@/assets/images/collection-urban.png";
-import CollectionApril from "@/assets/images/collection-april.png";
-import CollectionBlack from "@/assets/images/collection-black.png";
 import Cart from "@/assets/icons/cart.svg";
 import MenuBurger from "@/assets/icons/menu-burger.svg";
+import { collectionNav } from "@/db/collectionNew";
 
-const collectionNav = [
-  {
-    type: "URBAN",
-    title: "New",
-    heading: "Urban Collection",
-    mainImage: CollectionUrban,
-  },
-  {
-    type: "APRIL",
-    title: "Creative User",
-    heading: "April Design",
-    mainImage: CollectionApril,
-  },
-  {
-    type: "BLACK",
-    title: "All Products",
-    heading: "Black Style",
-    mainImage: CollectionBlack,
-  },
-];
+// const collectionNav = [
+//   {
+//     type: "URBAN",
+//     title: "New",
+//     heading: "Urban Collection",
+//     mainImage: CollectionUrban,
+//     status: "Active",
+//   },
+//   {
+//     type: "APRIL",
+//     title: "Creative User",
+//     heading: "April Design",
+//     mainImage: CollectionApril,
+//     status: "Active",
+//   },
+//   {
+//     type: "BLACK",
+//     title: "All Products",
+//     heading: "Black Style",
+//     mainImage: CollectionBlack,
+//     status: "Active",
+//   },
+// ];
 
 // interface ISidebar {
 //   setActiveCollection: (val: string) => void;
 // }
 
 // const Sidebar = (props: ISidebar) => {
-const Sidebar = () => {
+const Sidebar = (props: { handleActive: any }) => {
+  const { handleActive } = props;
   // const { setActiveCollection } = props;
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -45,7 +47,7 @@ const Sidebar = () => {
       <div className="leftbar">
         <div className="leftbar-1">
           <div onClick={() => setIsMenuOpen((prev) => !prev)}>
-            {!isMenuOpen ? <img src={MenuBurger} alt="" /> : <img src={MenuBurger} alt="" /> }
+            {!isMenuOpen ? <img src={MenuBurger} alt="" /> : <img src={MenuBurger} alt="" />}
           </div>
           <div className="dot-icons-list">
             <div />
@@ -75,42 +77,15 @@ const Sidebar = () => {
           </div>
         </div>
 
-        {/* {collectionNav.map((navData) => (
-          <div
-            className="nav-item collection-nav"
-            onClick={() => {
-              // onCollectionClick(navData.key)
-            }}
-          >
+        {collectionNav.map((navData) => (
+          <div className="nav-item collection-nav" onClick={() => handleActive(navData)}>
             <img src={navData.mainImage} alt="" />
             <div>
               <p>{navData.title}</p>
               <h3>{navData.heading}</h3>
             </div>
           </div>
-        ))} */}
-
-        {/* <div className="nav-item collection-nav">
-          <img src={collectionNav[0].mainImage} alt="" />
-          <div>
-            <p>New</p>
-            <h3>Urban Collection</h3>
-          </div>
-        </div>
-        <div className="nav-item collection-nav">
-          <img src={CollectionApril} alt="" />
-          <div>
-            <p>Creative User</p>
-            <h3>April Design</h3>
-          </div>
-        </div>
-        <div className="nav-item collection-nav">
-          <img src={CollectionBlack} alt="" />
-          <div>
-            <p>All Products</p>
-            <h3>Black Style</h3>
-          </div>
-        </div> */}
+        ))}
       </div>
     </div>
   );

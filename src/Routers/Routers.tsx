@@ -9,14 +9,21 @@ import Create from "@/pages/Create/Create";
 import Construct from "@/pages/Construct/Construct";
 import ConfirmConstruct from "@/pages/ConfirmConstruct/ConfirmConstruct";
 import AboutUs from "@/pages/AboutUs/AboutUs";
+import { useState } from "react";
+import { collectionNav } from "@/db/collectionNew";
 
 function Routers() {
+  const [activeCollection, setActiveCollection] = useState(collectionNav[0]);
+
+  const handleActive = (selectedState: any) => {
+    setActiveCollection(selectedState);
+  };
   return (
     <Router>
       <div style={{ display: "flex" }}>
-        <Sidebar />
+        <Sidebar handleActive={handleActive} />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home activeCollection={activeCollection} />} />
           <Route path="/products" element={<Products />} />
           <Route path="/category-details" element={<CategoryDetails />} />
           <Route path="/product-details" element={<ProductDetails />} />
