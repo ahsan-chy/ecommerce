@@ -1,46 +1,86 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router";
 import "./Sidebar.scss";
 
 import Cart from "@/assets/icons/cart.svg";
 import MenuBurger from "@/assets/icons/menu-burger.svg";
+import Heart from "@/assets/icons/heart.svg";
 import { collectionNav } from "@/db/collectionNew";
 
-// const collectionNav = [
-//   {
-//     type: "URBAN",
-//     title: "New",
-//     heading: "Urban Collection",
-//     mainImage: CollectionUrban,
-//     status: "Active",
-//   },
-//   {
-//     type: "APRIL",
-//     title: "Creative User",
-//     heading: "April Design",
-//     mainImage: CollectionApril,
-//     status: "Active",
-//   },
-//   {
-//     type: "BLACK",
-//     title: "All Products",
-//     heading: "Black Style",
-//     mainImage: CollectionBlack,
-//     status: "Active",
-//   },
-// ];
+const sidebarData = [
+  {
+    key: 1,
+    text: "Home",
+    path: "/",
+    isActive: true,
+  },
+  {
+    key: 2,
+    text: "All Prducts",
+    path: "/products",
+    isActive: false,
+  },
+  {
+    key: 3,
+    text: "Creation",
+    path: "/create",
+    isActive: false,
+  },
+  {
+    key: 4,
+    text: "Constuctor",
+    path: "/construct",
+    isActive: false,
+  },
+  {
+    key: 5,
+    text: "Special Offer",
+    path: "/special-offer",
+    isActive: false,
+  },
+  {
+    key: 6,
+    text: "Help & FAQ",
+    path: "/about",
+    isActive: false,
+  },
+  {
+    key: 7,
+    text: "Favorites",
+    path: "/favorites",
+    icon: (
+      <span className="favourites-icon">
+        <img src={Heart} alt="" />
+        <span>2</span>
+      </span>
+    ),
+    isActive: false,
+  },
+];
 
-// interface ISidebar {
-//   setActiveCollection: (val: string) => void;
-// }
+const creativeUserOptions = [
+  {
+    key: 5,
+    text: "Voting",
+    path: "/voting",
+    isActive: false,
+  },
+  {
+    key: 6,
+    text: "Monthly Design",
+    path: "/monthly-design",
+    isActive: false,
+  },
+];
 
 // const Sidebar = (props: ISidebar) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Sidebar = (props: { handleActive: any }) => {
   const { handleActive } = props;
-  // const { setActiveCollection } = props;
+
+  const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  // const onCollectionClick = () => {};
 
   return (
     <div className="navbar-container">
@@ -61,6 +101,42 @@ const Sidebar = (props: { handleActive: any }) => {
 
         <div className={`leftbar-2 ${isMenuOpen ? "leftbar-2-open" : "leftbar-2-close"}`}>
           <h3>Burger Menu</h3>
+
+          <div className="primary-menu-options">
+            <ul>
+              {sidebarData.map((menuItem, index) => (
+                <li key={index} onClick={() => navigate(menuItem.path)}>
+                  {menuItem.isActive && <div />}
+                  <span style={{ marginLeft: menuItem.isActive ? "95px" : "45px" }}>
+                    {menuItem.icon} {menuItem.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="creative-user-options">
+            <h4>Creative User</h4>
+            <ul>
+              {creativeUserOptions.map((menuItem, index) => (
+                <li key={index}>
+                  {menuItem.isActive && <div />}
+                  <span style={{ marginLeft: menuItem.isActive ? "95px" : "45px" }}>
+                    {menuItem.text}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="we-are-online">
+            <h4>We are online</h4>
+            <div className="steps">
+              <p>1</p>
+              <p>2</p>
+              <p>3</p>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -78,7 +154,10 @@ const Sidebar = (props: { handleActive: any }) => {
         </div>
 
         {collectionNav.map((navData) => (
-          <div className="nav-item collection-nav" onClick={() => handleActive(navData)}>
+          <div
+            className="nav-item collection-nav"
+            onClick={() => handleActive(navData)}
+            key={navData.id}>
             <img src={navData.mainImage} alt="" />
             <div>
               <p>{navData.title}</p>
