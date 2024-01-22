@@ -13,6 +13,8 @@
 
   --dark-color: #35363a;
   --light-color: #dddddd;
+  --orange-color: #f19942;
+  --green-color: #4f9098;
 }
 
 * {
@@ -24,4 +26,8 @@
 body {
   font-family: var(--primary-font);
   background-color: #dddddd;
+}
+
+li{
+  list-style: none;
 }

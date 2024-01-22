@@ -2,9 +2,14 @@ import { productsData } from "@/db/productsData";
 import "./Products.scss";
 import ProductTopImg from "@/assets/images/For-Photo.png";
 import Arrow from "@/assets/icons/Arrow.svg";
+import { useNavigate } from "react-router";
 
 const Products = () => {
-  console.log("products", productsData);
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/product-details");
+  };
+
   return (
     <div className="products-container">
       {/* //* Left */}
@@ -44,7 +49,7 @@ const Products = () => {
             <div className="product-card" key={product.id}>
               <img src={`${product.img}`} alt="img" />
               <div className="divider"></div>
-              <div className="title">
+              <div className="title" onClick={handleNavigate}>
                 <p>{product.name}</p>
                 <img src={Arrow} alt="products-image" />
               </div>

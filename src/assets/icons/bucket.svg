@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="31.382" height="34.93" viewBox="0 0 31.382 34.93">
+  <g id="Group_1" data-name="Group 1" transform="translate(-1461.267 -884.072)">
+    <g id="Icon">
+      <g id="Прямоугольник_1033" data-name="Прямоугольник 1033" fill="none">
+        <path d="M1463.432,889.875h20.937l2.166,20.937h-25.269Z" stroke="none"/>
+        <path d="M 1464.78515625 891.3753051757812 L 1462.929809570312 909.3125 L 1484.872314453125 909.3125 L 1483.016845703125 891.3753051757812 L 1464.78515625 891.3753051757812 M 1463.432373046875 889.8753051757812 L 1484.369750976562 889.8753051757812 L 1486.535522460938 910.8125 L 1461.2666015625 910.8125 L 1463.432373046875 889.8753051757812 Z" stroke="none" fill="#fff"/>
+      </g>
+      <ellipse id="Эллипс_1035" data-name="Эллипс 1035" cx="1.44" cy="1.45" rx="1.44" ry="1.45" transform="translate(1467.78 892.75)" fill="#fff"/>
+      <ellipse id="Эллипс_1035_копия" data-name="Эллипс 1035 копия" cx="1.44" cy="1.45" rx="1.44" ry="1.45" transform="translate(1477.15 892.75)" fill="#fff"/>
+      <path id="Эллипс_1034" data-name="Эллипс 1034" d="M1477.962,894.93v-5.475a4.1,4.1,0,1,0-8.122,0v5.034" fill="none" stroke="#fff" stroke-width="1.5"/>
+    </g>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="7" cy="7" r="7" transform="translate(1478 901)" fill="#4f9098"/>
+    <text id="_" data-name="+" transform="matrix(1, 0, 0, 1, 1479.649, 914.002)" fill="#fff" font-size="18" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">+</tspan></text>
+  </g>
+</svg>
