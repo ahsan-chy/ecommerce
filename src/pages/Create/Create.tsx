@@ -2,8 +2,11 @@ import Arrow from "@/assets/icons/Arrow.svg";
 import CreateShirt from "@/assets/images/create-shirt.png";
 import "./Create.scss";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
+import { useNavigate } from "react-router";
 
 const Create = () => {
+  const navigate = useNavigate();
+
   return (
     <SideMarginWrapper>
       <div className="create-wrapper">
@@ -26,7 +29,7 @@ const Create = () => {
                 do it for you for free.
               </p>
               <div className="description-btns">
-                <button>CONSTRUCTOR</button>
+                <button onClick={() => navigate("/construct")}>CONSTRUCTOR</button>
                 <button className="view-btn">
                   VIEW NOMINEES
                   <img src={Arrow} alt="arrow" />

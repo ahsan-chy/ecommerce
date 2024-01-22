@@ -11,6 +11,7 @@ import ConfirmConstruct from "@/pages/ConfirmConstruct/ConfirmConstruct";
 import AboutUs from "@/pages/AboutUs/AboutUs";
 import { useState } from "react";
 import { collectionNav } from "@/db/collectionNew";
+import SpecialOffer from "@/pages/SpecialOffer/SpecialOffer";
 
 function Routers() {
   const [activeCollection, setActiveCollection] = useState(collectionNav[0]);
@@ -28,9 +29,10 @@ function Routers() {
           <Route path="/category-details" element={<CategoryDetails />} />
           <Route path="/product-details" element={<ProductDetails />} />
           <Route path="/create" element={<Create />} />
-          <Route path="/Construct" element={<Construct />} />
+          <Route path="/construct" element={<Construct />} />
           <Route path="/confirm-construct" element={<ConfirmConstruct />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/special-offer" element={<SpecialOffer />} />
 
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/404" replace />} />

@@ -1,0 +1,16 @@
+.pagination-wrapper {
+  display: flex;
+  gap: 15px;
+  img {
+    cursor: pointer;
+  }
+  .count-wrapper {
+    span {
+      font-family: var(--primary-font);
+      font-size: 15px;
+      line-height: 18px;
+      font-weight: 500;
+      color: #61626a;
+    }
+  }
+}

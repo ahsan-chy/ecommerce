@@ -11,6 +11,7 @@ import design3 from "@/assets/images/design3.png";
 import design4 from "@/assets/images/design4.png";
 import design5 from "@/assets/images/design5.png";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
+import PaginationArrows from "@/components/PaginationArrows/PaginationArrows";
 
 const Construct = () => {
   return (
@@ -26,6 +27,9 @@ const Construct = () => {
           <div className="left-constructor">
             <div className="constructor-img-wrapper">
               <img src={CreateShirt} alt="Create-Shirt" />
+            </div>
+            <div className="pagination-box">
+              <PaginationArrows current={"0"} length={"30"} />
             </div>
           </div>
           <div className="right-constructor">

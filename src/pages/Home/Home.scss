@@ -62,8 +62,6 @@
         padding-right: 24.1px;
         margin-top: 31.8px;
         cursor: pointer;
-        img {
-        }
       }
     }
   }
@@ -89,17 +87,7 @@
     grid-template-columns: 450px auto;
     .home-left-wrapper {
       padding-bottom: 70px;
-      .home-header-text {
-        p {
-        }
-      }
       .home-left {
-        .sub-head-box {
-          .spacer {
-          }
-          p {
-          }
-        }
         h1 {
           font-size: 60px;
           line-height: 70px;
@@ -112,16 +100,10 @@
           height: 46px;
           padding-left: 15.1px;
           padding-right: 15.1px;
-          img {
-          }
         }
       }
     }
 
-    .collection-featured-img {
-      img {
-      }
-    }
   }
 }
 
@@ -130,17 +112,8 @@
     grid-template-columns: 363px auto;
     .home-left-wrapper {
       padding-left: 30px;
-      .home-header-text {
-        p {
-        }
-      }
+
       .home-left {
-        .sub-head-box {
-          .spacer {
-          }
-          p {
-          }
-        }
         h1 {
           font-size: 40px;
           line-height: 50px;
@@ -149,16 +122,8 @@
           font-size: 14px;
           line-height: 22px;
         }
-        button {
-          img {
-          }
-        }
       }
     }
 
-    .collection-featured-img {
-      img {
-      }
-    }
   }
 }
