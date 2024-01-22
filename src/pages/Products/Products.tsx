@@ -44,17 +44,31 @@ const Products = () => {
           </div>
         </div>
 
-        <div className="products-wrapper">
-          {productsData.map((product) => (
-            <div className="product-card" key={product.id}>
-              <img src={`${product.img}`} alt="img" />
-              <div className="divider"></div>
-              <div className="title" onClick={handleNavigate}>
-                <p>{product.name}</p>
-                <img src={Arrow} alt="products-image" />
+        <div className="product-category-root">
+          <div className="products-wrapper">
+            {productsData.slice(0, 4).map((product) => (
+              <div className="product-card" key={product.id}>
+                <img src={`${product.img}`} alt="img" />
+                <div className="divider-products"></div>
+                <div className="title" onClick={handleNavigate}>
+                  <p>{product.name}</p>
+                  <img src={Arrow} alt="products-image" />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
+          <div className="products-wrapper">
+            {productsData.slice(4, 9).map((product) => (
+              <div className="product-card" key={product.id}>
+                <img src={`${product.img}`} alt="img" />
+                <div className="divider-products"></div>
+                <div className="title" onClick={handleNavigate}>
+                  <p>{product.name}</p>
+                  <img src={Arrow} alt="products-image" />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
