@@ -14,20 +14,22 @@
   }
   .creater-box {
     margin-top: 162px;
-    h1 {
-      font-family: var(--secondary-font);
-      font-size: 370px;
-      line-height: 500px;
-      font-weight: 500;
-      color: var(--dark-color);
+
+    .create-text-image {
       position: relative;
       display: inline-block;
+      h1 {
+        font-family: var(--secondary-font);
+        font-size: 370px;
+        font-weight: 500;
+        color: var(--dark-color);
+      }
 
-      &::after {
-        content: url("../../assets/images/create-shirt.png");
+      img {
         position: absolute;
-        right: -135px;
-        top: -143px;
+        top: -35%;
+        right: -400px;
+        width: 600px;
       }
     }
 
@@ -70,6 +72,42 @@
         justify-content: space-between;
         padding-left: 19.6px;
         padding-right: 10.5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1920px) {
+  .create-wrapper {
+    .creater-box {
+      .create-text-image {
+        h1 {
+          font-size: 300px;
+        }
+
+        img {
+          top: -35%;
+          right: -330px;
+          width: 480px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1600px) {
+  .create-wrapper {
+    .creater-box {
+      .create-text-image {
+        h1 {
+          font-size: 200px;
+        }
+
+        img {
+          top: -35%;
+          right: -230px;
+          width: 330px;
+        }
       }
     }
   }

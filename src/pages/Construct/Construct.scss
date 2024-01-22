@@ -25,6 +25,7 @@
         padding: 0 30px;
         img {
           width: 100%;
+          min-width: 500px;
           height: auto;
           object-fit: cover;
         }
@@ -72,7 +73,7 @@
             display: flex;
             margin-top: 18px;
             gap: 19px;
-            width: 546px;
+            // width: 546px;
             .color-block {
               width: 24px;
               height: 24px;
@@ -104,6 +105,7 @@
 
           .images-row {
             display: flex;
+            flex-wrap: wrap;
             gap: 21px;
             margin-top: 21px;
             .design-image-wrapper {
@@ -135,6 +137,7 @@
           }
           .images-row {
             display: flex;
+            flex-wrap: wrap;
             gap: 21px;
             margin-top: 21px;
             .preview-image-wrapper {
@@ -155,7 +158,7 @@
 }
 
 .divider {
-  width: 539px;
+  // width: 539px;
   height: 1px;
   background-color: #7070707c;
   margin: 34px 0;

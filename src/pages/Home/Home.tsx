@@ -1,16 +1,19 @@
+import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import "./Home.scss";
 
 import CollectionUrban from "@/assets/images/collection-urban.png";
 
 const Home = () => {
   return (
-    <div className="home-container">
-      <h1>Home</h1>
+    <SideMarginWrapper>
+      <div className="home-container">
+        <h1>Home</h1>
 
-      <div className="collection-featured-img">
-        <img src={CollectionUrban} alt="" />
+        <div className="collection-featured-img">
+          <img src={CollectionUrban} alt="" />
+        </div>
       </div>
-    </div>
+    </SideMarginWrapper>
   );
 };
 

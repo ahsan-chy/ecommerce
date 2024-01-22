@@ -1,5 +1,6 @@
 .navbar-container {
   height: 100vh;
+  white-space: nowrap;
 
   .leftbar {
     height: 100%;
@@ -10,7 +11,7 @@
     .leftbar-1 {
       height: 100%;
       width: 160px;
-      border: 1px solid red;
+      border-right: 2px solid var(--primary-color);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -63,9 +64,86 @@
     .leftbar-2 {
       // width: 270px;
       background-color: var(--primary-color);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 57px 0px;
 
       h3 {
-        white-space: nowrap;
+        margin-left: 45px;
+        font-size: 20px;
+        font-weight: 500;
+      }
+
+      .primary-menu-options {
+        .favourites-icon {
+          position: relative;
+          span {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: 8px;
+          }
+        }
+      }
+
+      .creative-user-options {
+        h4 {
+          margin-left: 45px;
+          margin-bottom: 34px;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+
+      .we-are-online {
+        margin-left: 45px;
+        h4 {
+          margin-bottom: 34px;
+          font-size: 16px;
+          font-weight: 400;
+        }
+
+        .steps {
+          width: 133px;
+          display: flex;
+          justify-content: space-between;
+
+          p {
+            font-size: 12px;
+            font-weight: 600;
+            width: 25px;
+            height: 25px;
+            border: 2px solid white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 37px;
+        li {
+          position: relative;
+          font-size: 20px;
+          cursor: pointer;
+
+          div {
+            position: absolute;
+            left: 0;
+            width: 75px;
+            border: 1px solid white;
+            top: 50%;
+          }
+        }
+        li:hover {
+          font-weight: 600;
+        }
       }
     }
 
@@ -108,7 +186,7 @@
       }
     }
     .store-nav:nth-child(2) {
-      background-color: #4f9098;
+      background-color: var(--primary-color);
       gap: 20px;
       img {
         width: 41px;
@@ -150,7 +228,7 @@
     }
     .collection-nav:nth-child(3) {
       margin-top: auto;
-      background-color: #4f9098;
+      background-color: var(--primary-color);
 
       div {
         background-color: rgba(241, 153, 66, 0.7);
