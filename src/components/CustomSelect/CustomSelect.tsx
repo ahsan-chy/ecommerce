@@ -1,5 +1,3 @@
-// CustomSelect.jsx
-
 import { useState } from "react";
 import "./CustomSelect.scss";
 

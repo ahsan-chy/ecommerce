@@ -1,34 +1,6 @@
-// select {
-//     border: none;
-//     border-bottom: 1px solid #000;
-//     background-color: transparent;
-//     padding: 8px;
-//     font-size: 14px;
-//     outline: none;
-//     width: 100%;
-
-//     color: #000;
-//     cursor: pointer;
-//   }
-
-//   select::-ms-expand {
-//     display: none;
-//   }
-
-//   select option {
-//   }
-
-//   select:hover,
-//   select:focus {
-//     border-bottom: 2px solid #000;
-//   }
-
-/* CustomSelect.scss */
-/* CustomSelect.scss */
-
 .custom-select {
   position: relative;
-  min-width: 145px;
+  min-width: 130px;
   width: 100%;
 }
 
@@ -96,4 +68,46 @@
 .option.selected {
   background-color: var(--green-color);
   color: var(--light-color);
+}
+
+@media (max-width: 1715px) {
+  .custom-select {
+    min-width: 105px;
+  }
+
+  .select-header {
+    padding-bottom: 4px;
+    label {
+      font-size: 11px;
+    }
+  }
+
+  .options {
+    font-size: 11px;
+  }
+
+  .option {
+    padding: 4px;
+  }
+}
+
+@media (max-width: 1400px) {
+  .custom-select {
+    min-width: 70px;
+  }
+
+  .select-header {
+    padding-bottom: 2px;
+    label {
+      font-size: 9px;
+    }
+  }
+
+  .options {
+    font-size: 8px;
+  }
+
+  .option {
+    padding: 2px;
+  }
 }

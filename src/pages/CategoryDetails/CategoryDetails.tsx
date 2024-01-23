@@ -3,7 +3,7 @@ import "./CategoryDetails.scss";
 import Arrow from "@/assets/icons/arrow-white.svg";
 import { shirtsData } from "@/db/shirtsData";
 import FilterDropdown from "@/components/FilterDropdown/FilterDropdown";
-
+import { useNavigate } from "react-router";
 
 const sortBy = [
   { value: "new", label: "New" },
@@ -32,6 +32,11 @@ const size = [
 ];
 
 function CategoryDetails() {
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/product-details");
+  };
+
   return (
     <div className="category-details-container">
       <div className="breadcrumb-wrapper">
@@ -44,7 +49,7 @@ function CategoryDetails() {
           confidence in a big city.
         </p>
       </div>
-      
+
       <div className="filter-category">
         <FilterDropdown title="Sort By" options={sortBy} />
         <FilterDropdown title="Gender" options={gender} />
@@ -65,7 +70,7 @@ function CategoryDetails() {
               <p>{product.description}</p>
               <div className="card-footer">
                 <h3>{product.price}</h3>
-                <button>
+                <button onClick={handleNavigate}>
                   DETAILS
                   <img src={Arrow} alt="products-image" />
                 </button>

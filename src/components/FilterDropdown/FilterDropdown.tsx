@@ -1,4 +1,3 @@
-// FilterDropdown.tsx
 import React from "react";
 import CustomSelect from "../CustomSelect/CustomSelect";
 import "./FilterDropdown.scss";

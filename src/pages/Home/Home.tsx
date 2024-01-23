@@ -1,10 +1,17 @@
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import "./Home.scss";
 import ArrowWhite from "@/assets/icons/arrow-white.svg";
+import { useNavigate } from "react-router";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Home = (props: { activeCollection: any }) => {
   const { activeCollection } = props;
+
+  const navigate = useNavigate();
+  const handleNavigate = () => {
+    navigate("/products");
+  };
+
   return (
     <SideMarginWrapper>
       <div className="home-container">
@@ -23,7 +30,7 @@ const Home = (props: { activeCollection: any }) => {
             <h1>{activeCollection.heading}</h1>
 
             <p>{activeCollection.description}</p>
-            <button>
+            <button onClick={handleNavigate}>
               SEE COLLECTION
               <img src={ArrowWhite} alt="ArrowWhite" />
             </button>

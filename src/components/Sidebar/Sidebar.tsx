@@ -107,7 +107,9 @@ const Sidebar = (props: { handleActive: any }) => {
               {sidebarData.map((menuItem, index) => (
                 <li key={index} onClick={() => navigate(menuItem.path)}>
                   {menuItem.isActive && <div />}
-                  <span style={{ marginLeft: menuItem.isActive ? "95px" : "45px" }}>
+                  <span
+                    style={{ marginLeft: menuItem.isActive ? "95px" : "45px" }}
+                    className="menuItem-text">
                     {menuItem.icon} {menuItem.text}
                   </span>
                 </li>
@@ -153,7 +155,7 @@ const Sidebar = (props: { handleActive: any }) => {
           </div>
         </div>
 
-        {collectionNav.map((navData) => (
+        {/* {collectionNav.map((navData) => (
           <div
             className="nav-item collection-nav"
             onClick={() => handleActive(navData)}
@@ -164,7 +166,7 @@ const Sidebar = (props: { handleActive: any }) => {
               <h3>{navData.heading}</h3>
             </div>
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   );
