@@ -8,6 +8,34 @@ import subimg2 from "@/assets/images/subimg2.png";
 import subimg3 from "@/assets/images/subimg3.png";
 import subimg4 from "@/assets/images/subimg4.png";
 import subimg5 from "@/assets/images/subimg5.png";
+import PaginationArrows from "@/components/PaginationArrows/PaginationArrows";
+import FilterDropdown from "@/components/FilterDropdown/FilterDropdown";
+
+const sortBy = [
+  { value: "new", label: "New" },
+  { value: "sale", label: "Sale" },
+];
+const gender = [
+  { value: "man", label: "Man" },
+  { value: "women", label: "Women" },
+];
+const model = [
+  { value: "regular", label: "Regular" },
+  { value: "treditional", label: "Treditional" },
+];
+const color = [
+  { value: "white", label: "White" },
+  { value: "orange", label: "Orange" },
+  { value: "green", label: "Green" },
+];
+const size = [
+  { value: "s", label: "S" },
+  { value: "m", label: "M" },
+  { value: "l", label: "L" },
+  { value: "xl", label: "XL" },
+  { value: "xxl", label: "XXL" },
+  { value: "xxxl", label: "XXXL" },
+];
 
 function ProductDetails() {
   return (
@@ -22,12 +50,13 @@ function ProductDetails() {
           confidence in a big city.
         </p>
       </div>
-      {/* <div className="filter-category">
-        <div className="filter-title">Sort</div>
-        <div className="dropdown">
-
-        </div>
-      </div> */}
+      <div className="filter-category">
+        <FilterDropdown title="Sort By" options={sortBy} />
+        <FilterDropdown title="Gender" options={gender} />
+        <FilterDropdown title="Model" options={model} />
+        <FilterDropdown title="Color" options={color} />
+        <FilterDropdown title="Size" options={size} />
+      </div>
       <div className="products-wrapper">
         <div className="left-img-wrapper">
           <img src={ProductDetailsImg} alt="" />
@@ -112,6 +141,9 @@ function ProductDetails() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="product_details-pagination">
+        <PaginationArrows current={"0"} length={"30"} />
       </div>
     </div>
   );

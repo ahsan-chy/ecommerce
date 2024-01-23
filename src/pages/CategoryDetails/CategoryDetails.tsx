@@ -2,6 +2,34 @@ import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import "./CategoryDetails.scss";
 import Arrow from "@/assets/icons/arrow-white.svg";
 import { shirtsData } from "@/db/shirtsData";
+import FilterDropdown from "@/components/FilterDropdown/FilterDropdown";
+
+
+const sortBy = [
+  { value: "new", label: "New" },
+  { value: "sale", label: "Sale" },
+];
+const gender = [
+  { value: "man", label: "Man" },
+  { value: "women", label: "Women" },
+];
+const model = [
+  { value: "regular", label: "Regular" },
+  { value: "treditional", label: "Treditional" },
+];
+const color = [
+  { value: "white", label: "White" },
+  { value: "orange", label: "Orange" },
+  { value: "green", label: "Green" },
+];
+const size = [
+  { value: "s", label: "S" },
+  { value: "m", label: "M" },
+  { value: "l", label: "L" },
+  { value: "xl", label: "XL" },
+  { value: "xxl", label: "XXL" },
+  { value: "xxxl", label: "XXXL" },
+];
 
 function CategoryDetails() {
   return (
@@ -16,12 +44,14 @@ function CategoryDetails() {
           confidence in a big city.
         </p>
       </div>
-      {/* <div className="filter-category">
-        <div className="filter-title">Sort</div>
-        <div className="dropdown">
-
-        </div>
-      </div> */}
+      
+      <div className="filter-category">
+        <FilterDropdown title="Sort By" options={sortBy} />
+        <FilterDropdown title="Gender" options={gender} />
+        <FilterDropdown title="Model" options={model} />
+        <FilterDropdown title="Color" options={color} />
+        <FilterDropdown title="Size" options={size} />
+      </div>
       <div className="category-wrapper">
         {shirtsData.map((product) => (
           <div className="product-card" key={product.id}>

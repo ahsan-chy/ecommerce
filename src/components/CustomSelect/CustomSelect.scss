@@ -1,0 +1,99 @@
+// select {
+//     border: none;
+//     border-bottom: 1px solid #000;
+//     background-color: transparent;
+//     padding: 8px;
+//     font-size: 14px;
+//     outline: none;
+//     width: 100%;
+
+//     color: #000;
+//     cursor: pointer;
+//   }
+
+//   select::-ms-expand {
+//     display: none;
+//   }
+
+//   select option {
+//   }
+
+//   select:hover,
+//   select:focus {
+//     border-bottom: 2px solid #000;
+//   }
+
+/* CustomSelect.scss */
+/* CustomSelect.scss */
+
+.custom-select {
+  position: relative;
+  min-width: 145px;
+  width: 100%;
+}
+
+.select-header {
+  border-bottom: 1px solid #414848;
+  border-radius: 0px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.5s ease-in-out;
+  label {
+    text-transform: capitalize;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: var(--secondary-font);
+    font-size: 14px;
+    line-height: 0.7px;
+    color: var(--dark-color);
+    font-weight: 400;
+  }
+}
+
+.arrow {
+  transition: transform 0.5s ease-in-out;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  background-color: #fff;
+  color: var(--green-color);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  font-family: var(--secondary-font);
+  font-size: 14px;
+  color: var(--dark-color);
+  font-weight: 400;
+}
+
+.custom-select.open .options {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.option {
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.option:hover {
+  background-color: rgba(79, 144, 152, 80%);
+  color: var(--light-color);
+}
+
+.option.selected {
+  background-color: var(--green-color);
+  color: var(--light-color);
+}

@@ -22,11 +22,17 @@
       margin-top: 15px;
     }
   }
+  .filter-category {
+    display: flex;
+    gap: 36.8px;
+    margin-top: 35px;
+  }
   .products-wrapper {
     margin-top: 58px;
     width: 1150.38px;
     display: grid;
     grid-template-columns: 506px auto;
+    position: relative;
 
     .left-img-wrapper {
       height: 629px;
@@ -174,5 +180,11 @@
         }
       }
     }
+  }
+  .product_details-pagination {
+    position: absolute;
+    right: 150px;
+    bottom: 80px;
+    z-index: 2;
   }
 }
