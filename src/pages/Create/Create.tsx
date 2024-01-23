@@ -19,7 +19,7 @@ const Create = () => {
         <div className="creater-box">
           <div className="create-left">
             <div className="create-text-image">
-              <h1>Crea</h1>
+              <h1>Create</h1>
               <img src={CreateShirt} alt="" />
             </div>
             <div className="description-wrapper">
