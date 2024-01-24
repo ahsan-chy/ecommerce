@@ -1,9 +1,270 @@
-.offer-root{
-    .offer-left-wrapper{
-        .top-wrapper{
-            .offer-header-text{
-                        
-            }
+.offer-root {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 475px auto;
+  padding-bottom: 44px;
+  .offer-left {
+    padding: 44.4px 0 0 65.4px;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    .top-wrapper {
+      .offer-header-text {
+        p {
+          font-family: var(--primary-font);
+          font-size: 20px;
+          line-height: 26px;
+          font-weight: 400;
+          color: var(--dark-color);
         }
+      }
     }
+    .offer-left-title {
+      margin-bottom: 10px;
+      .offer-wrap {
+        h1 {
+          font-family: var(--secondary-font);
+          font-size: 70px;
+          font-weight: 400;
+          line-height: 85px;
+          color: var(--dark-color);
+        }
+        p {
+          font-family: var(--secondary-font);
+          font-size: 15px;
+          line-height: 29px;
+          color: var(--dark-color);
+          font-weight: 400;
+        }
+      }
+      .offer-pagination {
+        margin-top: 50px;
+      }
+    }
+  }
+  .offer-right {
+    .offer-row {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 35px;
+      height: 100%;
+      .offer-column {
+        .offer-footer {
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          padding: 0 30px 30px 30px;
+          text-align: left;
+          position: relative;
+          display: flex;
+          align-items: flex-end;
+          gap: 15px;
+          overflow: hidden;
+          .offer-content {
+            z-index: 1;
+            p {
+              font-family: var(--secondary-font);
+              font-size: 19px;
+              line-height: 35px;
+              color: #fff;
+              font-weight: 400;
+            }
+            h3 {
+              font-family: var(--secondary-font);
+              font-size: 44px;
+              line-height: 61px;
+              color: #fff;
+              font-weight: 500;
+            }
+            p:last-child {
+              font-family: var(--secondary-font);
+              font-size: 14px;
+              line-height: 28px;
+              color: #fff;
+              font-weight: 400;
+            }
+          }
+          .offer-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 295px;
+            background-color: #000;
+            opacity: 0;
+            transition: opacity 0.3s ease-in;
+            z-index: 0;
+          }
+
+          .hovered-offer {
+            z-index: 1;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+
+            .offer-icons-wrapper {
+              display: grid;
+              row-gap: 2px;
+              .icon-row {
+                cursor: pointer;
+                background-color: rgba($color: #4f9098, $alpha: 0.25);
+                width: 45px;
+                height: 45px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 10px;
+                img {
+                  width: 100%;
+                  height: auto;
+                  object-fit: cover;
+                }
+              }
+            }
+          }
+        }
+        &:hover .hovered-offer {
+          opacity: 1;
+          visibility: visible;
+        }
+        &:hover .offer-overlay {
+          opacity: 25%;
+        }
+        .offer-first {
+          background-image: url(../../assets/images/offer-img.png);
+        }
+        .offer-second {
+          background-image: url(../../assets/images/offer-hover.png);
+        }
+        .offer-third {
+          background-image: url(../../assets/images/offer-side.png);
+        }
+      }
+      .last-offer {
+        margin-top: auto;
+        height: 62%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1715px) {
+  .offer-root {
+    padding-bottom: 25px;
+  grid-template-columns: 375px auto;
+    .offer-left {
+      padding: 28px 20px 0 28px;
+      .top-wrapper {
+        .offer-header-text {
+          p {
+            font-size: 16px;
+            line-height: 22px;
+          }
+        }
+      }
+      .offer-left-title {
+        .offer-wrap {
+          h1 {
+            font-size: 50px;
+            line-height: 70px;
+          }
+          p {
+            font-size: 13px;
+            line-height: 25px;
+          }
+        }
+        .offer-pagination {
+          margin-top: 50px;
+        }
+      }
+    }
+    .offer-right {
+      .offer-row {
+        .offer-column {
+          .offer-footer {
+            padding: 0 15px 15px 15px;
+            .offer-content {
+              z-index: 1;
+              p {
+                font-size: 14px;
+                line-height: 30px;
+              }
+              h3 {
+                font-size: 28px;
+                line-height: 45px;
+              }
+              p:last-child {
+                font-size: 11px;
+                line-height: 18px;
+              }
+            }
+            .offer-overlay {
+              height: 268px;
+            }
+
+            .hovered-offer {
+              .offer-icons-wrapper {
+                .icon-row {
+                  width: 25px;
+                  height: 25px;
+                  padding: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .offer-root {
+    padding-bottom: 25px;
+  grid-template-columns: 310px auto;
+    .offer-left {
+      .offer-left-title {
+        .offer-wrap {
+          h1 {
+            font-size: 38px;
+            line-height: 50px;
+          }
+          p {
+            font-size: 13px;
+            line-height: 25px;
+          }
+        }
+        .offer-pagination {
+          margin-top: 50px;
+        }
+      }
+    }
+    .offer-right {
+      .offer-row {
+        .offer-column {
+          .offer-footer {
+            padding: 0 15px 15px 15px;
+            .offer-content {
+              z-index: 1;
+              p {
+                font-size: 12px;
+                line-height: 20px;
+              }
+              h3 {
+                font-size: 22px;
+                line-height: 35px;
+              }
+              p:last-child {
+                font-size: 10px;
+                line-height: 17px;
+              }
+            }
+            .offer-overlay {
+              height: 178px;
+            }
+          }
+        }
+      }
+    }
+  }
 }

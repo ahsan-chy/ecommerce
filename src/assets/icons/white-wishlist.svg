@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="23.342" height="23.347" viewBox="0 0 23.342 23.347">
+  <g id="Group_2" data-name="Group 2" transform="translate(-1488.078 -887.876)">
+    <path id="Favorites_Icons" data-name="Favorites Icons" d="M1507.218,890.393l-.08-.091a4.861,4.861,0,0,0-7.344,0l-1.041,1.192-1.041-1.192a4.863,4.863,0,0,0-7.346,0l-.078.091a5.95,5.95,0,0,0,0,7.806l7.525,8.532a1.252,1.252,0,0,0,1.881,0l7.525-8.532A5.95,5.95,0,0,0,1507.218,890.393Z" fill="none" stroke="#f7f7f7" stroke-width="1.5"/>
+    <text id="_" data-name="+" transform="matrix(1, 0, 0, 1, 1502.42, 908.223)" fill="#fff" font-size="12" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">+</tspan></text>
+  </g>
+</svg>
