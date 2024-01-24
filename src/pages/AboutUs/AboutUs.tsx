@@ -9,15 +9,15 @@ import team6 from "@/assets/images/team6.png";
 const AboutUs = () => {
   return (
     <div className="about-wrapper">
-      <div className="top-wrapper">
-        <div className="about-header-text">
-          <p>Clothes</p>
-          <p>Designer</p>
+      <div className="about-left">
+        <div className="top-wrapper">
+          <div className="about-header-text">
+            <p>Clothes</p>
+            <p>Designer</p>
+          </div>
         </div>
-      </div>
-      <div className="about-box">
-        <div className="about-left">
-          <div className="products-left-title">
+        <div className="about-left-title">
+          <div className="about-wrap">
             <h1>About Us</h1>
             <p>
               Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will give
@@ -25,6 +25,9 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
+      </div>
+
+      <div className="about-box">
         <div className="about-right">
           <h3>Help & FAQ</h3>
           <p>
@@ -68,32 +71,44 @@ const AboutUs = () => {
 
               <div className="team-images-wrapper">
                 <div className="team-card">
-                  <img src={team} alt="team" />
+                  <div className="team-image-wrapper">
+                    <img src={team} alt="team" />
+                  </div>
                   <h6>John Doe</h6>
                   <p>Designer </p>
                 </div>
                 <div className="team-card">
-                  <img src={team2} alt="team" />
+                  <div className="team-image-wrapper">
+                    <img src={team2} alt="team" />
+                  </div>
                   <h6>John Doe</h6>
                   <p>Designer </p>
                 </div>
                 <div className="team-card">
-                  <img src={team3} alt="team" />
+                  <div className="team-image-wrapper">
+                    <img src={team3} alt="team" />
+                  </div>
                   <h6>John Doe</h6>
                   <p>Designer </p>
                 </div>
                 <div className="team-card">
-                  <img src={team4} alt="team" />
+                  <div className="team-image-wrapper">
+                    <img src={team4} alt="team" />
+                  </div>
                   <h6>John Doe</h6>
                   <p>Designer </p>
                 </div>
                 <div className="team-card">
-                  <img src={team5} alt="team" />
+                  <div className="team-image-wrapper">
+                    <img src={team5} alt="team" />
+                  </div>
                   <h6>John Doe</h6>
                   <p>Designer </p>
                 </div>
                 <div className="team-card">
-                  <img src={team6} alt="team" />
+                  <div className="team-image-wrapper">
+                    <img src={team6} alt="team" />
+                  </div>
                   <h6>John Doe</h6>
                   <p>Designer </p>
                 </div>

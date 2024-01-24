@@ -3,6 +3,7 @@
   gap: 15px;
   img {
     cursor: pointer;
+    width: 50px;
   }
   .count-wrapper {
     span {
@@ -11,6 +12,21 @@
       line-height: 18px;
       font-weight: 500;
       color: #61626a;
+    }
+  }
+}
+
+@media (max-width: 1715px) {
+  .pagination-wrapper {
+    gap: 10px;
+    img {
+      width: 30px;
+    }
+    .count-wrapper {
+      span {
+        font-size: 12px;
+        line-height: 18px;
+      }
     }
   }
 }
