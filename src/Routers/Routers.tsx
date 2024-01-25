@@ -12,6 +12,10 @@ import AboutUs from "@/pages/AboutUs/AboutUs";
 import { useState } from "react";
 import { collectionNav } from "@/db/collectionNew";
 import SpecialOffer from "@/pages/SpecialOffer/SpecialOffer";
+import SpecialProduct from "@/pages/SpecialProduct/SpecialProduct";
+import Voting from "@/pages/Voting/Voting";
+import VotingAll from "@/pages/VotingAll/VotingAll";
+import Cart from "@/pages/Cart/Cart";
 
 function Routers() {
   const [activeCollection, setActiveCollection] = useState(collectionNav[0]);
@@ -33,6 +37,10 @@ function Routers() {
           <Route path="/confirm-construct" element={<ConfirmConstruct />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/special-offer" element={<SpecialOffer />} />
+          <Route path="/special-product" element={<SpecialProduct />} />
+          <Route path="/voting" element={<Voting activeCollection={activeCollection} />} />
+          <Route path="/voting-all" element={<VotingAll />} />
+          <Route path="/cart" element={<Cart />} />
 
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/404" replace />} />

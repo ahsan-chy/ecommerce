@@ -15,6 +15,22 @@
       }
     }
     .home-left {
+      .voting-titles-wrapper {
+        p {
+          font-family: var(--primary-font);
+          font-size: 19px;
+          line-height: 26px;
+          font-weight: 400;
+          color: var(--dark-color);
+        }
+        p:last-child {
+          font-family: var(--primary-font);
+          font-size: 19px;
+          line-height: 26px;
+          font-weight: 400;
+          color: #1671b7;
+        }
+      }
       .sub-head-box {
         display: flex;
         gap: 15px;
@@ -88,6 +104,16 @@
     .home-left-wrapper {
       padding-bottom: 70px;
       .home-left {
+        .voting-titles-wrapper {
+          p {
+            font-size: 13px;
+            line-height: 20px;
+          }
+          p:last-child {
+            font-size: 13px;
+            line-height: 20px;
+          }
+        }
         h1 {
           font-size: 60px;
           line-height: 70px;
@@ -103,7 +129,6 @@
         }
       }
     }
-
   }
 }
 
@@ -124,6 +149,5 @@
         }
       }
     }
-
   }
 }

@@ -2,14 +2,10 @@ import "./ConfirmConstruct.scss";
 import CreateShirt from "@/assets/images/create-shirt.png";
 import ArrowWhite from "@/assets/icons/long-white-arrow.svg";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
-import LeftArrow from "@/assets/icons/left-gray-arrow.svg";
-import { useNavigate } from "react-router";
+import BackNavigation from "@/components/BackNavigation/BackNavigation";
 
 const ConfirmConstruct = () => {
-  const navigate = useNavigate();
-  const handleNavigate = () => {
-    navigate("/construct");
-  };
+
   return (
     <SideMarginWrapper>
       <div className="confirm-construct-wrapper">
@@ -61,11 +57,8 @@ const ConfirmConstruct = () => {
               <p>Publish for the "Design Months" </p>
             </div>
 
-            <div className="back-pagination" onClick={handleNavigate}>
-              <img src={LeftArrow} alt="LeftArrow" />
-              <div className="count-wrapper">
-                <span>Back to Constuctor </span>
-              </div>
+            <div className="construct-back-wrapper">
+              <BackNavigation navigateTo={"construct"} pageName={"Back to constructor"} />
             </div>
           </div>
         </div>

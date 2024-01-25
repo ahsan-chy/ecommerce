@@ -146,24 +146,9 @@
           margin-top: 14px;
         }
       }
-      .back-pagination {
+      .construct-back-wrapper {
         margin-top: auto;
         margin-left: 20px;
-        display: flex;
-        gap: 16px;
-        cursor: pointer;
-        img {
-          width: 35px;
-        }
-        .count-wrapper {
-          span {
-            font-family: var(--primary-font);
-            font-size: 18px;
-            line-height: 26px;
-            font-weight: 400;
-            color: var(--dark-color);
-          }
-        }
       }
     }
   }
@@ -233,13 +218,6 @@
           }
           p {
             font-size: 12px;
-          }
-        }
-        .back-pagination {
-          .count-wrapper {
-            span {
-              font-size: 14px;
-            }
           }
         }
       }
