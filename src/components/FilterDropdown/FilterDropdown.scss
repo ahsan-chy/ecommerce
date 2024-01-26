@@ -1,3 +1,5 @@
+@import "../../assets/Variables/Variables.scss";
+
 .filter-wrapper {
   display: flex;
   gap: 15px;
@@ -7,8 +9,26 @@
     font-size: 13px;
     line-height: 31px;
     font-weight: 500;
-    color: var(--dark-color);
+    color: $dark-color;
     white-space: nowrap;
+    span {
+      color: #d53434;
+      margin-left: 10px;
+    }
+  }
+}
+.default {
+  display: grid;
+  p {
+    font-family: var(--secondary-font);
+    font-size: 17px;
+    line-height: 40px;
+    font-weight: 400;
+    color: $dark-color;
+    span {
+      color: #d53434;
+      margin-left: 10px;
+    }
   }
 }
 
@@ -17,6 +37,12 @@
     gap: 10px;
     p {
       font-size: 10px;
+    }
+  }
+  .default {
+    p {
+      font-size: 13px;
+      line-height: 30px;
     }
   }
 }

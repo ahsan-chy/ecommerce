@@ -1,3 +1,5 @@
+@import "../../assets/Variables/Variables.scss";
+
 .custom-select {
   position: relative;
   min-width: 130px;
@@ -7,7 +9,7 @@
 .select-header {
   border-bottom: 1px solid #414848;
   border-radius: 0px;
-  padding: 8px;
+  padding: 5px;
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -18,10 +20,15 @@
     margin-left: auto;
     margin-right: auto;
     font-family: var(--secondary-font);
-    font-size: 14px;
+    font-size: 12px;
     line-height: 0.7px;
-    color: var(--dark-color);
+    color: $dark-color;
     font-weight: 400;
+  }
+}
+.default-filter {
+  label {
+    margin-left: unset !important;
   }
 }
 
@@ -38,20 +45,34 @@
   border-top: none;
   border-radius: 0 0 4px 4px;
   background-color: #fff;
-  color: var(--green-color);
+  color: $green-color;
   z-index: 1;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
   font-family: var(--secondary-font);
   font-size: 14px;
-  color: var(--dark-color);
+  color: $dark-color;
   font-weight: 400;
 }
 
 .custom-select.open .options {
   opacity: 1;
   pointer-events: auto;
+  max-height: 250px;
+  overflow: auto;
+}
+.custom-select.open .options::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-select.open .options::-webkit-scrollbar-thumb {
+  background-color: $green-color;
+  border-radius: 4px;
+}
+
+.custom-select.open .options::-webkit-scrollbar-track {
+  background-color: $light-color;
 }
 
 .option {
@@ -62,12 +83,12 @@
 
 .option:hover {
   background-color: rgba(79, 144, 152, 80%);
-  color: var(--light-color);
+  color: $light-color;
 }
 
 .option.selected {
-  background-color: var(--green-color);
-  color: var(--light-color);
+  background-color: $green-color;
+  color: $light-color;
 }
 
 @media (max-width: 1715px) {

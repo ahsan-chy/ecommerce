@@ -1,3 +1,5 @@
+@import "../../assets/Variables/Variables.scss";
+
 .cart-card-wrapper {
   position: relative;
 
@@ -29,7 +31,7 @@
       font-size: 19px;
       line-height: 40px;
       font-weight: 400;
-      color: var(--dark-color);
+      color: $dark-color;
     }
     p:last-child {
       margin-top: 45px;
@@ -39,7 +41,7 @@
       font-size: 40px;
       line-height: 80px;
       font-weight: 500;
-      color: var(--dark-color);
+      color: $dark-color;
     }
     .cart-options {
       display: grid;
@@ -52,14 +54,14 @@
           font-size: 14px;
           line-height: 28px;
           font-weight: 400;
-          color: var(--dark-color);
+          color: $dark-color;
         }
         h2 {
           font-family: var(--primary-font);
           font-size: 22px;
           line-height: 30px;
           font-weight: 500;
-          color: var(--dark-color);
+          color: $dark-color;
         }
       }
       .cart-color {
@@ -68,12 +70,12 @@
           font-size: 14px;
           line-height: 28px;
           font-weight: 400;
-          color: var(--dark-color);
+          color: $dark-color;
         }
         .color-box {
           width: 14px;
           height: 14px;
-          background-color: var(--green-color);
+          background-color: $green-color;
           margin-top: 10px;
         }
       }
@@ -83,7 +85,7 @@
           font-size: 14px;
           line-height: 28px;
           font-weight: 400;
-          color: var(--dark-color);
+          color: $dark-color;
         }
         .counter-wrapper {
           display: flex;
@@ -102,7 +104,7 @@
             font-size: 22px;
             line-height: 30px;
             font-weight: 400;
-            color: var(--dark-color);
+            color: $dark-color;
           }
           .inc {
             font-family: var(--secondary-font);
@@ -120,14 +122,14 @@
           font-size: 14px;
           line-height: 28px;
           font-weight: 400;
-          color: var(--dark-color);
+          color: $dark-color;
         }
         h4 {
           font-family: var(--primary-font);
           font-size: 22px;
           line-height: 30px;
           font-weight: 400;
-          color: var(--dark-color);
+          color: $dark-color;
         }
       }
     }
@@ -141,7 +143,7 @@
     .cart-close-box {
       right: 30px;
       top: 30px;
-      img{
+      img {
         width: 18px;
       }
     }
@@ -169,7 +171,7 @@
     .cart-close-box {
       right: 20px;
       top: 20px;
-      img{
+      img {
         width: 13px;
       }
     }
@@ -188,53 +190,53 @@
       }
       .cart-options {
         .size {
-            p {
-              font-size: 11px;
-              line-height: 14px;
-            }
-            h2 {
-              font-size: 16px;
-              line-height: 28px;
-            }
+          p {
+            font-size: 11px;
+            line-height: 14px;
           }
-          .cart-color {
-            p {
-              font-size: 11px;
-              line-height: 14px;
-            }
-            .color-box {
-              width: 10px;
-              height: 10px;
-              margin-top: 7px;
-            }
+          h2 {
+            font-size: 16px;
+            line-height: 28px;
           }
-          .cart-quantity {
-            p {
-              font-size: 11px;
-              line-height: 14px;
-            }
-            .counter-wrapper {
-              gap: 8px;
-              .dec {
-                font-size: 18px;
-              }
-              h6 {
-                font-size: 18px;
-              }
-              .inc {
-                font-size: 18px;
-              }
-            }
+        }
+        .cart-color {
+          p {
+            font-size: 11px;
+            line-height: 14px;
           }
-          .cart-price {
-            p {
-              font-size: 11px;
-              line-height: 14px;
+          .color-box {
+            width: 10px;
+            height: 10px;
+            margin-top: 7px;
+          }
+        }
+        .cart-quantity {
+          p {
+            font-size: 11px;
+            line-height: 14px;
+          }
+          .counter-wrapper {
+            gap: 8px;
+            .dec {
+              font-size: 18px;
             }
-            h4 {
+            h6 {
+              font-size: 18px;
+            }
+            .inc {
               font-size: 18px;
             }
           }
+        }
+        .cart-price {
+          p {
+            font-size: 11px;
+            line-height: 14px;
+          }
+          h4 {
+            font-size: 18px;
+          }
+        }
       }
     }
   }

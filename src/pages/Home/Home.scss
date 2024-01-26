@@ -1,3 +1,5 @@
+@import "../../assets/Variables/Variables.scss";
+
 .home-container {
   display: grid;
   grid-template-columns: 570px auto;
@@ -11,7 +13,7 @@
         font-size: 20px;
         line-height: 26px;
         font-weight: 400;
-        color: var(--dark-color);
+        color: $dark-color;
       }
     }
     .home-left {
@@ -21,7 +23,7 @@
           font-size: 19px;
           line-height: 26px;
           font-weight: 400;
-          color: var(--dark-color);
+          color: $dark-color;
         }
         p:last-child {
           font-family: var(--primary-font);
@@ -38,14 +40,14 @@
         .spacer {
           height: 2px;
           width: 50px;
-          background-color: var(--dark-color);
+          background-color: $dark-color;
         }
         p {
           font-family: var(--primary-font);
           font-size: 30px;
           line-height: 30px;
           font-weight: 400;
-          color: var(--dark-color);
+          color: $dark-color;
         }
       }
       h1 {
@@ -54,7 +56,7 @@
         line-height: 100px;
         letter-spacing: 5px;
         font-weight: 500;
-        color: var(--dark-color);
+        color: $dark-color;
         margin-top: 19px;
       }
       > p {
@@ -62,14 +64,14 @@
         font-size: 17px;
         line-height: 32px;
         font-weight: 400;
-        color: var(--dark-color);
+        color: $dark-color;
         margin-top: 42.9px;
       }
       button {
         width: 251px;
         height: 65px;
         color: #fff;
-        background-color: var(--orange-color);
+        background-color: $orange-color;
         border: none;
         display: flex;
         align-items: center;

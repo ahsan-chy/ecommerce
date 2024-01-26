@@ -3,10 +3,11 @@ import "./CustomSelect.scss";
 
 interface CustomSelectProps {
   options: { value: string; label: string }[];
+  filterType?: string;
 }
 
-const CustomSelect: React.FC<CustomSelectProps> = ({ options }) => {
-  const [selectedOption, setSelectedOption] = useState(options && options[0]?.value || 'Select');
+const CustomSelect: React.FC<CustomSelectProps> = ({ options, filterType }) => {
+  const [selectedOption, setSelectedOption] = useState((options && options[0]?.value) || "Select");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -17,14 +18,14 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options }) => {
     setSelectedOption(value);
     setIsDropdownOpen(false);
   };
-
+  console.log("filterType", filterType);
   return (
     <div className={`custom-select ${isDropdownOpen ? "open" : ""}`}>
-      <div className="select-header" onClick={toggleDropdown}>
-        <label>
-        {selectedOption}
-        </label>        
-         <span className="arrow">&#9662;</span>
+      <div
+        className={`select-header ${filterType === "default" ? "default-filter" : ""}`}
+        onClick={toggleDropdown}>
+        <label>{selectedOption}</label>
+        <span className="arrow">&#9662;</span>
       </div>
       {isDropdownOpen && (
         <div className="options">
@@ -32,8 +33,7 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options }) => {
             <div
               key={option.value}
               className={`option ${selectedOption === option.value ? "selected" : ""}`}
-              onClick={() => handleSelectChange(option.value)}
-            >
+              onClick={() => handleSelectChange(option.value)}>
               {option.label}
             </div>
           ))}

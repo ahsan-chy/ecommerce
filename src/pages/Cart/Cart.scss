@@ -1,3 +1,5 @@
+@import "../../assets/Variables/Variables.scss";
+
 .cart-wrapper {
   padding: 44.4px 0 0 65.4px;
 
@@ -8,7 +10,7 @@
         font-size: 20px;
         line-height: 26px;
         font-weight: 400;
-        color: var(--dark-color);
+        color: $dark-color;
       }
     }
   }
@@ -20,14 +22,14 @@
       font-size: 40px;
       line-height: 60px;
       font-weight: 500;
-      color: var(--dark-color);
+      color: $dark-color;
     }
     p {
       font-family: var(--primary-font);
       font-size: 12px;
       line-height: 26px;
       font-weight: 400;
-      color: var(--dark-color);
+      color: $dark-color;
     }
     .cart-list {
       margin-top: 20px;
@@ -56,14 +58,14 @@
                 font-size: 14px;
                 line-height: 22px;
                 font-weight: 400;
-                color: var(--dark-color);
+                color: $dark-color;
               }
               h4 {
                 font-family: var(--primary-font);
                 font-size: 26px;
                 line-height: 50px;
                 font-weight: 500;
-                color: var(--dark-color);
+                color: $dark-color;
               }
             }
             .size {
@@ -72,14 +74,14 @@
                 font-size: 14px;
                 line-height: 28px;
                 font-weight: 400;
-                color: var(--dark-color);
+                color: $dark-color;
               }
               h2 {
                 font-family: var(--primary-font);
                 font-size: 22px;
                 line-height: 30px;
                 font-weight: 500;
-                color: var(--dark-color);
+                color: $dark-color;
               }
             }
             .cart-color {
@@ -88,12 +90,12 @@
                 font-size: 14px;
                 line-height: 28px;
                 font-weight: 400;
-                color: var(--dark-color);
+                color: $dark-color;
               }
               .color-box {
                 width: 14px;
                 height: 14px;
-                background-color: var(--green-color);
+                background-color: $green-color;
                 margin-top: 10px;
               }
             }
@@ -103,7 +105,7 @@
                 font-size: 14px;
                 line-height: 28px;
                 font-weight: 400;
-                color: var(--dark-color);
+                color: $dark-color;
               }
               .counter-wrapper {
                 display: flex;
@@ -122,7 +124,7 @@
                   font-size: 22px;
                   line-height: 30px;
                   font-weight: 400;
-                  color: var(--dark-color);
+                  color: $dark-color;
                 }
                 .inc {
                   font-family: var(--secondary-font);
@@ -140,14 +142,14 @@
                 font-size: 14px;
                 line-height: 28px;
                 font-weight: 400;
-                color: var(--dark-color);
+                color: $dark-color;
               }
               h4 {
                 font-family: var(--primary-font);
                 font-size: 22px;
                 line-height: 30px;
                 font-weight: 400;
-                color: var(--dark-color);
+                color: $dark-color;
               }
             }
             .close-box {
@@ -162,8 +164,6 @@
         }
       }
     }
-
-    
 
     .cart-back-wrapper {
       margin-top: 40px;

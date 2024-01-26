@@ -1,3 +1,5 @@
+@import "../../assets/Variables/Variables.scss";
+
 .product-details-container {
   padding: 47.9px 48.1px;
   width: 100%;
@@ -11,14 +13,14 @@
       font-family: var(--primary-font);
       font-size: 35px;
       line-height: 60px;
-      color: var(--dark-color);
+      color: $dark-color;
       font-weight: 600;
     }
     p {
       font-family: var(--primary-font);
       font-size: 12px;
       line-height: 24px;
-      color: var(--dark-color);
+      color: $dark-color;
       font-weight: 500;
       margin-top: 10px;
     }
@@ -49,21 +51,21 @@
         margin-top: 30px;
         font-family: var(--primary-font);
         font-size: 22px;
-        color: var(--dark-color);
+        color: $dark-color;
         font-weight: 500;
       }
       h2 {
         font-family: var(--primary-font);
         font-size: 55px;
         line-height: 75px;
-        color: var(--dark-color);
+        color: $dark-color;
         font-weight: 500;
       }
       p {
         font-family: var(--primary-font);
         font-size: 17px;
         line-height: 30px;
-        color: var(--dark-color);
+        color: $dark-color;
         font-weight: 400;
       }
 
@@ -76,7 +78,7 @@
           h6 {
             font-family: var(--primary-font);
             font-size: 22px;
-            color: var(--dark-color);
+            color: $dark-color;
             font-weight: 400;
           }
           ul {
@@ -88,7 +90,7 @@
           ul li {
             font-family: var(--primary-font);
             font-size: 16px;
-            color: var(--dark-color);
+            color: $dark-color;
             font-weight: 400;
           }
           .color-wrapper {
@@ -112,7 +114,7 @@
         h6 {
           font-family: var(--primary-font);
           font-size: 22px;
-          color: var(--dark-color);
+          color: $dark-color;
           font-weight: 400;
         }
 
@@ -137,7 +139,7 @@
         h2 {
           font-family: var(--primary-font);
           font-size: 40px;
-          color: var(--dark-color);
+          color: $dark-color;
           font-weight: 500;
         }
         .buy-btns-wrapper {
@@ -147,7 +149,7 @@
             width: 150px;
             height: 50px;
             color: #fff;
-            background-color: var(--orange-color);
+            background-color: $orange-color;
             font-family: var(--primary-font);
             border: none;
             display: flex;
@@ -158,7 +160,7 @@
             width: 60px;
             height: 50px;
             color: #fff;
-            background-color: var(--green-color);
+            background-color: $green-color;
             border: none;
             display: flex;
             align-items: center;
@@ -170,7 +172,7 @@
             width: 60px;
             height: 50px;
             color: #fff;
-            background-color: var(--green-color);
+            background-color: $green-color;
             border: none;
             display: flex;
             align-items: center;

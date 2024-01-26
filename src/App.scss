@@ -40,3 +40,17 @@ body {
 li {
   list-style: none;
 }
+
+.double-inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 15px;
+  margin: 10px 0;
+}
+
+.triple-inputs {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  grid-gap: 15px;
+  margin: 10px 0;
+}

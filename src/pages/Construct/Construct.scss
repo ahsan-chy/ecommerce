@@ -1,3 +1,5 @@
+@import "../../assets/Variables/Variables.scss";
+
 .construct-wrapper {
   padding: 44.4px 0 0 65.4px;
   width: 100%;
@@ -9,7 +11,7 @@
         font-size: 20px;
         line-height: 26px;
         font-weight: 400;
-        color: var(--dark-color);
+        color: $dark-color;
       }
     }
   }
@@ -43,14 +45,14 @@
           font-size: 40px;
           line-height: 60px;
           font-weight: 500;
-          color: var(--dark-color);
+          color: $dark-color;
         }
         > p {
           font-family: var(--primary-font);
           font-size: 17px;
           line-height: 32px;
           font-weight: 400;
-          color: var(--dark-color);
+          color: $dark-color;
           margin-top: 15px;
         }
 
@@ -62,14 +64,14 @@
             font-size: 26px;
             line-height: 36px;
             font-weight: 500;
-            color: var(--dark-color);
+            color: $dark-color;
           }
           p {
             font-family: var(--primary-font);
             font-size: 12px;
             line-height: 24px;
             font-weight: 400;
-            color: var(--dark-color);
+            color: $dark-color;
             margin-top: 14px;
           }
           .colors-row {
@@ -101,14 +103,14 @@
             font-size: 26px;
             line-height: 36px;
             font-weight: 500;
-            color: var(--dark-color);
+            color: $dark-color;
           }
           p {
             font-family: var(--primary-font);
             font-size: 12px;
             line-height: 24px;
             font-weight: 400;
-            color: var(--dark-color);
+            color: $dark-color;
             margin-top: 14px;
           }
 
@@ -134,14 +136,14 @@
             font-size: 26px;
             line-height: 36px;
             font-weight: 500;
-            color: var(--dark-color);
+            color: $dark-color;
           }
           p {
             font-family: var(--primary-font);
             font-size: 12px;
             line-height: 24px;
             font-weight: 400;
-            color: var(--dark-color);
+            color: $dark-color;
             margin-top: 14px;
           }
           .images-row {
@@ -316,7 +318,7 @@
           .preview-section {
             h4 {
               font-size: 16px;
-              line-height: 16px   ;
+              line-height: 16px;
             }
             p {
               margin-top: 7px;

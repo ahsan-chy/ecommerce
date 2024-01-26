@@ -1,0 +1,36 @@
+@import "../../assets//Variables/Variables.scss";
+
+.inputs-wrapper {
+    display: grid;
+
+  label {
+    font-family: var(--secondary-font);
+    font-size: 17px;
+    line-height: 40px;
+    font-weight: 400;
+    color: $dark-color;
+    span{
+        color: #D53434;
+        margin-left: 10px;
+    }
+  }
+  input {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid $dark-color;
+    outline: none;
+    background-color: transparent;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 1400px) {
+    .inputs-wrapper {
+    
+      label {
+        font-size: 13px;
+        line-height: 30px;
+      }
+    }
+    
+}
