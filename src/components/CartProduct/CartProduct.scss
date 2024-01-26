@@ -27,7 +27,7 @@
   }
   .right-cart-description {
     p {
-      font-family: var(--primary-font);
+      font-family: $primary-font;
       font-size: 19px;
       line-height: 40px;
       font-weight: 400;
@@ -37,7 +37,7 @@
       margin-top: 45px;
     }
     h2 {
-      font-family: var(--primary-font);
+      font-family: $primary-font;
       font-size: 40px;
       line-height: 80px;
       font-weight: 500;
@@ -50,14 +50,14 @@
       margin-top: 45px;
       .size {
         p {
-          font-family: var(--primary-font);
+          font-family: $primary-font;
           font-size: 14px;
           line-height: 28px;
           font-weight: 400;
           color: $dark-color;
         }
         h2 {
-          font-family: var(--primary-font);
+          font-family: $primary-font;
           font-size: 22px;
           line-height: 30px;
           font-weight: 500;
@@ -66,7 +66,7 @@
       }
       .cart-color {
         p {
-          font-family: var(--primary-font);
+          font-family: $primary-font;
           font-size: 14px;
           line-height: 28px;
           font-weight: 400;
@@ -81,7 +81,7 @@
       }
       .cart-quantity {
         p {
-          font-family: var(--primary-font);
+          font-family: $primary-font;
           font-size: 14px;
           line-height: 28px;
           font-weight: 400;
@@ -92,7 +92,7 @@
           gap: 15px;
           align-items: center;
           .dec {
-            font-family: var(--secondary-font);
+            font-family: $secondary-font;
             font-size: 22px;
             line-height: 30px;
             font-weight: 400;
@@ -100,14 +100,14 @@
             cursor: pointer;
           }
           h6 {
-            font-family: var(--primary-font);
+            font-family: $primary-font;
             font-size: 22px;
             line-height: 30px;
             font-weight: 400;
             color: $dark-color;
           }
           .inc {
-            font-family: var(--secondary-font);
+            font-family: $secondary-font;
             font-size: 22px;
             line-height: 30px;
             font-weight: 400;
@@ -118,14 +118,14 @@
       }
       .cart-price {
         p {
-          font-family: var(--primary-font);
+          font-family: $primary-font;
           font-size: 14px;
           line-height: 28px;
           font-weight: 400;
           color: $dark-color;
         }
         h4 {
-          font-family: var(--primary-font);
+          font-family: $primary-font;
           font-size: 22px;
           line-height: 30px;
           font-weight: 400;

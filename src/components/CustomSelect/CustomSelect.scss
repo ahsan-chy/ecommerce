@@ -19,7 +19,7 @@
     text-transform: capitalize;
     margin-left: auto;
     margin-right: auto;
-    font-family: var(--secondary-font);
+    font-family: $secondary-font;
     font-size: 12px;
     line-height: 0.7px;
     color: $dark-color;
@@ -50,7 +50,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease-in-out;
-  font-family: var(--secondary-font);
+  font-family: $secondary-font;
   font-size: 14px;
   color: $dark-color;
   font-weight: 400;

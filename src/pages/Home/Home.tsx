@@ -6,7 +6,7 @@ import ArrowWhite from "@/assets/icons/arrow-white.svg";
 import { useNavigate } from "react-router";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Home = (props: { activeCollection: any; pageType: string }) => {
+const Home = (props: { activeCollection: any; pageType?: string }) => {
   const {
     activeCollection,
     pageType, // VOTING - HOME

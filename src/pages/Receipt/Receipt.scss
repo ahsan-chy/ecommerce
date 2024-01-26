@@ -1,0 +1,120 @@
+@import "../../assets/Variables/Variables.scss";
+
+.receipt-wrapper {
+  padding: 44.4px 0 0 65.4px;
+  font-family: $primary-font;
+
+  .top-wrapper {
+    .receipt-header-text {
+      p {
+        font-size: 20px;
+        line-height: 26px;
+        font-weight: 400;
+        color: $dark-color;
+      }
+    }
+  }
+
+  .receipt-details {
+    padding: 30px 40px 0 95px;
+    width: 100%;
+    h2 {
+      font-size: 40px;
+      line-height: 60px;
+      font-weight: 500;
+      color: $dark-color;
+    }
+    > p {
+      font-size: 12px;
+      line-height: 26px;
+      font-weight: 400;
+      color: $dark-color;
+    }
+
+    .receipt-box {
+      .receipt-left {
+        .receipt-wrapper {
+            h4{
+
+            }
+            p{
+
+            }
+            .receipt-divider{
+
+            }
+            .receipt-double-divider{
+
+            }
+            ul:first-child{
+                li{
+                    span{
+                        
+                    }
+                }
+            }
+            ul{
+                li{
+                    span{
+
+                    }
+                }
+            }
+            .discount-row{
+                span{
+
+                }
+            }
+            .payment-type{
+                ul{
+                    li{
+                        span{
+
+                        }
+                    }
+                }
+            }
+            .total-charges{
+                span{
+
+                }
+            }
+            .qr-code-box{
+                .qr-code{
+                    img{
+
+                    }
+                }
+                p{
+
+                }
+            }
+        }
+      }
+      .receipt-right {
+        .receipt-back-wrapper {
+        }
+        h1 {
+        }
+        p {
+        }
+        .bottom-description {
+          h5 {
+          }
+          p {
+          }
+          .receipt-cards-wrapper {
+            .card {
+              p {
+              }
+              h4 {
+              }
+              p:last-child {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

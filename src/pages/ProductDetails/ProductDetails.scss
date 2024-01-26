@@ -10,14 +10,14 @@
     margin-top: 30px;
 
     h2 {
-      font-family: var(--primary-font);
+      font-family: $primary-font;
       font-size: 35px;
       line-height: 60px;
       color: $dark-color;
       font-weight: 600;
     }
     p {
-      font-family: var(--primary-font);
+      font-family: $primary-font;
       font-size: 12px;
       line-height: 24px;
       color: $dark-color;
@@ -49,20 +49,20 @@
     .right-product-details-wrapper {
       p:first-child {
         margin-top: 30px;
-        font-family: var(--primary-font);
+        font-family: $primary-font;
         font-size: 22px;
         color: $dark-color;
         font-weight: 500;
       }
       h2 {
-        font-family: var(--primary-font);
+        font-family: $primary-font;
         font-size: 55px;
         line-height: 75px;
         color: $dark-color;
         font-weight: 500;
       }
       p {
-        font-family: var(--primary-font);
+        font-family: $primary-font;
         font-size: 17px;
         line-height: 30px;
         color: $dark-color;
@@ -76,7 +76,7 @@
         margin-top: 20px;
         .col {
           h6 {
-            font-family: var(--primary-font);
+            font-family: $primary-font;
             font-size: 22px;
             color: $dark-color;
             font-weight: 400;
@@ -88,7 +88,7 @@
           }
 
           ul li {
-            font-family: var(--primary-font);
+            font-family: $primary-font;
             font-size: 16px;
             color: $dark-color;
             font-weight: 400;
@@ -112,7 +112,7 @@
       .other-section {
         margin-top: 21px;
         h6 {
-          font-family: var(--primary-font);
+          font-family: $primary-font;
           font-size: 22px;
           color: $dark-color;
           font-weight: 400;
@@ -137,7 +137,7 @@
         justify-content: space-between;
         align-items: center;
         h2 {
-          font-family: var(--primary-font);
+          font-family: $primary-font;
           font-size: 40px;
           color: $dark-color;
           font-weight: 500;
@@ -150,7 +150,7 @@
             height: 50px;
             color: #fff;
             background-color: $orange-color;
-            font-family: var(--primary-font);
+            font-family: $primary-font;
             border: none;
             display: flex;
             align-items: center;

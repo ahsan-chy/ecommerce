@@ -1,0 +1,56 @@
+@import "../../../../assets/Variables/Variables.scss";
+
+.constructor-menu-wrapper {
+  width: 320px;
+  margin-top: auto;
+  .confirm-construct-menu {
+    background-color: $green-color;
+    height: 143px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    margin-top: 2px;
+    cursor: pointer;
+
+    h3 {
+      font-family: $primary-font;
+      font-size: 26px;
+      line-height: 30px;
+      font-weight: 500;
+      color: #fff;
+      img {
+        margin-left: 20px;
+      }
+    }
+    p {
+      font-family: $primary-font;
+      font-size: 14px;
+      line-height: 28px;
+      font-weight: 400;
+      color: #fff;
+      margin-top: 14px;
+    }
+  }
+}
+
+@media (max-width: 1715px) {
+  .constructor-menu-wrapper {
+    width: 240px;
+    .confirm-construct-menu {
+      height: 105px;
+
+      h3 {
+        font-size: 17px;
+        line-height: 20px;
+        img {
+          margin-left: 10px;
+          width: 40px;
+        }
+      }
+      p {
+        font-size: 11px;
+        line-height: 20px;
+      }
+    }
+  }
+}

@@ -17,6 +17,7 @@ import Voting from "@/pages/Voting/Voting";
 import VotingAll from "@/pages/VotingAll/VotingAll";
 import Cart from "@/pages/Cart/Cart";
 import ShipPayment from "@/pages/ShipPayment/ShipPayment";
+import Receipt from "@/pages/Receipt/Receipt";
 
 function Routers() {
   const [activeCollection, setActiveCollection] = useState(collectionNav[0]);
@@ -43,6 +44,7 @@ function Routers() {
           <Route path="/voting-all" element={<VotingAll />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/shipping-and-payment" element={<ShipPayment />} />
+          <Route path="/receipt" element={<Receipt />} />
 
           <Route path="/404" element={<NotFound />} />
           <Route path="*" element={<Navigate to="/404" replace />} />

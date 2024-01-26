@@ -12,7 +12,7 @@
     .top-wrapper {
       .offer-header-text {
         p {
-          font-family: var(--primary-font);
+          font-family: $primary-font;
           font-size: 20px;
           line-height: 26px;
           font-weight: 400;
@@ -24,14 +24,14 @@
       margin-bottom: 10px;
       .offer-wrap {
         h1 {
-          font-family: var(--secondary-font);
+          font-family: $secondary-font;
           font-size: 70px;
           font-weight: 400;
           line-height: 85px;
           color: $dark-color;
         }
         p {
-          font-family: var(--secondary-font);
+          font-family: $secondary-font;
           font-size: 15px;
           line-height: 29px;
           color: $dark-color;
@@ -64,21 +64,21 @@
           .offer-content {
             z-index: 1;
             p {
-              font-family: var(--secondary-font);
+              font-family: $secondary-font;
               font-size: 19px;
               line-height: 35px;
               color: #fff;
               font-weight: 400;
             }
             h3 {
-              font-family: var(--secondary-font);
+              font-family: $secondary-font;
               font-size: 44px;
               line-height: 61px;
               color: #fff;
               font-weight: 500;
             }
             p:last-child {
-              font-family: var(--secondary-font);
+              font-family: $secondary-font;
               font-size: 14px;
               line-height: 28px;
               color: #fff;

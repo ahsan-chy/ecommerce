@@ -1,17 +1,17 @@
 @import "../../assets//Variables/Variables.scss";
 
 .inputs-wrapper {
-    display: grid;
+  display: grid;
 
   label {
-    font-family: var(--secondary-font);
+    font-family: $secondary-font;
     font-size: 17px;
     line-height: 40px;
     font-weight: 400;
     color: $dark-color;
-    span{
-        color: #D53434;
-        margin-left: 10px;
+    span {
+      color: #d53434;
+      margin-left: 10px;
     }
   }
   input {
@@ -25,12 +25,10 @@
 }
 
 @media (max-width: 1400px) {
-    .inputs-wrapper {
-    
-      label {
-        font-size: 13px;
-        line-height: 30px;
-      }
+  .inputs-wrapper {
+    label {
+      font-size: 13px;
+      line-height: 30px;
     }
-    
+  }
 }

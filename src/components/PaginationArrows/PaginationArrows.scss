@@ -1,3 +1,5 @@
+@import "../../assets/Variables/Variables.scss";
+
 .pagination-wrapper {
   display: flex;
   gap: 15px;
@@ -7,7 +9,7 @@
   }
   .count-wrapper {
     span {
-      font-family: var(--primary-font);
+      font-family: $primary-font;
       font-size: 15px;
       line-height: 18px;
       font-weight: 500;

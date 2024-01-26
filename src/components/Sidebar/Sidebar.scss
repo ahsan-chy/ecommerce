@@ -1,7 +1,9 @@
+@import "../../assets/Variables/Variables.scss";
+
 .navbar-container {
   height: 100vh;
   white-space: nowrap;
-  font-family: var(--primary-font);
+  font-family: $primary-font;
   position: sticky;
   top: 0;
   left: 0;

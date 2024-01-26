@@ -6,7 +6,7 @@
   .top-wrapper {
     .products-header-text {
       p {
-        font-family: var(--primary-font);
+        font-family: $primary-font;
         font-size: 20px;
         line-height: 26px;
         font-weight: 400;
@@ -21,7 +21,7 @@
       position: relative;
       display: inline-block;
       h1 {
-        font-family: var(--secondary-font);
+        font-family: $secondary-font;
         font-size: 370px;
         font-weight: 500;
         color: #c83640;
@@ -37,7 +37,7 @@
 
     .description-wrapper {
       p {
-        font-family: var(--primary-font);
+        font-family: $primary-font;
         font-size: 17px;
         line-height: 32px;
         color: $dark-color;

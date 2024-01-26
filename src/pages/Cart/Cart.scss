@@ -6,7 +6,7 @@
   .top-wrapper {
     .cart-header-text {
       p {
-        font-family: var(--primary-font);
+        font-family: $primary-font;
         font-size: 20px;
         line-height: 26px;
         font-weight: 400;
@@ -18,14 +18,14 @@
     padding: 30px 40px 0 95px;
     width: 100%;
     h2 {
-      font-family: var(--primary-font);
+      font-family: $primary-font;
       font-size: 40px;
       line-height: 60px;
       font-weight: 500;
       color: $dark-color;
     }
     p {
-      font-family: var(--primary-font);
+      font-family: $primary-font;
       font-size: 12px;
       line-height: 26px;
       font-weight: 400;
@@ -54,14 +54,14 @@
             }
             .basic-details {
               p {
-                font-family: var(--primary-font);
+                font-family: $primary-font;
                 font-size: 14px;
                 line-height: 22px;
                 font-weight: 400;
                 color: $dark-color;
               }
               h4 {
-                font-family: var(--primary-font);
+                font-family: $primary-font;
                 font-size: 26px;
                 line-height: 50px;
                 font-weight: 500;
@@ -70,14 +70,14 @@
             }
             .size {
               p {
-                font-family: var(--primary-font);
+                font-family: $primary-font;
                 font-size: 14px;
                 line-height: 28px;
                 font-weight: 400;
                 color: $dark-color;
               }
               h2 {
-                font-family: var(--primary-font);
+                font-family: $primary-font;
                 font-size: 22px;
                 line-height: 30px;
                 font-weight: 500;
@@ -86,7 +86,7 @@
             }
             .cart-color {
               p {
-                font-family: var(--primary-font);
+                font-family: $primary-font;
                 font-size: 14px;
                 line-height: 28px;
                 font-weight: 400;
@@ -101,7 +101,7 @@
             }
             .cart-quantity {
               p {
-                font-family: var(--primary-font);
+                font-family: $primary-font;
                 font-size: 14px;
                 line-height: 28px;
                 font-weight: 400;
@@ -112,7 +112,7 @@
                 gap: 15px;
                 align-items: center;
                 .dec {
-                  font-family: var(--secondary-font);
+                  font-family: $secondary-font;
                   font-size: 22px;
                   line-height: 30px;
                   font-weight: 400;
@@ -120,14 +120,14 @@
                   cursor: pointer;
                 }
                 h6 {
-                  font-family: var(--primary-font);
+                  font-family: $primary-font;
                   font-size: 22px;
                   line-height: 30px;
                   font-weight: 400;
                   color: $dark-color;
                 }
                 .inc {
-                  font-family: var(--secondary-font);
+                  font-family: $secondary-font;
                   font-size: 22px;
                   line-height: 30px;
                   font-weight: 400;
@@ -138,14 +138,14 @@
             }
             .cart-price {
               p {
-                font-family: var(--primary-font);
+                font-family: $primary-font;
                 font-size: 14px;
                 line-height: 28px;
                 font-weight: 400;
                 color: $dark-color;
               }
               h4 {
-                font-family: var(--primary-font);
+                font-family: $primary-font;
                 font-size: 22px;
                 line-height: 30px;
                 font-weight: 400;

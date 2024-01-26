@@ -1,11 +1,17 @@
 import { useState } from "react";
-import { useNavigate } from "react-router";
+import { useLocation, useNavigate } from "react-router";
 import "./Sidebar.scss";
 
 import Cart from "@/assets/icons/cart.svg";
 import MenuBurger from "@/assets/icons/menu-burger.svg";
 import Heart from "@/assets/icons/heart.svg";
 import { collectionNav } from "@/db/collectionNew";
+import ConstructorMenu from "./components/ConstructorMenu/ConstructorMenu";
+import SpecialProductMenu from "./components/SpecialProductMenu/SpecialProductMenu";
+import VotingMenu from "./components/VotingMenu/VotingMenu";
+import CartMenu from "./components/CartMenu/CartMenu";
+import ShippingPaymentMenu from "./components/ShippingPaymentMenu/ShippingPaymentMenu";
+import HomeMenu from "./components/HomeMenu/HomeMenu";
 
 const sidebarData = [
   {
@@ -78,9 +84,13 @@ const creativeUserOptions = [
 const Sidebar = (props: { handleActive: any }) => {
   const { handleActive } = props;
 
+  const location = useLocation();
   const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // const pathnames = location.pathname.slice(1);
+  const pathnames = location.pathname.substring(1);   
 
   return (
     <div className="navbar-container">
@@ -155,18 +165,21 @@ const Sidebar = (props: { handleActive: any }) => {
           </div>
         </div>
 
-        {/* {collectionNav.map((navData) => (
-          <div
-            className="nav-item collection-nav"
-            onClick={() => handleActive(navData)}
-            key={navData.id}>
-            <img src={navData.mainImage} alt="" />
-            <div>
-              <p>{navData.title}</p>
-              <h3>{navData.heading}</h3>
-            </div>
-          </div>
-        ))} */}
+        {pathnames === "" ? (
+          <HomeMenu collectionNav={collectionNav} handleActive={handleActive} />
+        ) : pathnames === "construct" ? (
+          <ConstructorMenu />
+        ) : pathnames === "special-product" ? (
+          <SpecialProductMenu />
+        ) : pathnames === "voting" ? (
+          <VotingMenu />
+        ) : pathnames === "cart" ? (
+          <CartMenu />
+        ) : pathnames === "shipping-and-payment" ? (
+          <ShippingPaymentMenu />
+        ) : (
+          <>...</>
+        )}
       </div>
     </div>
   );

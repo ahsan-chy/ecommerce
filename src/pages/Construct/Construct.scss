@@ -7,7 +7,7 @@
   .top-wrapper {
     .products-header-text {
       p {
-        font-family: var(--primary-font);
+        font-family: $primary-font;
         font-size: 20px;
         line-height: 26px;
         font-weight: 400;
@@ -41,14 +41,14 @@
       .constructor-details {
         max-width: 650px;
         h3 {
-          font-family: var(--primary-font);
+          font-family: $primary-font;
           font-size: 40px;
           line-height: 60px;
           font-weight: 500;
           color: $dark-color;
         }
         > p {
-          font-family: var(--primary-font);
+          font-family: $primary-font;
           font-size: 17px;
           line-height: 32px;
           font-weight: 400;
@@ -60,14 +60,14 @@
           margin-top: 30px;
 
           h4 {
-            font-family: var(--primary-font);
+            font-family: $primary-font;
             font-size: 26px;
             line-height: 36px;
             font-weight: 500;
             color: $dark-color;
           }
           p {
-            font-family: var(--primary-font);
+            font-family: $primary-font;
             font-size: 12px;
             line-height: 24px;
             font-weight: 400;
@@ -99,14 +99,14 @@
 
         .design-section {
           h4 {
-            font-family: var(--primary-font);
+            font-family: $primary-font;
             font-size: 26px;
             line-height: 36px;
             font-weight: 500;
             color: $dark-color;
           }
           p {
-            font-family: var(--primary-font);
+            font-family: $primary-font;
             font-size: 12px;
             line-height: 24px;
             font-weight: 400;
@@ -132,14 +132,14 @@
         }
         .preview-section {
           h4 {
-            font-family: var(--primary-font);
+            font-family: $primary-font;
             font-size: 26px;
             line-height: 36px;
             font-weight: 500;
             color: $dark-color;
           }
           p {
-            font-family: var(--primary-font);
+            font-family: $primary-font;
             font-size: 12px;
             line-height: 24px;
             font-weight: 400;

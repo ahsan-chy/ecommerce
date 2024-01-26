@@ -14,7 +14,7 @@
 }
 
 .products-left-wrapper .products-header-text p {
-  font-family: var(--primary-font);
+  font-family: $primary-font;
   font-size: 20px;
   line-height: 26px;
   font-weight: 400;
@@ -27,7 +27,7 @@
 }
 
 .products-left-title h2 {
-  font-family: var(--secondary-font);
+  font-family: $secondary-font;
   font-size: 90px;
   letter-spacing: 5px;
   font-weight: 400;
@@ -36,7 +36,7 @@
 }
 
 .products-left-title p {
-  font-family: var(--primary-font);
+  font-family: $primary-font;
   font-size: 17px;
   line-height: 32px;
   color: $dark-color;
@@ -52,14 +52,14 @@
 
     .right-top-text-wrapper {
       p {
-        font-family: var(--primary-font);
+        font-family: $primary-font;
         font-size: 17px;
         line-height: 32px;
         color: $dark-color;
         font-weight: 500;
       }
       h3 {
-        font-family: var(--primary-font);
+        font-family: $primary-font;
         font-size: 44px;
         line-height: 60px;
         color: $dark-color;
@@ -122,7 +122,7 @@
           cursor: pointer;
 
           p {
-            font-family: var(--primary-font);
+            font-family: $primary-font;
             font-size: 14px;
             line-height: 16.04px;
             color: $dark-color;

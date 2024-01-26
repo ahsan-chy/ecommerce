@@ -18,7 +18,6 @@ const CustomSelect: React.FC<CustomSelectProps> = ({ options, filterType }) => {
     setSelectedOption(value);
     setIsDropdownOpen(false);
   };
-  console.log("filterType", filterType);
   return (
     <div className={`custom-select ${isDropdownOpen ? "open" : ""}`}>
       <div
