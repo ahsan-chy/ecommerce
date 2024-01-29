@@ -18,13 +18,13 @@ const Receipt = () => {
 
           <div className="receipt-box">
             <div className="receipt-left">
-              <div className="receipt-wrapper">
+              <div className="receipt-wrapper-left">
                 <h4>Clothes Designer</h4>
                 <p>creative clothing store</p>
 
-                <div className="receipt-divider"></div>
+                <div></div>
 
-                <ul>
+                <ul className="top-divider">
                   <li>
                     <span>T-Shirt</span>
                     <span>x 1</span>
@@ -43,26 +43,20 @@ const Receipt = () => {
                   <li>
                     <span>T-Shirt</span>
                     <span>x 1</span>
-                    <span>52.99$</span>
-                  </li>
-                  <li>
-                    <span>T-Shirt</span>
                     <span>52.99$</span>
                   </li>
                 </ul>
                 <ul>
                   <li>
-                    <span>T-Shirt</span>
-                    <span>52.99$</span>
+                    <span>Delivery</span>
+                    <span>Free</span>
                   </li>
                 </ul>
 
-                <div className="receipt-divider"></div>
                 <div className="discount-row">
                   <span>Discount</span>
                   <span>40.99$</span>
                 </div>
-                <div className="receipt-divider"></div>
                 <div className="payment-type">
                   <ul>
                     <li>
@@ -77,7 +71,7 @@ const Receipt = () => {
                 </div>
                 <div className="total-charges">
                   <span>Paid</span>
-                  <span>119.48$</span>
+                  <span className="total-price">119.48$</span>
                 </div>
                 <div className="receipt-double-divider"></div>
                 <div className="receipt-double-divider"></div>
@@ -100,11 +94,44 @@ const Receipt = () => {
               <div className="bottom-description">
                 <h5>See also</h5>
                 <p>See our new products in various product categories</p>
-                <div className="receipt-cards-wrapper">
-                  <div className="card">
-                    <p>Special offer</p>
-                    <h4>Urban</h4>
-                    <p>Collection of youth elongated T-shirts with cuffs on the sleeves. </p>
+                <div className="offer-right">
+                  <div className="offer-row">
+                    <div className="offer-column">
+                      <div className="offer-footer offer-first">
+                        <div className="offer-content">
+                          <p>Special Offer</p>
+                          <h3>Style Who?</h3>
+                          <p>Collection of youth elongated T-shirts with cuffs on the sleeves.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="offer-column">
+                      <div className="offer-footer offer-second">
+                        <div className="offer-content">
+                          <p>Urban</p>
+                          <h3>Style Who?</h3>
+                          <p>Collection of youth elongated T-shirts with cuffs on the sleeves.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="offer-column">
+                      <div className="offer-footer offer-third">
+                        <div className="offer-content ">
+                          <p>Modern</p>
+                          <h3>Style Who?</h3>
+                          <p>Collection of youth elongated T-shirts with cuffs on the sleeves.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="offer-column">
+                      <div className="offer-footer offer-forth">
+                        <div className="offer-content ">
+                          <p>Modern</p>
+                          <h3>Style Who?</h3>
+                          <p>Collection of youth elongated T-shirts with cuffs on the sleeves.</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

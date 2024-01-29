@@ -32,84 +32,499 @@
     }
 
     .receipt-box {
+      display: flex;
+      gap: 80px;
       .receipt-left {
-        .receipt-wrapper {
-            h4{
-
+        width: 387px;
+        background-color: #fff;
+        .receipt-wrapper-left {
+          padding: 34px;
+          h4 {
+            font-size: 26px;
+            line-height: 28px;
+            font-weight: 500;
+            color: $dark-color;
+            text-align: center;
+          }
+          p {
+            font-size: 16px;
+            line-height: 28px;
+            font-weight: 500;
+            color: $dark-color;
+            text-align: center;
+          }
+          .receipt-double-divider {
+            height: 1px;
+            width: 100%;
+            margin-top: 5px;
+            background-color: black;
+          }
+          ul:first-child {
+            border-top: 2px dotted black;
+            margin-top: 10px;
+            li {
+              span {
+                font-size: 16px;
+                line-height: 30px;
+                font-weight: 500;
+                color: $dark-color;
+              }
             }
-            p{
-
+          }
+          ul {
+            li {
+              display: flex;
+              justify-content: space-between;
+              padding-top: 12px;
+              span {
+                font-size: 16px;
+                line-height: 30px;
+                font-weight: 500;
+                color: $dark-color;
+              }
             }
-            .receipt-divider{
-
+          }
+          .top-divider {
+            border-top: 2px dotted black;
+            margin-top: 20px;
+          }
+          .discount-row {
+            display: flex;
+            justify-content: space-between;
+            border-top: 2px dotted black;
+            margin-top: 20px;
+            padding-top: 10px;
+            span {
+              font-size: 16px;
+              line-height: 30px;
+              font-weight: 500;
+              color: $dark-color;
             }
-            .receipt-double-divider{
-
-            }
-            ul:first-child{
-                li{
-                    span{
-                        
-                    }
+          }
+          .payment-type {
+            ul {
+              li {
+                span {
+                  font-size: 16px;
+                  line-height: 30px;
+                  font-weight: 500;
+                  color: $dark-color;
                 }
+              }
             }
-            ul{
-                li{
-                    span{
-
-                    }
-                }
+          }
+          .total-charges {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span {
+              font-size: 16px;
+              line-height: 30px;
+              font-weight: 500;
+              color: $dark-color;
             }
-            .discount-row{
-                span{
-
-                }
+            .total-price {
+              font-family: $primary-font;
+              font-size: 22px;
+              font-weight: 500;
+              margin-top: 15px;
             }
-            .payment-type{
-                ul{
-                    li{
-                        span{
-
-                        }
-                    }
-                }
+          }
+          .qr-code-box {
+            .qr-code {
+              width: 30px;
+              height: 30px;
+              border: 1px solid black;
+              margin: 10px auto;
+              img {
+              }
             }
-            .total-charges{
-                span{
-
-                }
+            p {
             }
-            .qr-code-box{
-                .qr-code{
-                    img{
-
-                    }
-                }
-                p{
-
-                }
-            }
+          }
         }
       }
       .receipt-right {
         .receipt-back-wrapper {
         }
         h1 {
+          font-size: 55px;
+          line-height: 100px;
+          font-weight: 500;
+          color: $dark-color;
+          letter-spacing: 3px;
         }
-        p {
+        > p {
+          font-size: 22px;
+          line-height: 100px;
+          font-weight: 500;
+          color: $dark-color;
         }
         .bottom-description {
           h5 {
+            font-size: 26px;
+            line-height: 30px;
+            font-weight: 500;
+            color: $dark-color;
           }
           p {
+            font-size: 17px;
+            line-height: 32px;
+            font-weight: 500;
+            color: $dark-color;
           }
-          .receipt-cards-wrapper {
-            .card {
+          .offer-right {
+            margin-top: 20px;
+            .offer-row {
+              display: flex;
+              justify-content: space-between;
+              column-gap: 12px;
+              height: 100%;
+              .offer-column {
+                .offer-footer {
+                  height: 300px;
+                  width: 185px;
+                  background-size: cover;
+                  background-position: center;
+                  padding: 0 15px 15px 15px;
+                  text-align: left;
+                  display: flex;
+                  align-items: flex-end;
+                  gap: 15px;
+                  .offer-content {
+                    z-index: 1;
+                    p {
+                      font-family: $secondary-font;
+                      font-size: 9px;
+                      line-height: 26px;
+                      color: #fff;
+                      font-weight: 400;
+                    }
+                    h3 {
+                      font-family: $secondary-font;
+                      font-size: 22px;
+                      line-height: 28px;
+                      color: #fff;
+                      font-weight: 500;
+                    }
+                    p:last-child {
+                      font-family: $secondary-font;
+                      font-size: 8px;
+                      line-height: 12px;
+                      color: #fff;
+                      font-weight: 400;
+                    }
+                  }
+                }
+
+                .offer-first {
+                  background-image: url(../../assets/images/f1.png);
+                }
+                .offer-second {
+                  background-image: url(../../assets/images/f2.png);
+                }
+                .offer-third {
+                  background-image: url(../../assets/images/f3.png);
+                }
+                .offer-forth {
+                  background-image: url(../../assets/images/f4.png);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1715px) {
+  .receipt-wrapper {
+    padding: 28px 20px 0 28px;
+    font-family: $primary-font;
+
+    .top-wrapper {
+      .receipt-header-text {
+        p {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .receipt-details {
+      padding: 30px 0 0 65px;
+      h2 {
+        font-size: 25px;
+        line-height: 30px;
+      }
+      > p {
+        font-size: 12px;
+        line-height: 26px;
+      }
+
+      .receipt-box {
+        gap: 40px;
+        .receipt-left {
+          width: 330px;
+          .receipt-wrapper-left {
+            padding: 20px;
+            h4 {
+              font-size: 21px;
+              line-height: 22px;
+            }
+            p {
+              font-size: 11px;
+              line-height: 22px;
+            }
+            ul:first-child {
+              margin-top: 10px;
+              li {
+                span {
+                  font-size: 12px;
+                  line-height: 20px;
+                }
+              }
+            }
+            ul {
+              li {
+                padding-top: 10px;
+                span {
+                  font-size: 12px;
+                  line-height: 20px;
+                }
+              }
+            }
+            .top-divider {
+              margin-top: 10px;
+            }
+            .discount-row {
+              margin-top: 10px;
+              padding-top: 10px;
+              span {
+                font-size: 12px;
+                line-height: 20px;
+              }
+            }
+            .payment-type {
+              ul {
+                li {
+                  span {
+                    font-size: 12px;
+                    line-height: 20px;
+                  }
+                }
+              }
+            }
+            .total-charges {
+              span {
+                font-size: 12px;
+                line-height: 20px;
+              }
+              .total-price {
+                font-size: 16px;
+                margin-top: 10px;
+              }
+            }
+            .qr-code-box {
+              .qr-code {
+                width: 20px;
+                height: 20px;
+                margin: 5px auto;
+                img {
+                }
+              }
               p {
               }
-              h4 {
+            }
+          }
+        }
+        .receipt-right {
+          h1 {
+            font-size: 45px;
+            line-height: 70px;
+            letter-spacing: 1px;
+          }
+          > p {
+            font-size: 15px;
+            line-height: 40px;
+          }
+          .bottom-description {
+            h5 {
+              font-size: 20px;
+              line-height: 20px;
+            }
+            p {
+              font-size: 15px;
+              line-height: 22px;
+            }
+            .offer-right {
+              margin-top: 15px;
+              .offer-row {
+                column-gap: 10px;
+                .offer-column {
+                  .offer-footer {
+                    width: 160px;
+                    .offer-content {
+                      p {
+                      }
+                      h3 {
+                        font-size: 18px;
+                        line-height: 25px;
+                      }
+                      p:last-child {
+                      }
+                    }
+                  }
+                }
               }
-              p:last-child {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1400px) {
+  .receipt-wrapper {
+    padding: 28px 20px 0 28px;
+    font-family: $primary-font;
+
+    .top-wrapper {
+      .receipt-header-text {
+        p {
+          font-size: 16px;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .receipt-details {
+      padding: 30px 0 0 65px;
+      h2 {
+        font-size: 20px;
+        line-height: 30px;
+      }
+      > p {
+        font-size: 10px;
+        line-height: 26px;
+      }
+
+      .receipt-box {
+        .receipt-left {
+          width: 287px;
+          .receipt-wrapper-left {
+            padding: 15px;
+            h4 {
+              font-size: 17px;
+              line-height: 22px;
+            }
+            p {
+              font-size: 10px;
+              line-height: 22px;
+            }
+            ul:first-child {
+              margin-top: 10px;
+              li {
+                span {
+                  font-size: 10px;
+                  line-height: 15px;
+                }
+              }
+            }
+            ul {
+              li {
+                padding-top: 7px;
+                span {
+                  font-size: 10px;
+                  line-height: 15px;
+                }
+              }
+            }
+            .top-divider {
+              margin-top: 10px;
+            }
+            .discount-row {
+              margin-top: 10px;
+              padding-top: 10px;
+              span {
+                font-size: 10px;
+                  line-height: 15px;
+              }
+            }
+            .payment-type {
+              ul {
+                li {
+                  span {
+                    font-size: 10px;
+                    line-height: 15px;
+                  }
+                }
+              }
+            }
+            .total-charges {
+              span {
+                font-size: 10px;
+                  line-height: 15px;
+              }
+              .total-price {
+                font-size: 16px;
+                margin-top: 10px;
+              }
+            }
+            .qr-code-box {
+              .qr-code {
+                width: 20px;
+                height: 20px;
+                margin: 5px auto;
+                img {
+                }
+              }
+              p {
+              }
+            }
+          }
+        }
+        .receipt-right {
+          h1 {
+            font-size: 40px;
+            line-height: 70px;
+            letter-spacing: 1px;
+          }
+          > p {
+            font-size: 15px;
+            line-height: 40px;
+          }
+          .bottom-description {
+            h5 {
+              font-size: 20px;
+              line-height: 20px;
+            }
+            p {
+              font-size: 15px;
+              line-height: 22px;
+            }
+            .offer-right {
+              margin-top: 15px;
+              .offer-row {
+                column-gap: 10px;
+                .offer-column {
+                  .offer-footer {
+                    height: 175px;
+                    width: 107px;
+                    padding: 0 10px 10px 10px;
+                    .offer-content {
+                      p {
+                      }
+                      h3 {
+                        font-size: 15px;
+                      }
+                      p:last-child {
+                      }
+                    }
+                  }
+                }
               }
             }
           }

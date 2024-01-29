@@ -1,14 +1,14 @@
-import "./CartMenu.scss";
+import "./SingleCartMenu.scss";
 import ArrowWhite from "@/assets/icons/long-white-arrow.svg";
 
-const CartMenu = () => {
+const SingleCartMenu = () => {
   return (
-    <div className="cart-menu-wrapper">
-      <div className="cart-menu-details">
+    <div className="single-cart-menu-wrapper">
+      <div className="single-cart-menu-details">
         <ul>
           <li>
             <span>Quantity</span>
-            <span>5</span>
+            <span>1</span>
           </li>
           <li>
             <span>Total</span>
@@ -22,7 +22,7 @@ const CartMenu = () => {
         <ul>
           <li>
             <span>To pay</span>
-            <span className="cart-total-price">119.48$</span>
+            <span className="menu-total-price">119.48$</span>
           </li>
         </ul>
       </div>
@@ -34,4 +34,4 @@ const CartMenu = () => {
   );
 };
 
-export default CartMenu;
+export default SingleCartMenu;

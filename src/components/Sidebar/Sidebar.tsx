@@ -12,6 +12,7 @@ import VotingMenu from "./components/VotingMenu/VotingMenu";
 import CartMenu from "./components/CartMenu/CartMenu";
 import ShippingPaymentMenu from "./components/ShippingPaymentMenu/ShippingPaymentMenu";
 import HomeMenu from "./components/HomeMenu/HomeMenu";
+import SingleCartMenu from "./components/SingleCartMenu/SingleCartMenu";
 
 const sidebarData = [
   {
@@ -90,7 +91,7 @@ const Sidebar = (props: { handleActive: any }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // const pathnames = location.pathname.slice(1);
-  const pathnames = location.pathname.substring(1);   
+  const pathnames = location.pathname.substring(1);
 
   return (
     <div className="navbar-container">
@@ -175,10 +176,12 @@ const Sidebar = (props: { handleActive: any }) => {
           <VotingMenu />
         ) : pathnames === "cart" ? (
           <CartMenu />
+        ) : pathnames === "single-cart" ? (
+          <SingleCartMenu />
         ) : pathnames === "shipping-and-payment" ? (
           <ShippingPaymentMenu />
         ) : (
-          <>...</>
+          <></>
         )}
       </div>
     </div>
