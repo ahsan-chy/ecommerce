@@ -36,11 +36,13 @@ const Products = () => {
             <p>Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will</p>
           </div>
           <div className="right-top-img-wrapper">
-            <img src={ProductTopImg} alt="products-image" />
-            <button>
-              SEE ALL
-              <img src={Arrow} alt="products-image" />
-            </button>
+            <div className="right-products-wrapper">
+              <img src={ProductTopImg} alt="products-image" />
+              <button>
+                SEE ALL
+                <img src={Arrow} alt="products-image" />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -48,7 +50,9 @@ const Products = () => {
           <div className="products-wrapper">
             {productsData.slice(0, 4).map((product) => (
               <div className="product-card" key={product.id}>
-                <img src={`${product.img}`} alt="img" />
+                <div className="product-img-wrapper">
+                  <img src={`${product.img}`} alt="img" />
+                </div>
                 <div className="divider-products"></div>
                 <div className="title" onClick={handleNavigate}>
                   <p>{product.name}</p>
@@ -60,7 +64,9 @@ const Products = () => {
           <div className="products-wrapper">
             {productsData.slice(4, 9).map((product) => (
               <div className="product-card" key={product.id}>
-                <img src={`${product.img}`} alt="img" />
+                <div className="product-img-wrapper">
+                  <img src={`${product.img}`} alt="img" />
+                </div>
                 <div className="divider-products"></div>
                 <div className="title" onClick={handleNavigate}>
                   <p>{product.name}</p>
