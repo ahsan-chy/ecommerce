@@ -11,6 +11,7 @@ import subimg5 from "@/assets/images/subimg5.png";
 import PaginationArrows from "@/components/PaginationArrows/PaginationArrows";
 import FilterDropdown from "@/components/FilterDropdown/FilterDropdown";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
+import { motion } from "framer-motion";
 
 const sortBy = [
   { value: "new", label: "New" },
@@ -59,7 +60,9 @@ function ProductDetails() {
           <FilterDropdown title="Color" options={color} />
           <FilterDropdown title="Size" options={size} />
         </div>
-        <div className="products-wrapper">
+        <motion.div className="products-wrapper"  initial={{ opacity: 0, x: +100 }}
+        animate={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
+        exit={{ opacity: 0, x: +100 }}>
           <div className="left-img-wrapper">
             <img src={ProductDetailsImg} alt="" />
           </div>
@@ -143,7 +146,7 @@ function ProductDetails() {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
         <div className="product_details-pagination">
           <PaginationArrows current={"0"} length={"30"} />
         </div>

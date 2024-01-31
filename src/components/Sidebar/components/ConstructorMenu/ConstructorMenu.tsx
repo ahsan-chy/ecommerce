@@ -1,10 +1,18 @@
 import "./ConstructorMenu.scss";
 import ArrowWhite from "@/assets/icons/long-white-arrow.svg";
+import { motion } from "framer-motion";
+import { useNavigate } from "react-router";
 
 const ConstructorMenu = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="constructor-menu-wrapper">
-      <div className="confirm-construct-menu">
+    <motion.div
+      className="constructor-menu-wrapper"
+      initial={{ opacity: 0, x: +100 }}
+      animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+      exit={{ opacity: 0, x: +100 }}>
+      <div className="confirm-construct-menu" onClick={() => navigate("/confirm-construct")}>
         <h3>
           To Vote
           <img src={ArrowWhite} alt="" />
@@ -18,7 +26,7 @@ const ConstructorMenu = () => {
         </h3>
         <p>Checkout created t-shirt </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

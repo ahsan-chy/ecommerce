@@ -3,6 +3,7 @@ import CreateShirt from "@/assets/images/create-shirt.png";
 import "./Create.scss";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import { useNavigate } from "react-router";
+import { motion } from "framer-motion";
 
 const Create = () => {
   const navigate = useNavigate();
@@ -17,10 +18,20 @@ const Create = () => {
           </div>
         </div>
         <div className="creater-box">
-          <div className="create-left">
+          <motion.div
+            className="create-left"
+            initial={{ opacity: 0, y: +100 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: 1 } }}
+            exit={{ opacity: 0, y: +100 }}>
             <div className="create-text-image">
               <h1>Create</h1>
-              <img src={CreateShirt} alt="" />
+              <motion.img
+                src={CreateShirt}
+                alt=""
+                initial={{ opacity: 0, y: +50 }}
+                animate={{ opacity: 1, y: 0, transition: { duration: 1, delay: 1 } }}
+                exit={{ opacity: 0, y: +50 }}
+              />
             </div>
             <div className="description-wrapper">
               <p>
@@ -36,7 +47,7 @@ const Create = () => {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </SideMarginWrapper>

@@ -9,7 +9,7 @@ import Create from "@/pages/Create/Create";
 import Construct from "@/pages/Construct/Construct";
 import ConfirmConstruct from "@/pages/ConfirmConstruct/ConfirmConstruct";
 import AboutUs from "@/pages/AboutUs/AboutUs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { collectionNav } from "@/db/collectionNew";
 import SpecialOffer from "@/pages/SpecialOffer/SpecialOffer";
 import SpecialProduct from "@/pages/SpecialProduct/SpecialProduct";
@@ -19,6 +19,8 @@ import Cart from "@/pages/Cart/Cart";
 import ShipPayment from "@/pages/ShipPayment/ShipPayment";
 import Receipt from "@/pages/Receipt/Receipt";
 import SingleCart from "@/pages/SingleCart/SingleCart";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 function Routers() {
   const [activeCollection, setActiveCollection] = useState(collectionNav[0]);
@@ -26,6 +28,11 @@ function Routers() {
   const handleActive = (selectedState: any) => {
     setActiveCollection(selectedState);
   };
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <Router>
       <div style={{ display: "flex" }}>

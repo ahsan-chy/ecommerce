@@ -6,9 +6,10 @@ import specialFirst from "@/assets/images/special-first.png";
 import specialSub from "@/assets/images/special-sub-img.png";
 import BackNavigation from "@/components/BackNavigation/BackNavigation";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
+import { motion } from "framer-motion";
 
 const SpecialProduct = () => {
-  return ( 
+  return (
     <SideMarginWrapper>
       <div className="special-root">
         <div className="special-left">
@@ -18,21 +19,33 @@ const SpecialProduct = () => {
               <p>Designer</p>
             </div>
           </div>
-          <div className="special-back-wrapper">
+          <motion.div
+            className="special-back-wrapper"
+            initial={{ opacity: 0, x: +100 }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            exit={{ opacity: 0, x: +100 }}>
             <BackNavigation navigateTo={"special-offer"} pageName={"Back to all offers"} />
-          </div>
+          </motion.div>
           <div className="special-left-title">
-            <div className="special-titles-wrapper">
+            <motion.div
+              className="special-titles-wrapper"
+              initial={{ opacity: 0, x: +100 }}
+              animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.1 } }}
+              exit={{ opacity: 0, x: +100 }}>
               <p>design by</p>
               <p>#namedesigner</p>
-            </div>
-            <div className="special-wrap">
+            </motion.div>
+            <motion.div
+              className="special-wrap"
+              initial={{ opacity: 0, x: +100 }}
+              animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.2 } }}
+              exit={{ opacity: 0, x: +100 }}>
               <h1>Who Are You? Collections</h1>
               <p>
                 New collections at a special price. Only the first two weeks since the appearance of
                 the collection is a special offer.
               </p>
-            </div>
+            </motion.div>
           </div>
         </div>
         <div className="special-second">
@@ -52,7 +65,11 @@ const SpecialProduct = () => {
         </div>
         <div className="special-right">
           <div className="special-row">
-            <div className="special-column">
+            <motion.div
+              className="special-column"
+              initial={{ opacity: 0, x: "10%" }}
+              animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+              exit={{ opacity: 0, x: "10%" }}>
               <div className="special-footer special-first">
                 <div className="special-overlay"></div>
                 <div className="hovered-special">
@@ -66,7 +83,7 @@ const SpecialProduct = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

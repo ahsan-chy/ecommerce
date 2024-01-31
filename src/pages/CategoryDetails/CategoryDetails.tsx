@@ -4,6 +4,7 @@ import Arrow from "@/assets/icons/arrow-white.svg";
 import { shirtsData } from "@/db/shirtsData";
 import FilterDropdown from "@/components/FilterDropdown/FilterDropdown";
 import { useNavigate } from "react-router";
+import { motion } from "framer-motion";
 
 const sortBy = [
   { value: "new", label: "New" },
@@ -39,27 +40,44 @@ function CategoryDetails() {
 
   return (
     <div className="category-details-container">
-      <div className="breadcrumb-wrapper">
+      <motion.div
+        className="breadcrumb-wrapper"
+        initial={{ opacity: 0, x: +100 }}
+        animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+        exit={{ opacity: 0, x: +100 }}>
         <Breadcrumb />
-      </div>
-      <div className="category-title">
+      </motion.div>
+      <motion.div
+        className="category-title"
+        initial={{ opacity: 0, x: +100 }}
+        animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+        exit={{ opacity: 0, x: +100 }}>
         <h2>T-Shirt Collections</h2>
         <p>
           Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will give you
           confidence in a big city.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="filter-category">
+      <motion.div
+        className="filter-category"
+        initial={{ opacity: 0, x: +100 }}
+        animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+        exit={{ opacity: 0, x: +100 }}>
         <FilterDropdown title="Sort By" options={sortBy} />
         <FilterDropdown title="Gender" options={gender} />
         <FilterDropdown title="Model" options={model} />
         <FilterDropdown title="Color" options={color} />
         <FilterDropdown title="Size" options={size} />
-      </div>
+      </motion.div>
       <div className="category-wrapper">
         {shirtsData.map((product) => (
-          <div className="product-card" key={product.id}>
+          <motion.div
+            className="product-card"
+            key={product.id}
+            initial={{ opacity: 0, x: +100 }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.3 } }}
+            exit={{ opacity: 0, x: +100 }}>
             <div className="image-wrapper">
               <img src={product.img} alt="" />
             </div>
@@ -76,7 +94,7 @@ function CategoryDetails() {
                 </button>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>

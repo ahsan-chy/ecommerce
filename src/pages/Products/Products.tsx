@@ -3,15 +3,16 @@ import "./Products.scss";
 import ProductTopImg from "@/assets/images/For-Photo.png";
 import Arrow from "@/assets/icons/Arrow.svg";
 import { useNavigate } from "react-router";
+import { motion } from "framer-motion";
 
 const Products = () => {
   const navigate = useNavigate();
   const handleNavigate = () => {
-    navigate("/product-details");
+    navigate("/category-details");
   };
 
   return (
-    <div className="products-container">
+    <motion.div className="products-container">
       {/* //* Left */}
       <div className="products-left-wrapper">
         <div className="products-header-text">
@@ -36,17 +37,25 @@ const Products = () => {
             <p>Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will</p>
           </div>
           <div className="right-top-img-wrapper">
-            <div className="right-products-wrapper">
+            <motion.div
+              className="right-products-wrapper"
+              initial={{ opacity: 0, x: +100 }}
+              animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+              exit={{ opacity: 0, x: +100 }}>
               <img src={ProductTopImg} alt="products-image" />
               <button>
                 SEE ALL
                 <img src={Arrow} alt="products-image" />
               </button>
-            </div>
+            </motion.div>
           </div>
         </div>
 
-        <div className="product-category-root">
+        <motion.div
+          className="product-category-root"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1, transition: { duration: 1 } }}
+          exit={{ opacity: 0 }}>
           <div className="products-wrapper">
             {productsData.slice(0, 4).map((product) => (
               <div className="product-card" key={product.id}>
@@ -75,9 +84,9 @@ const Products = () => {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

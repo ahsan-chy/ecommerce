@@ -3,9 +3,9 @@ import CreateShirt from "@/assets/images/create-shirt.png";
 import ArrowWhite from "@/assets/icons/long-white-arrow.svg";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import BackNavigation from "@/components/BackNavigation/BackNavigation";
+import { motion } from "framer-motion";
 
 const ConfirmConstruct = () => {
-
   return (
     <SideMarginWrapper>
       <div className="confirm-construct-wrapper">
@@ -16,12 +16,32 @@ const ConfirmConstruct = () => {
           </div>
         </div>
         <div className="content-data-wrapper">
-          <h2>To Vote</h2>
-          <p>Give a description of your design, and send it to the competition.</p>
+          <motion.h2
+            initial={{ x: +50 }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
+            exit={{ x: +50 }}>
+            To Vote
+          </motion.h2>
+          <motion.p
+            initial={{ x: +50 }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
+            exit={{ x: +50 }}>
+            Give a description of your design, and send it to the competition.
+          </motion.p>
 
-          <div className="vot-form-wrapper">
+          <motion.div
+            className="vot-form-wrapper"
+            initial={{ x: +50 }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
+            exit={{ x: +50 }}>
             <div className="left-form">
-              <img src={CreateShirt} alt="CreateShirt" />
+              <motion.img
+                src={CreateShirt}
+                alt="CreateShirt"
+                initial={{ scale: 1.3 }}
+                animate={{ opacity: 1, scale: 1, transition: { duration: 0.7 } }}
+                exit={{ scale: 1.3 }}
+              />
             </div>
             <div className="right-content-wrapper">
               <div className="right-form">
@@ -46,9 +66,13 @@ const ConfirmConstruct = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="vote-footer">
+          <motion.div
+            className="vote-footer"
+            initial={{ x: +50 }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
+            exit={{ x: +50 }}>
             <div className="to-vote-wrapper">
               <h3>
                 To Vote
@@ -60,7 +84,7 @@ const ConfirmConstruct = () => {
             <div className="construct-back-wrapper">
               <BackNavigation navigateTo={"construct"} pageName={"Back to constructor"} />
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </SideMarginWrapper>

@@ -1,8 +1,13 @@
 import "./SpecialProductMenu.scss";
+import { motion } from "framer-motion";
 
 const SpecialProductMenu = () => {
   return (
-    <div className="product-menu-wrapper">
+    <motion.div
+      className="product-menu-wrapper"
+      initial={{ opacity: 0, x: +100 }}
+      animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.1 } }}
+      exit={{ opacity: 0, x: +100 }}>
       <div className="varients">
         <div className="row">
           <div className="col">
@@ -33,7 +38,7 @@ const SpecialProductMenu = () => {
         <h2>$52.99</h2>
       </div>
       <button>BUY NOW</button>
-    </div>
+    </motion.div>
   );
 };
 

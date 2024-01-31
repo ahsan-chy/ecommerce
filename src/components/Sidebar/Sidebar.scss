@@ -36,10 +36,19 @@
         justify-content: space-between;
 
         div {
-          width: 10px;
-          height: 10px;
+          width: 11px;
+          height: 11px;
           border: 1px solid black;
           border-radius: 50%;
+          box-sizing: border-box;
+          cursor: pointer;
+        }
+        .active-circle {
+          width: 11px;
+          height: 11px;
+          border: 1px solid $dark-color;
+          border-radius: 50%;
+          background-color: $dark-color;
           box-sizing: border-box;
           cursor: pointer;
         }
@@ -66,7 +75,6 @@
     }
 
     .leftbar-2 {
-      // width: 270px;
       background-color: var(--primary-color);
       color: white;
       display: flex;
@@ -137,12 +145,15 @@
           font-size: 20px;
           cursor: pointer;
 
-          div {
+          .active {
             position: absolute;
             left: 0;
             width: 75px;
             border: 1px solid white;
             top: 50%;
+            transition: border 0.5s ease-out;
+          }
+          .de-active {
           }
         }
         li:hover {

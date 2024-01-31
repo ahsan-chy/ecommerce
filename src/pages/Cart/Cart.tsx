@@ -4,7 +4,7 @@ import deleteIcon from "@/assets/icons/delate-icons.png";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import BackNavigation from "@/components/BackNavigation/BackNavigation";
 import { products } from "@/db/products";
-import CartProduct from "@/components/CartProduct/CartProduct";
+import { motion } from "framer-motion";
 
 const Cart = () => {
   return (
@@ -22,7 +22,12 @@ const Cart = () => {
           <div className="cart-list">
             <ul className="cart-container">
               {products.map((data) => (
-                <li className="cart-row" key={data.id}>
+                <motion.li
+                  className="cart-row"
+                  key={data.id}
+                  initial={{ opacity: 0, x: +100 }}
+                  animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: '0.1' } }}
+                  exit={{ opacity: 0, x: +100 }}>
                   <div className="cart-data">
                     <div className="cart-img-wrapper">
                       <img src={data.img} alt="" />
@@ -56,7 +61,7 @@ const Cart = () => {
                       <img src={deleteIcon} alt="" />
                     </div>
                   </div>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>

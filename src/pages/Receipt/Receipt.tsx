@@ -1,6 +1,7 @@
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import "./Receipt.scss";
 import BackNavigation from "@/components/BackNavigation/BackNavigation";
+import { motion } from "framer-motion";
 
 const Receipt = () => {
   return (
@@ -13,11 +14,25 @@ const Receipt = () => {
           </div>
         </div>
         <div className="receipt-details">
-          <h2>Receipt</h2>
-          <p>Specify the delivery address and payment method</p>
+          <motion.h2
+            initial={{ opacity: 0, x: "-10%" }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            exit={{ opacity: 0, x: "-10%" }}>
+            Receipt
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, x: "-10%" }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+            exit={{ opacity: 0, x: "-10%" }}>
+            Specify the delivery address and payment method
+          </motion.p>
 
           <div className="receipt-box">
-            <div className="receipt-left">
+            <motion.div
+              className="receipt-left"
+              initial={{ opacity: 0, x: "-30%" }}
+              animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.1 } }}
+              exit={{ opacity: 0, x: "-30%" }}>
               <div className="receipt-wrapper-left">
                 <h4>Clothes Designer</h4>
                 <p>creative clothing store</p>
@@ -82,21 +97,49 @@ const Receipt = () => {
                   <p>THANK YOU FOR YOUR PURCHASE</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
             <div className="receipt-right">
-              <div className="receipt-back-wrapper">
+              <motion.div
+                className="receipt-back-wrapper"
+                initial={{ opacity: 0, x: "-10%" }}
+                animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+                exit={{ opacity: 0, x: "-10%" }}>
                 <BackNavigation navigateTo={"/"} pageName={"Back to home"} />
-              </div>
+              </motion.div>
 
-              <h1>Thanks for your order</h1>
-              <p>We will ship your order within 2 days.</p>
+              <motion.h1
+                initial={{ opacity: 0, x: "-10%" }}
+                animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.2 } }}
+                exit={{ opacity: 0, x: "-10%" }}>
+                Thanks for your order
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, x: "-10%" }}
+                animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.2 } }}
+                exit={{ opacity: 0, x: "-10%" }}>
+                We will ship your order within 2 days.
+              </motion.p>
 
               <div className="bottom-description">
-                <h5>See also</h5>
-                <p>See our new products in various product categories</p>
+                <motion.h5
+                  initial={{ opacity: 0, x: "-10%" }}
+                  animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.2 } }}
+                  exit={{ opacity: 0, x: "-10%" }}>
+                  See also
+                </motion.h5>
+                <motion.p
+                  initial={{ opacity: 0, x: "-10%" }}
+                  animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.2 } }}
+                  exit={{ opacity: 0, x: "-10%" }}>
+                  See our new products in various product categories
+                </motion.p>
                 <div className="offer-right">
                   <div className="offer-row">
-                    <div className="offer-column">
+                    <motion.div
+                      className="offer-column"
+                      initial={{ opacity: 0, x: "-40%" }}
+                      animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.1 } }}
+                      exit={{ opacity: 0, x: "-40%" }}>
                       <div className="offer-footer offer-first">
                         <div className="offer-content">
                           <p>Special Offer</p>
@@ -104,8 +147,12 @@ const Receipt = () => {
                           <p>Collection of youth elongated T-shirts with cuffs on the sleeves.</p>
                         </div>
                       </div>
-                    </div>
-                    <div className="offer-column">
+                    </motion.div>
+                    <motion.div
+                      className="offer-column"
+                      initial={{ opacity: 0, x: "-40%" }}
+                      animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.2 } }}
+                      exit={{ opacity: 0, x: "-40%" }}>
                       <div className="offer-footer offer-second">
                         <div className="offer-content">
                           <p>Urban</p>
@@ -113,8 +160,12 @@ const Receipt = () => {
                           <p>Collection of youth elongated T-shirts with cuffs on the sleeves.</p>
                         </div>
                       </div>
-                    </div>
-                    <div className="offer-column">
+                    </motion.div>
+                    <motion.div
+                      className="offer-column"
+                      initial={{ opacity: 0, x: "-40%" }}
+                      animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.1 } }}
+                      exit={{ opacity: 0, x: "-40%" }}>
                       <div className="offer-footer offer-third">
                         <div className="offer-content ">
                           <p>Modern</p>
@@ -122,8 +173,12 @@ const Receipt = () => {
                           <p>Collection of youth elongated T-shirts with cuffs on the sleeves.</p>
                         </div>
                       </div>
-                    </div>
-                    <div className="offer-column">
+                    </motion.div>
+                    <motion.div
+                      className="offer-column"
+                      initial={{ opacity: 0, x: "-40%" }}
+                      animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.2 } }}
+                      exit={{ opacity: 0, x: "-40%" }}>
                       <div className="offer-footer offer-forth">
                         <div className="offer-content ">
                           <p>Modern</p>
@@ -131,7 +186,7 @@ const Receipt = () => {
                           <p>Collection of youth elongated T-shirts with cuffs on the sleeves.</p>
                         </div>
                       </div>
-                    </div>
+                    </motion.div>
                   </div>
                 </div>
               </div>

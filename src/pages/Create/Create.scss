@@ -24,7 +24,13 @@
         font-family: $secondary-font;
         font-size: 370px;
         font-weight: 500;
-        color: #c83640;
+        background-image: -webkit-linear-gradient(
+          25deg,
+          rgba(240, 100, 20, 1) 0%,
+          rgba(246, 62, 78, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       img {

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { useLocation, useNavigate } from "react-router";
+import { useEffect, useState } from "react";
+import { To, useLocation, useNavigate } from "react-router";
 import "./Sidebar.scss";
 
 import Cart from "@/assets/icons/cart.svg";
@@ -13,6 +13,9 @@ import CartMenu from "./components/CartMenu/CartMenu";
 import ShippingPaymentMenu from "./components/ShippingPaymentMenu/ShippingPaymentMenu";
 import HomeMenu from "./components/HomeMenu/HomeMenu";
 import SingleCartMenu from "./components/SingleCartMenu/SingleCartMenu";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { motion } from "framer-motion";
 
 const sidebarData = [
   {
@@ -35,24 +38,18 @@ const sidebarData = [
   },
   {
     key: 4,
-    text: "Constuctor",
-    path: "/construct",
-    isActive: false,
-  },
-  {
-    key: 5,
     text: "Special Offer",
     path: "/special-offer",
     isActive: false,
   },
   {
-    key: 6,
-    text: "Help & FAQ",
+    key: 5,
+    text: "FAQ",
     path: "/about",
     isActive: false,
   },
   {
-    key: 7,
+    key: 6,
     text: "Favorites",
     path: "/favorites",
     icon: (
@@ -89,9 +86,23 @@ const Sidebar = (props: { handleActive: any }) => {
   const navigate = useNavigate();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [SelectedRoute, setSelectedRoute] = useState(sidebarData);
 
-  // const pathnames = location.pathname.slice(1);
   const pathnames = location.pathname.substring(1);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  const handleActiveRoute = (param: { path: string }) => {
+    navigate(param.path);
+    setSelectedRoute((prev) =>
+      prev.map((item) => ({
+        ...item,
+        isActive: item === param ? true : false,
+      }))
+    );
+  };
 
   return (
     <div className="navbar-container">
@@ -101,12 +112,13 @@ const Sidebar = (props: { handleActive: any }) => {
             {!isMenuOpen ? <img src={MenuBurger} alt="" /> : <img src={MenuBurger} alt="" />}
           </div>
           <div className="dot-icons-list">
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
-            <div />
+            {SelectedRoute.slice(0, 5).map((side, index) => (
+              <div
+                onClick={() => handleActiveRoute(side)}
+                key={index}
+                className={`${side.isActive === true ? "active-circle" : ""}`}
+              />
+            ))}
           </div>
         </div>
 
@@ -115,9 +127,9 @@ const Sidebar = (props: { handleActive: any }) => {
 
           <div className="primary-menu-options">
             <ul>
-              {sidebarData.map((menuItem, index) => (
-                <li key={index} onClick={() => navigate(menuItem.path)}>
-                  {menuItem.isActive && <div />}
+              {SelectedRoute.map((menuItem, index) => (
+                <li key={index} onClick={() => handleActiveRoute(menuItem)}>
+                  <div className={`menu ${menuItem.isActive ? "active" : "de-active"}`} />
                   <span
                     style={{ marginLeft: menuItem.isActive ? "95px" : "45px" }}
                     className="menuItem-text">
@@ -153,7 +165,11 @@ const Sidebar = (props: { handleActive: any }) => {
         </div>
       </div>
 
-      <div className="rightbar">
+      <motion.div
+        className="rightbar"
+        initial={{ opacity: 0, x: +100 }}
+        animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.7 } }}
+        exit={{ opacity: 0, x: +100 }}>
         <div className="nav-item store-nav">
           <img src={Cart} alt="" />
           <p>150.55 $</p>
@@ -165,7 +181,7 @@ const Sidebar = (props: { handleActive: any }) => {
             <h3>Voting</h3>
           </div>
         </div>
-
+                
         {pathnames === "" ? (
           <HomeMenu collectionNav={collectionNav} handleActive={handleActive} />
         ) : pathnames === "construct" ? (
@@ -183,7 +199,7 @@ const Sidebar = (props: { handleActive: any }) => {
         ) : (
           <></>
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };

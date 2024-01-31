@@ -12,6 +12,7 @@ import design4 from "@/assets/images/design4.png";
 import design5 from "@/assets/images/design5.png";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import PaginationArrows from "@/components/PaginationArrows/PaginationArrows";
+import { motion } from "framer-motion";
 
 const Construct = () => {
   return (
@@ -25,15 +26,23 @@ const Construct = () => {
         </div>
         <div className="constructor-description">
           <div className="left-constructor">
-            <div className="constructor-img-wrapper">
+            <motion.div
+              className="constructor-img-wrapper"
+              initial={{ opacity: 0, x: +50 }}
+              animate={{ opacity: 1, x: 0, transition: { duration: 0.78, delay: 0.2 } }}
+              >
               <img src={CreateShirt} alt="Create-Shirt" />
-            </div>
+            </motion.div>
             <div className="pagination-box">
               <PaginationArrows current={"0"} length={"30"} />
             </div>
           </div>
           <div className="right-constructor">
-            <div className="constructor-details">
+            <motion.div
+              className="constructor-details"
+              initial={{ opacity: 0, x: +50 }}
+              animate={{ opacity: 1, x: 0, transition: { duration: 0.78 } }}
+              >
               <h3>Design Constructor</h3>
               <p>
                 Design your clothes using the colors. Choose a preview for the presentation and send
@@ -100,7 +109,7 @@ const Construct = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
