@@ -19,6 +19,7 @@ import Cart from "@/pages/Cart/Cart";
 import ShipPayment from "@/pages/ShipPayment/ShipPayment";
 import Receipt from "@/pages/Receipt/Receipt";
 import SingleCart from "@/pages/SingleCart/SingleCart";
+
 import Aos from "aos";
 import "aos/dist/aos.css";
 
