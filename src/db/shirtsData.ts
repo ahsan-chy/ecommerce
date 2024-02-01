@@ -42,4 +42,42 @@ export const shirtsData = [
     price: "$ 27.99",
     category: "Men Collections",
   },
+  {
+    id: 4,
+    name: "Gradient",
+    img: shirt1,
+    arival: "New",
+    description:
+      "Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will give you confidence in a big city.",
+    price: "$ 27.99",
+    category: "Men Collections",
+  },
+  {
+    id: 5,
+    name: "Who are you?",
+    img: shirt2,
+    description:
+      "Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will give you confidence in a big city.",
+    price: "$ 27.99",
+    category: "Men Collections",
+  },
+  {
+    id: 6,
+    name: "White M",
+    img: shirt3,
+    description:
+      "Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will give you confidence in a big city.",
+    price: "$ 27.99",
+    category: "Men Collections",
+  },
+  {
+    id: 7,
+    name: "Diagonal",
+    img: shirt4,
+    arival: "Top",
+    description:
+      "Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will give you confidence in a big city.",
+    price: "$ 27.99",
+    category: "Men Collections",
+  },
 ];

@@ -5,8 +5,17 @@
   padding: 47.9px 48.1px;
   width: 100%;
   padding-bottom: 30px;
+  position: relative;
+
   .breadcrumb-wrapper {
   }
+
+  .scroller-wrapper {
+    position: absolute;
+    right: 200px;
+    bottom: 80px;
+  }
+
   .category-title {
     margin-top: 30px;
     h2 {
@@ -30,10 +39,15 @@
     gap: 20.8px;
     margin-top: 20px;
   }
+  .category-wrapper::-webkit-scrollbar {
+    width: 0; /* This will hide the scrollbar */
+  }
   .category-wrapper {
     margin-top: 14px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    max-height: 550px;
+    overflow-y: scroll;
 
     .product-card {
       display: flex;

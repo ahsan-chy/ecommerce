@@ -1,0 +1,29 @@
+.scroll-wrapper {
+  width: 24px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 12.37px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  cursor: pointer;
+  gap: 5px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  .scroll-circle {
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    border-radius: 50%;
+  }
+  img {
+    width: 6px;
+    height: auto;
+    object-fit: contain;
+  }
+  .rotate-img {
+    // rotate: 180deg;
+  }
+}

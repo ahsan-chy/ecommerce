@@ -21,6 +21,59 @@
       justify-content: space-between;
       align-items: center;
 
+      .middle-left {
+        position: relative;
+        .left-menu-wrapper {
+          display: grid;
+          .menu-option-box {
+            width: 156px;
+            height: 140px;
+            background: $green-color;
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            color: #fff;
+            text-align: center;
+            border: 1px solid white;
+            cursor: pointer;
+            p {
+              font-size: 22px;
+              line-height: 30px;
+            }
+            span {
+              font-size: 14px;
+              line-height: 30px;
+            }
+          }
+          .active-menu {
+            background-color: $orange-color;
+          }
+        }
+        .left-sub-men {
+          position: absolute;
+          width: 156px;
+          height: 624px;
+          background-color: $orange-color;
+          left: 161px;
+          top: -73px;
+          display: grid;
+          gap: 20px;
+          align-content: center;
+          padding: 20px;
+          .sub-name {
+            font-size: 18px;
+            line-height: 22px;
+            color: #fff;
+            border-bottom: 1px solid transparent;
+            cursor: pointer;
+          }
+          .sub-name:hover{
+            border-bottom: 1px solid #fff;
+            transition: border 0.2s ease-in;
+          }
+        }
+      }
+
       > div:first-child {
         margin-top: 54px;
         cursor: pointer;
@@ -160,6 +213,20 @@
           font-weight: 600;
         }
       }
+      button {
+        width: 180px;
+        height: 55px;
+        color: #fff;
+        background-color: #f19942;
+        border: none;
+        text-align: center;
+        margin: 0 auto;
+        cursor: pointer;
+      }
+    }
+    .noflex {
+      justify-content: unset;
+      gap: 58px;
     }
 
     .leftbar-2-open {
@@ -271,6 +338,36 @@
     .leftbar {
       .leftbar-1 {
         width: 100px;
+        .middle-left {
+          position: relative;
+          .left-menu-wrapper {
+            display: grid;
+            .menu-option-box {
+              width: 98px;
+              height: 90px;
+              p {
+                font-size: 15px;
+                line-height: 10px;
+              }
+              span {
+                font-size: 11px;
+                line-height: 20px;
+              }
+            }
+          }
+          .left-sub-men {
+            height: 424px;
+            left: 101px;
+            top: -65px;
+            gap: 15px;
+            padding: 20px;
+            .sub-name {
+              font-size: 15px;
+              line-height: 22px;
+              color: #fff;
+            }
+          }
+        }
         > div:first-child {
           img {
             width: 20px;
