@@ -26,7 +26,7 @@ const Cart = () => {
                   className="cart-row"
                   key={data.id}
                   initial={{ opacity: 0, x: +100 }}
-                  animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: '0.1' } }}
+                  animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.1 } }}
                   exit={{ opacity: 0, x: +100 }}>
                   <div className="cart-data">
                     <div className="cart-img-wrapper">

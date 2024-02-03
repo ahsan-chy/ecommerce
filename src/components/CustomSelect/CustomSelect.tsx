@@ -9,7 +9,7 @@ interface CustomSelectProps {
 const CustomSelect: React.FC<CustomSelectProps> = ({ options, filterType }) => {
   const [selectedOption, setSelectedOption] = useState(options[0]?.value || "Select");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const dropdownRef = useRef(null);
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);

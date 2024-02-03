@@ -259,7 +259,7 @@ const Sidebar = (props: { handleActive: any }) => {
                     <span
                       style={{ marginLeft: menuItem.isActive ? "95px" : "45px" }}
                       className="menuItem-text">
-                      {menuItem.icon} {menuItem.text}
+                      {menuItem.text}
                     </span>
                   </li>
                 ))}

@@ -38,7 +38,7 @@ const size = [
 function CategoryDetails() {
   const navigate = useNavigate();
   
-  const [scrollY, setScrollY] = useState(0);
+  const [, setScrollY] = useState(0);
 
   const handleNavigate = () => {
     navigate("/product-details");

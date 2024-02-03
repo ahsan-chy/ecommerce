@@ -1,9 +1,7 @@
 import "./SingleCart.scss";
 
-import deleteIcon from "@/assets/icons/delate-icons.png";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import BackNavigation from "@/components/BackNavigation/BackNavigation";
-import { products } from "@/db/products";
 import CartProduct from "@/components/CartProduct/CartProduct";
 
 const SingleCart = () => {
