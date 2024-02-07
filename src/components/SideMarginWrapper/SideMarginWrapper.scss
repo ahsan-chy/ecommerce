@@ -9,3 +9,9 @@
     margin-right: 240px;
   }
 }
+
+@media (max-width: 768px) {
+  .side-margin-wrapper {
+    margin-right: 0;
+  }
+}

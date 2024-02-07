@@ -277,3 +277,102 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .cart-wrapper {
+    padding: 10px 10px 0 !important;
+
+    .top-wrapper {
+      .cart-header-text {
+        p {
+          font-size: 10px !important;
+          line-height: 14px !important;
+        }
+      }
+    }
+    .cart-details {
+      padding: 10px 10px 0 !important;
+      h2 {
+        font-size: 20px !important;
+      }
+      p {
+        font-size: 10px !important;
+        line-height: 18px !important;
+      }
+      .cart-list {
+        ul {
+          li {
+            .cart-data {
+              grid-template-columns: 1fr 2fr 1fr 1fr 1.2fr 1fr 1fr;
+              .cart-img-wrapper {
+                width: 80px !important;
+              }
+              .basic-details {
+                p {
+                  font-size: 8px !important;
+                  line-height: 14px !important;
+                }
+                h4 {
+                  font-size: 11px !important;
+                  line-height: 14px !important;
+                }
+              }
+              .size {
+                p {
+                  font-size: 8px !important;
+                  line-height: 14px !important;
+                }
+                h2 {
+                  font-size: 12px !important;
+                  line-height: 20px !important;
+                }
+              }
+              .cart-color {
+                p {
+                  font-size: 8px !important;
+                  line-height: 14px !important;
+                }
+              }
+              .cart-quantity {
+                p {
+                  font-size: 8px !important;
+                  line-height: 14px !important;
+                }
+                .counter-wrapper {
+                  gap: 4px;
+                  .dec {
+                    font-size: 12px !important;
+                    line-height: 20px !important;
+                  }
+                  h6 {
+                    font-size: 12px !important;
+                    line-height: 20px !important;
+                  }
+                  .inc {
+                    font-size: 12px !important;
+                    line-height: 20px !important;
+                  }
+                }
+              }
+              .cart-price {
+                p {
+                  font-size: 8px !important;
+                  line-height: 14px !important;
+                }
+                h4 {
+                  font-size: 10px !important;
+                  line-height: 20px !important;
+                }
+              }
+              .close-box {
+                img {
+                  width: 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

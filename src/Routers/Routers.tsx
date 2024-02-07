@@ -29,7 +29,7 @@ function Routers() {
 
   return (
     <Router>
-      <div style={{ display: "flex" }}>
+      <div className="global-box">
         <Sidebar handleActive={handleActive} />
         <Routes>
           <Route path="/" element={<Home activeCollection={activeCollection} />} />

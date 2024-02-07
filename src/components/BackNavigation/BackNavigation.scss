@@ -31,3 +31,18 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .back-pagination {
+    margin: 10px 0;
+    gap: 5px;
+    img {
+      width: 15px;
+    }
+    .name-wrapper {
+      span {
+        font-size: 10px;
+      }
+    }
+  }
+}

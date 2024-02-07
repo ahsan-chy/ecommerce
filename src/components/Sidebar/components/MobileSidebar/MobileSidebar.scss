@@ -1,0 +1,16 @@
+.mobile-menu-wrapper {
+  display: none;
+}
+@media (max-width: 768px) {
+  .mobile-menu-wrapper {
+    display: block;
+    .mobile-burger {
+      width: 14px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}

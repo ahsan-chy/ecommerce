@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router";
 import "./Sidebar.scss";
 
 import Cart from "@/assets/icons/cart.svg";
+import cross from "@/assets/icons/x-button.png";
+import burgericon from "@/assets/icons/right-burger.png";
 import MenuBurger from "@/assets/icons/menu-burger.svg";
 import Heart from "@/assets/icons/heart.svg";
 import { collectionNav } from "@/db/collectionNew";
@@ -13,6 +15,7 @@ import CartMenu from "./components/CartMenu/CartMenu";
 import ShippingPaymentMenu from "./components/ShippingPaymentMenu/ShippingPaymentMenu";
 import HomeMenu from "./components/HomeMenu/HomeMenu";
 import SingleCartMenu from "./components/SingleCartMenu/SingleCartMenu";
+import MobileSidebar from "./components/MobileSidebar/MobileSidebar";
 import { motion } from "framer-motion";
 
 const sidebarData = [
@@ -162,6 +165,8 @@ const Sidebar = (props: { handleActive: any }) => {
   const [leftIsMenuOpen, setleftIsMenuOpen] = useState(false);
   const [SelectedRoute, setSelectedRoute] = useState(sidebarData);
   const [subMenu, setSubMenu] = useState(constructorMenu);
+  const [rightIsMenuOpen, setRightIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const pathnames = location.pathname.substring(1);
 
@@ -236,11 +241,13 @@ const Sidebar = (props: { handleActive: any }) => {
             ))}
           </motion.div>
         </motion.div>
-
         <div
           className={`leftbar-2 ${pathnames}  === "" ? noflex : ""  ${
             isMenuOpen ? "leftbar-2-open" : "leftbar-2-close"
           }`}>
+          <div className="x-btn" onClick={() => setIsMenuOpen((prev) => !prev)}>
+            <img src={cross} alt="" />
+          </div>
           {pathnames === "" ? (
             <h3>Burger Menu</h3>
           ) : (
@@ -255,10 +262,12 @@ const Sidebar = (props: { handleActive: any }) => {
               <ul>
                 {productsMenu.map((menuItem, index) => (
                   <li key={index} onClick={() => handleActiveRoute(menuItem)}>
-                    <div className={`menu ${menuItem.isActive ? "active" : "de-active"}`} />
+                    <div
+                      className={`menu ${menuItem.isActive === true ? "active" : "de-active"}`}
+                    />
                     <span
-                      style={{ marginLeft: menuItem.isActive ? "95px" : "45px" }}
-                      className="menuItem-text">
+                      // style={{ marginLeft: menuItem.isActive === true ? "95px" : "45px" }}
+                      className={`menuItem-text ${menuItem.isActive ? "isActive" : ""}`}>
                       {menuItem.text}
                     </span>
                   </li>
@@ -272,8 +281,8 @@ const Sidebar = (props: { handleActive: any }) => {
                   <li key={index} onClick={() => handleActiveRoute(menuItem)}>
                     <div className={`menu ${menuItem.isActive ? "active" : "de-active"}`} />
                     <span
-                      style={{ marginLeft: menuItem.isActive ? "95px" : "45px" }}
-                      className="menuItem-text">
+                      // style={{ marginLeft: menuItem.isActive ? "95px" : "45px" }}
+                      className={`menuItem-text ${menuItem.isActive ? "isActive" : ""}`}>
                       {menuItem.icon} {menuItem.text}
                     </span>
                   </li>
@@ -289,7 +298,7 @@ const Sidebar = (props: { handleActive: any }) => {
                 {creativeUserOptions.map((menuItem, index) => (
                   <li key={index}>
                     {menuItem.isActive && <div />}
-                    <span style={{ marginLeft: menuItem.isActive ? "95px" : "45px" }}>
+                    <span className={`menuItem-text ${menuItem.isActive ? "isActive" : ""}`}>
                       {menuItem.text}
                     </span>
                   </li>
@@ -310,10 +319,16 @@ const Sidebar = (props: { handleActive: any }) => {
             </div>
           )}
         </div>
+        <MobileSidebar setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
+        <MobileSidebar
+          setIsMenuOpen={setRightIsMenuOpen}
+          isMenuOpen={rightIsMenuOpen}
+          icon={burgericon}
+        />
       </div>
 
       <motion.div
-        className="rightbar"
+        className={`rightbar right-2 ${rightIsMenuOpen ? "right-2-open" : "right-2-close"}`}
         initial={{ opacity: 0, x: +100 }}
         animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.7 } }}
         exit={{ opacity: 0, x: +100 }}>

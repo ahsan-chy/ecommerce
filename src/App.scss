@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 
-
-
 #root {
   --primary-color: #4f9098;
   --secondary-color: #f19942;
@@ -19,9 +17,7 @@
   --green-color: #4f9098;
 }
 
-
-
-// + Break points 
+// + Break points
 
 $xxxl: 1920px;
 $xxl: 1715px;
@@ -55,4 +51,25 @@ li {
   grid-template-columns: 2fr 1fr 2fr;
   grid-gap: 15px;
   margin: 10px 0;
+}
+
+.global-box {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  .double-inputs {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  
+  .triple-inputs {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5px;
+  }
+  .global-box {
+    display: grid;
+    width: 100%;
+  }
+
 }

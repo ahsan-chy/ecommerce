@@ -44,6 +44,15 @@ const ConfirmConstruct = () => {
               />
             </div>
             <div className="right-content-wrapper">
+            <div className="inside-left-form">
+              <motion.img
+                src={CreateShirt}
+                alt="CreateShirt"
+                initial={{ scale: 1.3 }}
+                animate={{ opacity: 1, scale: 1, transition: { duration: 0.7 } }}
+                exit={{ scale: 1.3 }}
+              />
+            </div>
               <div className="right-form">
                 <div className="project-row">
                   <p>Name Project</p>

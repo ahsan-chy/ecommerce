@@ -270,3 +270,57 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .offer-root {
+    grid-template-columns: 1fr;
+    .offer-left {
+      padding: 10px 10px 0;
+      .top-wrapper {
+        .offer-header-text {
+          p {
+            font-size: 10px;
+            line-height: 14px;
+          }
+        }
+      }
+      .offer-left-title {
+        .offer-wrap {
+          h1 {
+            font-size: 25px;
+          }
+          p {
+            font-size: 10px;
+            line-height: 18px;
+          }
+        }
+        .offer-pagination {
+          margin-top: 20px;
+        }
+      }
+    }
+    .offer-right {
+      .offer-row {
+        flex-direction: column;
+        gap: 1px;
+        .offer-column {
+          height: 500px;
+          .offer-footer {
+            justify-content: space-between;
+            background-position: top center;
+            background-size: cover;
+            .offer-overlay {
+              opacity: 25%;
+            }
+
+            .hovered-offer {
+              opacity: 1;
+              visibility: unset;
+            }
+          }
+        }
+
+      }
+    }
+  }
+}

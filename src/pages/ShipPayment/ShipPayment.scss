@@ -106,3 +106,44 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .ship-wrapper {
+    padding: 10px 10px 0;
+
+    .top-wrapper {
+      .ship-header-text {
+        p {
+          font-size: 10px;
+          line-height: 14px;
+        }
+      }
+    }
+    .ship-details {
+      padding: 10px 0 10px 0;
+
+      h2 {
+        font-size: 20px;
+      }
+      > p {
+        font-size: 10px;
+        line-height: 18px;
+      }
+      .shipping-inputs {
+        flex-direction: column;
+        .shipping {
+          gap: 15px;
+
+          .input-row {
+            margin-top: 10px;
+          }
+        }
+        .payment {
+          .input-row {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

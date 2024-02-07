@@ -32,3 +32,18 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .pagination-wrapper {
+    gap: 8px;
+    img {
+      width: 25px;
+    }
+    .count-wrapper {
+      span {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+  }
+}
