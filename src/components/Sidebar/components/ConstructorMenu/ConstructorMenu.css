@@ -1,0 +1,52 @@
+.constructor-menu-wrapper {
+  width: 320px;
+  margin-top: auto;
+}
+.constructor-menu-wrapper .confirm-construct-menu {
+  background-color: #4f9098;
+  height: 143px;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.constructor-menu-wrapper .confirm-construct-menu h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #fff;
+}
+.constructor-menu-wrapper .confirm-construct-menu h3 img {
+  margin-left: 20px;
+}
+.constructor-menu-wrapper .confirm-construct-menu p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #fff;
+  margin-top: 14px;
+}
+
+@media (max-width: 1715px) {
+  .constructor-menu-wrapper {
+    width: 240px;
+  }
+  .constructor-menu-wrapper .confirm-construct-menu {
+    height: 105px;
+  }
+  .constructor-menu-wrapper .confirm-construct-menu h3 {
+    font-size: 17px;
+    line-height: 20px;
+  }
+  .constructor-menu-wrapper .confirm-construct-menu h3 img {
+    margin-left: 10px;
+    width: 40px;
+  }
+  .constructor-menu-wrapper .confirm-construct-menu p {
+    font-size: 11px;
+    line-height: 20px;
+  }
+}/*# sourceMappingURL=ConstructorMenu.css.map */

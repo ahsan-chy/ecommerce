@@ -81,3 +81,29 @@
   }
 }
 
+@media (max-width: 768px) {
+  .single-cart-menu-wrapper {
+
+    .single-cart-menu-details {
+      ul {
+        li {
+          span {
+            font-size: 10px;
+            line-height: 15px;
+          }
+          .total-price {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    button {
+      height: 60px;
+      font-size: 14px;
+      img {
+        width: 35px;
+      }
+    }
+  }
+}

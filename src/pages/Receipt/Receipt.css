@@ -1,0 +1,476 @@
+.receipt-wrapper {
+  padding: 44.4px 0 0 65.4px;
+  font-family: "Montserrat", sans-serif;
+}
+.receipt-wrapper .top-wrapper .receipt-header-text p {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #35363a;
+}
+.receipt-wrapper .receipt-details {
+  padding: 30px 40px 0 95px;
+  width: 100%;
+}
+.receipt-wrapper .receipt-details h2 {
+  font-size: 40px;
+  line-height: 60px;
+  font-weight: 500;
+  color: #35363a;
+}
+.receipt-wrapper .receipt-details > p {
+  font-size: 12px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #35363a;
+}
+.receipt-wrapper .receipt-details .receipt-box {
+  display: flex;
+  gap: 80px;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left {
+  width: 387px;
+  background-color: #fff;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left {
+  padding: 34px;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left h4 {
+  font-size: 26px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #35363a;
+  text-align: center;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left p {
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 500;
+  color: #35363a;
+  text-align: center;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .receipt-double-divider {
+  height: 1px;
+  width: 100%;
+  margin-top: 5px;
+  background-color: black;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul:first-child {
+  border-top: 2px dotted black;
+  margin-top: 10px;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul:first-child li span {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #35363a;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul li {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul li span {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #35363a;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .top-divider {
+  border-top: 2px dotted black;
+  margin-top: 20px;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .discount-row {
+  display: flex;
+  justify-content: space-between;
+  border-top: 2px dotted black;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .discount-row span {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #35363a;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .payment-type ul li span {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #35363a;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .total-charges {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .total-charges span {
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #35363a;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .total-charges .total-price {
+  font-family: "Montserrat", sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  margin-top: 15px;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .qr-code-box .qr-code {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  margin: 10px auto;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right h1 {
+  font-size: 55px;
+  line-height: 100px;
+  font-weight: 500;
+  color: #35363a;
+  letter-spacing: 3px;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right > p {
+  font-size: 22px;
+  line-height: 100px;
+  font-weight: 500;
+  color: #35363a;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description h5 {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 500;
+  color: #35363a;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description p {
+  font-size: 17px;
+  line-height: 32px;
+  font-weight: 500;
+  color: #35363a;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right {
+  margin-top: 20px;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  height: 100%;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-footer {
+  height: 300px;
+  width: 185px;
+  background-size: cover;
+  background-position: center;
+  padding: 0 15px 15px 15px;
+  text-align: left;
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-footer .offer-content {
+  z-index: 1;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-footer .offer-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+  line-height: 26px;
+  color: #fff;
+  font-weight: 400;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-footer .offer-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 22px;
+  line-height: 28px;
+  color: #fff;
+  font-weight: 500;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-footer .offer-content p:last-child {
+  font-family: "Poppins", sans-serif;
+  font-size: 8px;
+  line-height: 12px;
+  color: #fff;
+  font-weight: 400;
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-first {
+  background-image: url(../../assets/images/f1.png);
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-second {
+  background-image: url(../../assets/images/f2.png);
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-third {
+  background-image: url(../../assets/images/f3.png);
+}
+.receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-forth {
+  background-image: url(../../assets/images/f4.png);
+}
+
+@media (max-width: 1715px) {
+  .receipt-wrapper {
+    padding: 28px 20px 0 28px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .receipt-wrapper .top-wrapper .receipt-header-text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .receipt-wrapper .receipt-details {
+    padding: 30px 0 0 65px;
+  }
+  .receipt-wrapper .receipt-details h2 {
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .receipt-wrapper .receipt-details > p {
+    font-size: 12px;
+    line-height: 26px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box {
+    gap: 40px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left {
+    width: 330px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left {
+    padding: 20px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left h4 {
+    font-size: 21px;
+    line-height: 22px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left p {
+    font-size: 11px;
+    line-height: 22px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul:first-child {
+    margin-top: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul:first-child li span {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul li {
+    padding-top: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul li span {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .top-divider {
+    margin-top: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .discount-row {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .discount-row span {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .payment-type ul li span {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .total-charges span {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .total-charges .total-price {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .qr-code-box .qr-code {
+    width: 20px;
+    height: 20px;
+    margin: 5px auto;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right h1 {
+    font-size: 45px;
+    line-height: 70px;
+    letter-spacing: 1px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right > p {
+    font-size: 15px;
+    line-height: 40px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description h5 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right {
+    margin-top: 15px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-footer {
+    width: 160px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-footer .offer-content h3 {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 1400px) {
+  .receipt-wrapper {
+    padding: 28px 20px 0 28px;
+    font-family: "Montserrat", sans-serif;
+  }
+  .receipt-wrapper .top-wrapper .receipt-header-text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .receipt-wrapper .receipt-details {
+    padding: 30px 0 0 65px;
+  }
+  .receipt-wrapper .receipt-details h2 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .receipt-wrapper .receipt-details > p {
+    font-size: 10px;
+    line-height: 26px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left {
+    width: 287px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left {
+    padding: 15px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left h4 {
+    font-size: 17px;
+    line-height: 22px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left p {
+    font-size: 10px;
+    line-height: 22px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul:first-child {
+    margin-top: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul:first-child li span {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul li {
+    padding-top: 7px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left ul li span {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .top-divider {
+    margin-top: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .discount-row {
+    margin-top: 10px;
+    padding-top: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .discount-row span {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .payment-type ul li span {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .total-charges span {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .total-charges .total-price {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left .receipt-wrapper-left .qr-code-box .qr-code {
+    width: 20px;
+    height: 20px;
+    margin: 5px auto;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right h1 {
+    font-size: 40px;
+    line-height: 70px;
+    letter-spacing: 1px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right > p {
+    font-size: 15px;
+    line-height: 40px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description h5 {
+    font-size: 20px;
+    line-height: 20px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description p {
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right {
+    margin-top: 15px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-footer {
+    height: 175px;
+    width: 107px;
+    padding: 0 10px 10px 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-footer .offer-content h3 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .receipt-wrapper {
+    padding: 10px 10px 0;
+  }
+  .receipt-wrapper .top-wrapper .receipt-header-text p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .receipt-wrapper .receipt-details {
+    padding: 10px 10px 0;
+  }
+  .receipt-wrapper .receipt-details h2 {
+    font-size: 20px;
+  }
+  .receipt-wrapper .receipt-details > p {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box {
+    flex-direction: column;
+    margin-top: 15px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-left {
+    width: 100%;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right h1 {
+    font-size: 30px;
+    letter-spacing: 0px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right > p {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description h5 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-footer .offer-content h3 {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  .receipt-wrapper .receipt-details .receipt-box .receipt-right .bottom-description .offer-right .offer-row .offer-column .offer-footer .offer-content p:last-child {
+    font-size: 7px;
+  }
+}/*# sourceMappingURL=Receipt.css.map */

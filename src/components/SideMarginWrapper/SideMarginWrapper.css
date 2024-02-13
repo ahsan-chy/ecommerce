@@ -1,0 +1,16 @@
+.side-margin-wrapper {
+  width: 100%;
+  margin-right: 320px;
+}
+
+@media (max-width: 1715px) {
+  .side-margin-wrapper {
+    width: 100%;
+    margin-right: 240px;
+  }
+}
+@media (max-width: 768px) {
+  .side-margin-wrapper {
+    margin-right: 0;
+  }
+}/*# sourceMappingURL=SideMarginWrapper.css.map */

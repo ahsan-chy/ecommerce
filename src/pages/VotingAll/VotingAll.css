@@ -1,0 +1,469 @@
+.vottings-container {
+  display: grid;
+  grid-template-columns: 490px auto;
+  gap: 48.9px;
+  width: 100%;
+}
+.vottings-container .vottings-left-wrapper {
+  display: grid;
+  height: 100%;
+  align-content: space-between;
+  padding: 44.4px 0 10px 65.4px;
+}
+.vottings-container .vottings-left-wrapper .vottings-header-text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #35363a;
+}
+.vottings-container .vottings-left-wrapper .vottings-left-title {
+  margin-bottom: 40px;
+}
+.vottings-container .vottings-left-wrapper .vottings-left-title .sub-head-box {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.vottings-container .vottings-left-wrapper .vottings-left-title .sub-head-box .spacer {
+  height: 2px;
+  width: 50px;
+  background-color: #35363a;
+}
+.vottings-container .vottings-left-wrapper .vottings-left-title .sub-head-box p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 400;
+  color: #35363a;
+}
+.vottings-container .vottings-left-wrapper .vottings-left-title h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 65px;
+  letter-spacing: 0px;
+  font-weight: 500;
+  line-height: 85px;
+  color: #35363a;
+}
+.vottings-container .vottings-left-wrapper .vottings-left-title p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 32px;
+  color: #35363a;
+  font-weight: 400;
+}
+.vottings-container .vottings-right-wrapper .right-top-box-wrapper {
+  margin-top: 137.2px;
+  display: flex;
+  gap: 35px;
+}
+.vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  line-height: 32px;
+  color: #35363a;
+  font-weight: 500;
+}
+.vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 42px;
+  line-height: 60px;
+  color: #35363a;
+  font-weight: 500;
+}
+.vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper p:last-child {
+  font-size: 14px;
+  line-height: 28px;
+  width: 273px;
+  font-weight: 400;
+}
+.vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-img-wrapper .right-vottings-wrapper {
+  position: relative;
+}
+.vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-img-wrapper .right-vottings-wrapper > img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-img-wrapper button {
+  width: 157px;
+  height: 59px;
+  background-color: #dddddd;
+  border: none;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 23.7px;
+  padding-right: 23.7px;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root {
+  margin-top: 35px;
+  padding-right: 94px;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper {
+  display: flex;
+  gap: 50px;
+  justify-content: unset;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper:nth-child(2) {
+  margin-top: 30px;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card {
+  display: grid;
+  justify-content: center;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper {
+  width: 200px;
+  height: 100%;
+  position: relative;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0 5px;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .left-starts {
+  display: flex;
+  gap: 5px;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .left-starts img {
+  width: 20px;
+  height: 18px;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .right-star {
+  display: grid;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .right-star .top-star {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .right-star .top-star img {
+  width: 12px;
+  height: 11px;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .right-star .top-star h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #35363a;
+  font-weight: 400;
+  color: #fff;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .right-star p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  line-height: 20px;
+  color: #35363a;
+  font-weight: 400;
+  color: #8d8e96;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
+  padding: 10px 5px;
+  position: relative;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .title .votting-title-left p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  line-height: 20px;
+  color: #35363a;
+  font-weight: 400;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .title .votting-title-left h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  color: #35363a;
+  font-weight: 500;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .title .votting-title-right {
+  display: flex;
+  gap: 5px;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .title .votting-title-right p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  line-height: 16.04px;
+  color: #35363a;
+  font-weight: 400;
+}
+.vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .title .votting-title-right img {
+  width: 25px;
+}
+
+@media (max-width: 1715px) {
+  .vottings-container {
+    grid-template-columns: 350px auto;
+    gap: 20px;
+  }
+  .vottings-container .vottings-left-wrapper {
+    padding: 28px 28px 0 28px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-header-text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title {
+    margin-bottom: 40px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title .sub-head-box .spacer {
+    height: 1.3px;
+    width: 30px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title .sub-head-box p {
+    font-size: 20px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title h2 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title p {
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper {
+    margin-top: 75px;
+    gap: 10px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper h3 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper p:last-child {
+    font-size: 12px;
+    line-height: 20px;
+    width: 203px;
+    font-weight: 400;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-img-wrapper button img {
+    width: 20px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root {
+    margin-top: 25px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper {
+    display: flex;
+    gap: 50px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper:nth-child(2) {
+    margin-top: 25px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper {
+    width: 160px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .left-starts {
+    gap: 3px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .left-starts img {
+    width: 13px;
+    height: 12px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .right-star .top-star {
+    gap: 3px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .right-star .top-star img {
+    width: 10px;
+    height: 10px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .right-star .top-star h2 {
+    font-size: 13px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .right-star p {
+    font-size: 8px;
+    line-height: 15px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .title .votting-title-left h4 {
+    font-size: 15px;
+    line-height: 25px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .title .votting-title-right img {
+    width: 22px;
+  }
+}
+@media (max-width: 1429px) {
+  .vottings-container {
+    grid-template-columns: 350px auto;
+    gap: 20px;
+  }
+  .vottings-container .vottings-left-wrapper {
+    padding: 28px 28px 0 28px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-header-text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title {
+    margin-bottom: 40px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title h2 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title p {
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper {
+    margin-top: 75px;
+    gap: 10px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper h3 {
+    font-size: 35px;
+    line-height: 40px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper p:last-child {
+    font-size: 12px;
+    line-height: 20px;
+    width: 203px;
+    font-weight: 400;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-img-wrapper .right-vottings-wrapper {
+    width: 430px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-img-wrapper .right-vottings-wrapper > img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-img-wrapper button {
+    width: 107px;
+    height: 40px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root {
+    margin-top: 25px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper {
+    display: flex;
+    gap: 50px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper:nth-child(2) {
+    margin-top: 25px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper {
+    width: 140px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .votting-img-wrapper .card-inside .right-star .top-star h2 {
+    font-size: 11px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .divider-vottings {
+    height: 1px;
+    width: 100%;
+    background-color: #61626a;
+    margin: 0;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .title .votting-title-left h4 {
+    font-size: 13px;
+    line-height: 20px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .title .votting-title-right img {
+    width: 20px;
+  }
+}
+@media (max-width: 768px) {
+  .vottings-container {
+    gap: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .vottings-container .vottings-left-wrapper {
+    padding: 10px 10px 0;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-header-text p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title .sub-head-box {
+    gap: 5px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title .sub-head-box .spacer {
+    height: 1px;
+    width: 30px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title .sub-head-box p {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title h2 {
+    font-size: 30px;
+    line-height: 30px;
+    margin-top: 5px;
+    letter-spacing: 1px;
+  }
+  .vottings-container .vottings-left-wrapper .vottings-left-title p {
+    font-size: 10px;
+  }
+  .vottings-container .vottings-right-wrapper {
+    padding: 10px 10px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper {
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper p {
+    font-size: 10px;
+    font-weight: 400;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper h3 {
+    font-size: 22px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-text-wrapper p:last-child {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-img-wrapper .right-vottings-wrapper {
+    width: 100%;
+  }
+  .vottings-container .vottings-right-wrapper .right-top-box-wrapper .right-top-img-wrapper button {
+    width: 75px;
+    height: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 8px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root {
+    padding-right: 0px;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper {
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .vottings-container .vottings-right-wrapper .votting-category-root .vottings-wrapper .votting-card .title .votting-title-right img {
+    width: 20px;
+  }
+}/*# sourceMappingURL=VotingAll.css.map */

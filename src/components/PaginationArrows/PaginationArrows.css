@@ -1,0 +1,40 @@
+.pagination-wrapper {
+  display: flex;
+  gap: 15px;
+}
+.pagination-wrapper img {
+  cursor: pointer;
+  width: 50px;
+}
+.pagination-wrapper .count-wrapper span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #61626a;
+}
+
+@media (max-width: 1715px) {
+  .pagination-wrapper {
+    gap: 10px;
+  }
+  .pagination-wrapper img {
+    width: 30px;
+  }
+  .pagination-wrapper .count-wrapper span {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .pagination-wrapper {
+    gap: 8px;
+  }
+  .pagination-wrapper img {
+    width: 25px;
+  }
+  .pagination-wrapper .count-wrapper span {
+    font-size: 10px;
+    line-height: 12px;
+  }
+}/*# sourceMappingURL=PaginationArrows.css.map */

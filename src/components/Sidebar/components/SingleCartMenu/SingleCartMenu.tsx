@@ -22,7 +22,7 @@ const SingleCartMenu = () => {
         <ul>
           <li>
             <span>To pay</span>
-            <span className="menu-total-price">119.48$</span>
+            <span className="total-price">119.48$</span>
           </li>
         </ul>
       </div>

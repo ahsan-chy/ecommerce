@@ -33,3 +33,18 @@
     font-size: 22px;
   }
 }
+
+@media (max-width: 768px) {
+  .collection-nav {
+    div {
+      padding-left: 15px !important;
+    }
+
+    p {
+      font-size: 10px !important;
+    }
+    h3 {
+      font-size: 12px !important;
+    }
+  }
+}

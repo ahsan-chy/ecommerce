@@ -1,0 +1,32 @@
+.nav-item {
+  height: 143px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.collection-nav {
+  position: relative;
+}
+.collection-nav img {
+  margin-left: auto;
+  height: 100%;
+}
+.collection-nav div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 35px;
+}
+.collection-nav p {
+  font-size: 14px;
+}
+.collection-nav h3 {
+  margin-top: 5px;
+  font-size: 22px;
+}/*# sourceMappingURL=HomeMenu.css.map */

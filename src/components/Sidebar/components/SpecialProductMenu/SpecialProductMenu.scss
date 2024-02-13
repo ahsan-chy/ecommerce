@@ -95,3 +95,39 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .product-menu-wrapper {
+    background-color: #fff;
+    padding-top: 26px;
+
+    .varients {
+      .row {
+        .col {
+          h6 {
+            font-size: 14px;
+          }
+          ul {
+            gap: 14px;
+          }
+
+          ul li {
+            font-size: 11px;
+          }
+          .color-box {
+            width: 10px;
+            height: 10px;
+          }
+         
+        }
+      }
+      h2 {
+        font-size: 25px;
+      }
+    }
+    button {
+      height: 60px;
+      font-size: 14px;
+    }
+  }
+}

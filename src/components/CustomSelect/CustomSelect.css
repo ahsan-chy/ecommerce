@@ -1,0 +1,125 @@
+.custom-select {
+  position: relative;
+  min-width: 130px;
+  width: 100%;
+}
+
+.select-header {
+  border-bottom: 1px solid #414848;
+  border-radius: 0px;
+  padding: 5px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.5s ease-in-out;
+}
+.select-header label {
+  text-transform: capitalize;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  line-height: 0.7px;
+  color: #35363a;
+  font-weight: 400;
+}
+
+.default-filter label {
+  margin-left: unset !important;
+}
+
+.arrow {
+  transition: transform 0.5s ease-in-out;
+}
+
+.options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  background-color: #fff;
+  color: #4f9098;
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: #35363a;
+  font-weight: 400;
+}
+
+.custom-select.open .options {
+  opacity: 1;
+  pointer-events: auto;
+  max-height: 250px;
+  overflow: auto;
+}
+
+.custom-select.open .options::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-select.open .options::-webkit-scrollbar-thumb {
+  background-color: #4f9098;
+  border-radius: 4px;
+}
+
+.custom-select.open .options::-webkit-scrollbar-track {
+  background-color: #dddddd;
+}
+
+.option {
+  padding: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.option:hover {
+  background-color: rgba(79, 144, 152, 0.8);
+  color: #dddddd;
+}
+
+.option.selected {
+  background-color: #4f9098;
+  color: #dddddd;
+}
+
+@media (max-width: 1715px) {
+  .custom-select {
+    min-width: 105px;
+  }
+  .select-header {
+    padding-bottom: 4px;
+  }
+  .select-header label {
+    font-size: 11px;
+  }
+  .options {
+    font-size: 11px;
+  }
+  .option {
+    padding: 4px;
+  }
+}
+@media (max-width: 1400px) {
+  .custom-select {
+    min-width: 70px;
+  }
+  .select-header {
+    padding-bottom: 2px;
+  }
+  .select-header label {
+    font-size: 9px;
+  }
+  .options {
+    font-size: 8px;
+  }
+  .option {
+    padding: 2px;
+  }
+}/*# sourceMappingURL=CustomSelect.css.map */

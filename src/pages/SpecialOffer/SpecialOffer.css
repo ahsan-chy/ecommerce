@@ -1,0 +1,269 @@
+.offer-root {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 475px auto;
+  padding-bottom: 44px;
+}
+.offer-root .offer-left {
+  padding: 44.4px 0 0 65.4px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.offer-root .offer-left .top-wrapper .offer-header-text p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+  color: #35363a;
+}
+.offer-root .offer-left .offer-left-title {
+  margin-bottom: 10px;
+}
+.offer-root .offer-left .offer-left-title .offer-wrap h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  line-height: 85px;
+  color: #35363a;
+}
+.offer-root .offer-left .offer-left-title .offer-wrap p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  line-height: 29px;
+  color: #35363a;
+  font-weight: 400;
+}
+.offer-root .offer-left .offer-left-title .offer-pagination {
+  margin-top: 50px;
+}
+.offer-root .offer-right .offer-row {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  height: 100%;
+}
+.offer-root .offer-right .offer-row .offer-column .offer-footer {
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  padding: 0 30px 30px 30px;
+  text-align: left;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 15px;
+  overflow: hidden;
+}
+.offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content {
+  z-index: 1;
+}
+.offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content p {
+  font-family: "Poppins", sans-serif;
+  font-size: 19px;
+  line-height: 35px;
+  color: #fff;
+  font-weight: 400;
+}
+.offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content h3 {
+  font-family: "Poppins", sans-serif;
+  font-size: 44px;
+  line-height: 61px;
+  color: #fff;
+  font-weight: 500;
+}
+.offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content p:last-child {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 28px;
+  color: #fff;
+  font-weight: 400;
+}
+.offer-root .offer-right .offer-row .offer-column .offer-footer .offer-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 295px;
+  background-color: #000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+  z-index: 0;
+}
+.offer-root .offer-right .offer-row .offer-column .offer-footer .hovered-offer {
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+.offer-root .offer-right .offer-row .offer-column .offer-footer .hovered-offer .offer-icons-wrapper {
+  display: grid;
+  row-gap: 2px;
+}
+.offer-root .offer-right .offer-row .offer-column .offer-footer .hovered-offer .offer-icons-wrapper .icon-row {
+  cursor: pointer;
+  background-color: rgba(79, 144, 152, 0.25);
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.offer-root .offer-right .offer-row .offer-column .offer-footer .hovered-offer .offer-icons-wrapper .icon-row img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.offer-root .offer-right .offer-row .offer-column:hover .hovered-offer {
+  opacity: 1;
+  visibility: visible;
+}
+.offer-root .offer-right .offer-row .offer-column:hover .offer-overlay {
+  opacity: 25%;
+}
+.offer-root .offer-right .offer-row .offer-column .offer-first {
+  background-image: url(../../assets/images/offer-img.png);
+}
+.offer-root .offer-right .offer-row .offer-column .offer-second {
+  background-image: url(../../assets/images/offer-hover.png);
+}
+.offer-root .offer-right .offer-row .offer-column .offer-third {
+  background-image: url(../../assets/images/offer-side.png);
+}
+.offer-root .offer-right .offer-row .last-offer {
+  margin-top: auto;
+  height: 62%;
+}
+
+@media (max-width: 1715px) {
+  .offer-root {
+    padding-bottom: 25px;
+    grid-template-columns: 375px auto;
+  }
+  .offer-root .offer-left {
+    padding: 28px 20px 0 28px;
+  }
+  .offer-root .offer-left .top-wrapper .offer-header-text p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .offer-root .offer-left .offer-left-title .offer-wrap h1 {
+    font-size: 50px;
+    line-height: 70px;
+  }
+  .offer-root .offer-left .offer-left-title .offer-wrap p {
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .offer-root .offer-left .offer-left-title .offer-pagination {
+    margin-top: 50px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer {
+    padding: 0 15px 15px 15px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content {
+    z-index: 1;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content p {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content h3 {
+    font-size: 28px;
+    line-height: 45px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content p:last-child {
+    font-size: 11px;
+    line-height: 18px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .offer-overlay {
+    height: 268px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .hovered-offer .offer-icons-wrapper .icon-row {
+    width: 25px;
+    height: 25px;
+    padding: 4px;
+  }
+}
+@media (max-width: 1400px) {
+  .offer-root {
+    padding-bottom: 25px;
+    grid-template-columns: 310px auto;
+  }
+  .offer-root .offer-left .offer-left-title .offer-wrap h1 {
+    font-size: 38px;
+    line-height: 50px;
+  }
+  .offer-root .offer-left .offer-left-title .offer-wrap p {
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .offer-root .offer-left .offer-left-title .offer-pagination {
+    margin-top: 50px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer {
+    padding: 0 15px 15px 15px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content {
+    z-index: 1;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content p {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content h3 {
+    font-size: 22px;
+    line-height: 35px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .offer-content p:last-child {
+    font-size: 10px;
+    line-height: 17px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .offer-overlay {
+    height: 178px;
+  }
+}
+@media (max-width: 768px) {
+  .offer-root {
+    grid-template-columns: 1fr;
+  }
+  .offer-root .offer-left {
+    padding: 10px 10px 0;
+  }
+  .offer-root .offer-left .top-wrapper .offer-header-text p {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  .offer-root .offer-left .offer-left-title .offer-wrap h1 {
+    font-size: 25px;
+  }
+  .offer-root .offer-left .offer-left-title .offer-wrap p {
+    font-size: 10px;
+    line-height: 18px;
+  }
+  .offer-root .offer-left .offer-left-title .offer-pagination {
+    margin-top: 20px;
+  }
+  .offer-root .offer-right .offer-row {
+    flex-direction: column;
+    gap: 1px;
+  }
+  .offer-root .offer-right .offer-row .offer-column {
+    height: 500px;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer {
+    justify-content: space-between;
+    background-position: top center;
+    background-size: cover;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .offer-overlay {
+    opacity: 25%;
+  }
+  .offer-root .offer-right .offer-row .offer-column .offer-footer .hovered-offer {
+    opacity: 1;
+    visibility: unset;
+  }
+}/*# sourceMappingURL=SpecialOffer.css.map */

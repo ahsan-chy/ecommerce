@@ -1,0 +1,53 @@
+.filter-wrapper {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.filter-wrapper p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 31px;
+  font-weight: 500;
+  color: #35363a;
+  white-space: nowrap;
+}
+.filter-wrapper p span {
+  color: #d53434;
+  margin-left: 10px;
+}
+
+.default {
+  display: grid;
+}
+.default p {
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #35363a;
+}
+.default p span {
+  color: #d53434;
+  margin-left: 10px;
+}
+
+@media (max-width: 1715px) {
+  .filter-wrapper {
+    gap: 10px;
+  }
+  .filter-wrapper p {
+    font-size: 10px;
+  }
+  .default p {
+    font-size: 13px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 1400px) {
+  .filter-wrapper {
+    gap: 5px;
+  }
+  .filter-wrapper p {
+    font-size: 10px;
+  }
+}/*# sourceMappingURL=FilterDropdown.css.map */
