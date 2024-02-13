@@ -7,3 +7,10 @@
   color: #a6a6a6;
   font-weight: 400;
 }
+
+@media (max-width: 768px) {
+  .breadcrumb-wrapper {
+    font-size: 10px;
+    line-height: 16px;
+  }
+}

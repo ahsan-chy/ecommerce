@@ -400,15 +400,13 @@
 
 @media (max-width: 768px) {
   .about-wrapper {
-    // padding: 44.4px 0 0 65.4px;
-    // width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    padding: 10px 0 0 10px;
 
-    // display: grid;
-    // grid-template-columns: 390px auto;
     padding: 10px 10px 0;
     .about-left {
-      // display: grid;
-      // grid-template-rows: 1fr auto;
       .top-wrapper {
         .about-header-text {
           p {
@@ -418,22 +416,17 @@
         }
       }
       .about-left-title {
-        margin-bottom: 40px;
+        margin-bottom: 20px;
         .about-wrap {
           h1 {
-            font-family: $secondary-font;
-            font-size: 70px;
-            letter-spacing: 5px;
-            font-weight: 400;
-            line-height: 100px;
-            color: $dark-color;
+            font-size: 30px;
+            line-height: 30px;
+            margin-top: 20px;
+            letter-spacing: 2px;
           }
           p {
-            font-family: $primary-font;
-            font-size: 17px;
-            line-height: 32px;
-            color: $dark-color;
-            font-weight: 400;
+            font-size: 10px;
+            line-height: 18px;
           }
         }
       }
@@ -443,153 +436,25 @@
       column-gap: 80px;
 
       .about-right {
-        > h3 {
-          font-family: $primary-font;
-          font-size: 40px;
-          line-height: 60px;
-          font-weight: 500;
-          color: $dark-color;
-        }
         > p {
-          font-family: $primary-font;
-          font-size: 17px;
-          line-height: 26px;
-          font-weight: 500;
-          color: $dark-color;
-          max-width: 589.42px;
+          font-size: 13px;
+          line-height: 20px;
+          font-weight: 400;
+          max-width: 100%;
         }
         .sub-menus-wrapper {
-          display: flex;
-          gap: 28px;
-          margin-top: 25px;
+          gap: 15px;
+          margin-top: 20px;
+          flex-wrap: wrap;
           .sub-menu-col {
             span {
-              font-family: $secondary-font;
-              font-size: 17px;
+              font-size: 13px;
               font-weight: 500;
-              line-height: 0.7px;
-              color: #8d8e96;
-              position: relative;
-              cursor: pointer;
-            }
-            span:hover:after {
-              position: absolute;
-              content: "";
-              left: 50%;
-              top: 31px;
-              transform: translate(-50%);
-              width: 30px;
-              height: 2px;
-              background-color: $dark-color;
-              transition: all 0.7s ease;
             }
           }
         }
         .our-team {
-          margin-top: 50px;
-          display: grid;
-          grid-template-columns: 491px auto;
-          column-gap: 30px;
-          .team-left {
-            h3 {
-              font-family: $primary-font;
-              font-size: 40px;
-              line-height: 50px;
-              font-weight: 500;
-              color: $dark-color;
-            }
-            p {
-              font-family: $primary-font;
-              font-size: 14px;
-              line-height: 24px;
-              font-weight: 400;
-              color: $dark-color;
-              text-align: justify;
-            }
-            .team-images-wrapper {
-              margin-top: 20px;
-              display: flex;
-              gap: 47px;
-              row-gap: 30px;
-              flex-wrap: wrap;
-              .team-card {
-                .team-image-wrapper {
-                  width: 120px;
-                  height: auto;
-                  img {
-                    width: 100%;
-                    object-fit: cover;
-                    height: auto;
-                  }
-                }
-                h6 {
-                  font-family: $primary-font;
-                  font-size: 17px;
-                  font-weight: 500;
-                  color: $dark-color;
-                  margin-top: 4.2px;
-                }
-                p {
-                  font-family: $primary-font;
-                  font-size: 12px;
-                  line-height: 24px;
-                  font-weight: 500;
-                  color: $dark-color;
-                  margin-top: 5.7px;
-                }
-              }
-            }
-          }
-          .team-right {
-            .our-team-img-wrapper {
-              width: 374px;
-              height: 530px;
-              background-image: url(../../assets/images/team-img.png);
-              display: grid;
-              justify-content: center;
-              align-content: center;
-              text-align: center;
-              position: relative;
-              margin-top: 55px;
-              background-size: cover;
-              background-position: center;
-              .circle-box {
-                background-color: #fff;
-                width: 46px;
-                height: 46px;
-                z-index: 2;
-                border-radius: 50%;
-                margin: auto;
-              }
-
-              h6 {
-                font-family: $primary-font;
-                font-size: 20px;
-                font-weight: 500;
-                color: #fff;
-                z-index: 2;
-                margin-top: 12px;
-              }
-              p {
-                font-family: $primary-font;
-                font-size: 14px;
-                line-height: 36px;
-                font-weight: 500;
-                color: #fff;
-                z-index: 2;
-              }
-              &::before {
-                content: "";
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                background: rgba(0, 0, 0, 0.5);
-                z-index: 1;
-              }
-            }
-          }
+          grid-template-columns: 1fr;
         }
       }
     }
