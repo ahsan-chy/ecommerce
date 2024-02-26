@@ -21,16 +21,28 @@ import Receipt from "@/pages/Receipt/Receipt";
 import SingleCart from "@/pages/SingleCart/SingleCart";
 
 function Routers() {
-  const [activeCollection, setActiveCollection] = useState(collectionNav[0]);
+  const [selectedCollections, setselectedCollections] = useState(collectionNav);
+  const [activeCollection, setActiveCollection] = useState(selectedCollections[0]);
 
   const handleActive = (selectedState: any) => {
-    setActiveCollection(selectedState);
+    const updatedCollection = collectionNav.map((item) => {
+      if (item.id === selectedState.id) {
+        return { ...item, status: true };
+      } else {
+        return { ...item, status: false };
+      }
+    });
+    setselectedCollections(updatedCollection);
+    const updatedCollectionObject = updatedCollection.filter((item) => item.status === true);
+    setActiveCollection(updatedCollectionObject[0]);
   };
 
   return (
     <Router>
       <div className="global-box">
-        <Sidebar handleActive={handleActive} />
+        {/* {console.log("activeCollection", activeCollection)} */}
+        {/* {console.log("selectedCollections", selectedCollections)} */}
+        <Sidebar handleActive={handleActive} selectedCollections={selectedCollections} />
         <Routes>
           <Route path="/" element={<Home activeCollection={activeCollection} />} />
           <Route path="/products" element={<Products />} />

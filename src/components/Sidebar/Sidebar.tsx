@@ -7,7 +7,6 @@ import cross from "@/assets/icons/x-button.png";
 import burgericon from "@/assets/icons/right-burger.png";
 import MenuBurger from "@/assets/icons/menu-burger.svg";
 import Heart from "@/assets/icons/heart.svg";
-import { collectionNav } from "@/db/collectionNew";
 import ConstructorMenu from "./components/ConstructorMenu/ConstructorMenu";
 import SpecialProductMenu from "./components/SpecialProductMenu/SpecialProductMenu";
 import VotingMenu from "./components/VotingMenu/VotingMenu";
@@ -153,10 +152,9 @@ const constructorMenu = [
   },
 ];
 
-// const Sidebar = (props: ISidebar) => {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const Sidebar = (props: { handleActive: any }) => {
-  const { handleActive } = props;
+const Sidebar = (props: { handleActive: any; selectedCollections: any }) => {
+  const { handleActive, selectedCollections } = props;
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -166,7 +164,6 @@ const Sidebar = (props: { handleActive: any }) => {
   const [SelectedRoute, setSelectedRoute] = useState(sidebarData);
   const [subMenu, setSubMenu] = useState(constructorMenu);
   const [rightIsMenuOpen, setRightIsMenuOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
 
   const pathnames = location.pathname.substring(1);
 
@@ -345,7 +342,7 @@ const Sidebar = (props: { handleActive: any }) => {
         </div>
 
         {pathnames === "" ? (
-          <HomeMenu collectionNav={collectionNav} handleActive={handleActive} />
+          <HomeMenu collectionNav={selectedCollections} handleActive={handleActive} />
         ) : pathnames === "construct" ? (
           <ConstructorMenu />
         ) : pathnames === "special-product" ? (

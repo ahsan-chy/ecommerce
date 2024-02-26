@@ -11,7 +11,7 @@ export const collectionNav = [
     mainImage: urban,
     description:
       "Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will give you confidence in a big city.",
-    status: "Active",
+    status: true,
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ export const collectionNav = [
     mainImage: april,
     description:
       "Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will give you confidence in a big city.",
-    status: "Deactive",
+    status: false,
   },
   {
     id: 3,
@@ -31,6 +31,6 @@ export const collectionNav = [
     mainImage: black,
     description:
       "Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will give you confidence in a big city.",
-    status: "Deactive",
+    status: false,
   },
 ];

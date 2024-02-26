@@ -12,6 +12,7 @@ const Home = (props: { activeCollection: any; pageType?: string }) => {
     activeCollection,
     pageType, // VOTING - HOME
   } = props;
+  // const [currentActiveCollection, setCurrentActiveCollection] = useState();
 
   const navigate = useNavigate();
   const handleNavigate = () => {
