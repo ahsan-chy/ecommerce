@@ -4,20 +4,30 @@ import BackNavigation from "@/components/BackNavigation/BackNavigation";
 import "./Home.scss";
 import ArrowWhite from "@/assets/icons/arrow-white.svg";
 import { useNavigate } from "react-router";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Home = (props: { activeCollection: any; pageType?: string }) => {
   const {
     activeCollection,
-    pageType, // VOTING - HOME
+    pageType,
   } = props;
-  // const [currentActiveCollection, setCurrentActiveCollection] = useState();
+  const [showImage, setShowImage] = useState(false);
 
   const navigate = useNavigate();
   const handleNavigate = () => {
     navigate("/products");
   };
+  useEffect(() => {
+    setShowImage(false);
+    if (activeCollection.mainImage) {
+      const delayTimeout = setTimeout(() => {
+        setShowImage(true);
+      }, 1000);
+      return () => clearTimeout(delayTimeout);
+    }
+  }, [activeCollection.mainImage]);
 
   return (
     <SideMarginWrapper>
@@ -61,16 +71,19 @@ const Home = (props: { activeCollection: any; pageType?: string }) => {
             )}
           </div>
         </div>
-
-        <motion.div className="collection-featured-img">
-          <motion.img
-            src={activeCollection.mainImage}
-            alt=""
-            initial={{ opacity: 0, x: +100 }}
-            animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.3 } }}
-            exit={{ opacity: 0, x: +100 }}
-          />
-        </motion.div>
+        <AnimatePresence>
+          <motion.div className="collection-featured-img">
+            {showImage && (
+              <motion.img
+                src={activeCollection.mainImage}
+                alt=""
+                initial={{ opacity: 0, x: 100 }}
+                animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.3 } }}
+                exit={{ opacity: 0, x: 100 }}
+              />
+            )}
+          </motion.div>
+        </AnimatePresence>
       </div>
     </SideMarginWrapper>
   );

@@ -76,6 +76,9 @@
   margin-top: 31.8px;
   cursor: pointer;
 }
+.home-container .collection-featured-img {
+  height: 100vh;
+}
 .home-container .collection-featured-img img {
   height: 100vh;
   -o-object-fit: cover;

@@ -342,7 +342,10 @@
       // transition: background-color 0.3s ease;
     }
     .de-active-right {
-      // background-color: rgba(64, 69, 73, 0.7);
+      background-color: rgba(64, 69, 73, 0.7);
+    }
+    .de-active-right {
+      background-color: rgba(64, 69, 73, 0.7);
     }
 
     .active-right-nav::before {
@@ -364,25 +367,25 @@
         transform: translateX(+100%);
       }
     }
-    .de-active-right::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(64, 69, 73, 0.7);
-      animation: flipAnimat 1s forwards;
-    }
+    // .de-active-right::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   background-color: rgba(64, 69, 73, 0.7);
+    //   animation: flipAnimat 1s forwards;
+    // }
 
-    @keyframes flipAnimat {
-      0% {
-        transform: translateX(-100%);
-      }
-      100% {
-        transform: translateX(0%);
-      }
-    }
+    // @keyframes flipAnimat {
+    //   0% {
+    //     transform: translateX(-100%);
+    //   }
+    //   100% {
+    //     transform: translateX(0%);
+    //   }
+    // }
   }
 }
 

@@ -7,7 +7,6 @@ interface HomeMenuProps {
 }
 
 const HomeMenu: React.FC<HomeMenuProps> = ({ collectionNav, handleActive }) => {
-  console.log("collection", collectionNav);
   return (
     <>
       {collectionNav.map((navData) => (
