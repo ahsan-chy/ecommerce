@@ -25,10 +25,32 @@
       .constructor-img-wrapper {
         width: 100%;
         padding: 0 30px;
+        position: relative;
         img {
           width: 100%;
           height: auto;
           object-fit: cover;
+        }
+        .design-div {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 1;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .preview-div {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          img{
+            width: 25rem;
+            height: 100%;
+          }
         }
       }
       .pagination-box {
@@ -78,16 +100,18 @@
             height: 27px;
             display: flex;
             margin-top: 18px;
-            gap: 19px;
+            gap: 10px;
             .color-block {
               width: 24px;
               height: 24px;
-              background-color: #11a5f1;
               cursor: pointer;
               transition: width 0.5s ease-in-out;
             }
+            .color-selected {
+              border: 1px solid $green-color;
+            }
             .color-block:hover {
-              width: 200px;
+              width: 120px;
             }
           }
         }
@@ -122,11 +146,15 @@
             .design-image-wrapper {
               width: 80px;
               height: 80px;
+              cursor: pointer;
               img {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
               }
+            }
+            .image-selected {
+              border: 1px solid $green-color;
             }
           }
         }
@@ -155,11 +183,16 @@
               width: 80px;
               height: 80px;
               background-color: #fff;
+              cursor: pointer;
+              border: 1px solid transparent;
               img {
                 width: 100%;
                 height: 100%;
                 object-fit: contain;
               }
+            }
+            .prev-selected {
+              border: 1px solid $green-color;
             }
           }
         }
@@ -367,7 +400,6 @@
       }
       .right-constructor {
         .constructor-details {
-
           .color-section {
             .colors-row {
               gap: 8px;
@@ -376,7 +408,6 @@
               }
             }
           }
-     
         }
       }
     }

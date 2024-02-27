@@ -13,8 +13,74 @@ import design5 from "@/assets/images/design5.png";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import PaginationArrows from "@/components/PaginationArrows/PaginationArrows";
 import { motion } from "framer-motion";
+import { useState } from "react";
+
+const defaultColors = [
+  { id: 1, colorCode: "#11a5f1", selected: false },
+  { id: 2, colorCode: "#ff6347", selected: false },
+  { id: 3, colorCode: "#7fff00", selected: false },
+  { id: 4, colorCode: "#ffd700", selected: false },
+  { id: 5, colorCode: "#ff69b4", selected: false },
+  { id: 6, colorCode: "#40e0d0", selected: false },
+  { id: 7, colorCode: "#9370db", selected: false },
+  { id: 8, colorCode: "#008080", selected: false },
+  { id: 9, colorCode: "#ffa07a", selected: false },
+];
+const defaultImages = [
+  { id: 1, src: design, selected: false },
+  { id: 2, src: design2, selected: false },
+  { id: 3, src: design3, selected: false },
+  { id: 4, src: design4, selected: false },
+  { id: 5, src: design5, selected: false },
+];
+const defaultPreviews = [
+  { id: 1, src: subimg, selected: false },
+  { id: 2, src: subimg2, selected: false },
+  { id: 3, src: subimg3, selected: false },
+  { id: 4, src: subimg4, selected: false },
+  { id: 5, src: subimg5, selected: false },
+];
 
 const Construct = () => {
+  const [colors, setColors] = useState(defaultColors);
+  const [images, setImages] = useState(defaultImages);
+  const [previews, setPreviews] = useState(defaultPreviews);
+  const [selectedDesign, setSelectedDesign] = useState(null);
+  const [selectedPreview, setSelectedPreview] = useState(null);
+
+  const handleColorChange = (selectedColorId: number) => {
+    const updatedColors = colors.map((color) => {
+      if (color.id === selectedColorId) {
+        return { ...color, selected: true };
+      } else {
+        return { ...color, selected: false };
+      }
+    });
+    setColors(updatedColors);
+  };
+
+  const handleImageDesign = (selectedImage: number) => () => {
+    const updatedImages = images.map((image) => {
+      if (image.id === selectedImage) {
+        setSelectedDesign(image);
+        return { ...image, selected: true };
+      } else {
+        return { ...image, selected: false };
+      }
+    });
+    setImages(updatedImages);
+  };
+  const handlePreview = (selectedPrev: number) => () => {
+    const updatedPrev = previews.map((prev) => {
+      if (prev.id === selectedPrev) {
+        setSelectedPreview(prev);
+        return { ...prev, selected: true };
+      } else {
+        return { ...prev, selected: false };
+      }
+    });
+    setPreviews(updatedPrev);
+  };
   return (
     <SideMarginWrapper>
       <div className="construct-wrapper">
@@ -29,9 +95,17 @@ const Construct = () => {
             <motion.div
               className="constructor-img-wrapper"
               initial={{ opacity: 0, x: +50 }}
-              animate={{ opacity: 1, x: 0, transition: { duration: 0.78, delay: 0.2 } }}
-              >
+              animate={{ opacity: 1, x: 0, transition: { duration: 0.78, delay: 0.2 } }}>
               <img src={CreateShirt} alt="Create-Shirt" />
+              {/* <div className="color-div">
+
+              </div> */}
+              <div className="design-div">
+                <img src={selectedDesign?.src} className="" />
+              </div>
+              <div className="preview-div">
+                <img src={selectedPreview?.src} className="" />
+              </div>
             </motion.div>
             <div className="pagination-box">
               <PaginationArrows current={"0"} length={"30"} />
@@ -41,8 +115,7 @@ const Construct = () => {
             <motion.div
               className="constructor-details"
               initial={{ opacity: 0, x: +50 }}
-              animate={{ opacity: 1, x: 0, transition: { duration: 0.78 } }}
-              >
+              animate={{ opacity: 1, x: 0, transition: { duration: 0.78 } }}>
               <h3>Design Constructor</h3>
               <p>
                 Design your clothes using the colors. Choose a preview for the presentation and send
@@ -52,17 +125,14 @@ const Construct = () => {
               <div className="color-section">
                 <h4>T-Shirt Color</h4>
                 <p>Create the color of your shirt</p>
-
                 <div className="colors-row">
-                  <div className="color-block"></div>
-                  <div className="color-block"></div>
-                  <div className="color-block"></div>
-                  <div className="color-block"></div>
-                  <div className="color-block"></div>
-                  <div className="color-block"></div>
-                  <div className="color-block"></div>
-                  <div className="color-block"></div>
-                  <div className="color-block"></div>
+                  {colors.map((color, index) => (
+                    <div
+                      key={index}
+                      className={`color-block ${color.selected ? "color-selected" : ""}`}
+                      style={{ backgroundColor: color.colorCode }}
+                      onClick={() => handleColorChange(color.id)}></div>
+                  ))}
                 </div>
               </div>
               <div className="divider"></div>
@@ -70,21 +140,14 @@ const Construct = () => {
                 <h4>Design</h4>
                 <p>Apply design, Use our section, or load your</p>
                 <div className="images-row">
-                  <div className="design-image-wrapper">
-                    <img src={design} alt="sub-item" />
-                  </div>
-                  <div className="design-image-wrapper">
-                    <img src={design2} alt="sub-item" />
-                  </div>
-                  <div className="design-image-wrapper">
-                    <img src={design3} alt="sub-item" />
-                  </div>
-                  <div className="design-image-wrapper">
-                    <img src={design4} alt="sub-item" />
-                  </div>
-                  <div className="design-image-wrapper">
-                    <img src={design5} alt="sub-item" />
-                  </div>
+                  {images.map((image) => (
+                    <div
+                      className={`design-image-wrapper  ${image.selected ? "image-selected" : ""}`}
+                      onClick={handleImageDesign(image.id)}
+                      key={image.id}>
+                      <img src={image.src} alt={`sub-item ${image.id}`} />
+                    </div>
+                  ))}
                 </div>
               </div>
               <div className="preview-section">
@@ -92,21 +155,14 @@ const Construct = () => {
                 <h4>Preview</h4>
                 <p>Apply design, Use our section, or load your</p>
                 <div className="images-row">
-                  <div className="preview-image-wrapper">
-                    <img src={subimg} alt="sub-item" />
-                  </div>
-                  <div className="preview-image-wrapper">
-                    <img src={subimg2} alt="sub-item" />
-                  </div>
-                  <div className="preview-image-wrapper">
-                    <img src={subimg3} alt="sub-item" />
-                  </div>
-                  <div className="preview-image-wrapper">
-                    <img src={subimg4} alt="sub-item" />
-                  </div>
-                  <div className="preview-image-wrapper">
-                    <img src={subimg5} alt="sub-item" />
-                  </div>
+                  {previews.map((prev) => (
+                    <div
+                      className={`preview-image-wrapper ${prev.selected ? "prev-selected" : ""}`}
+                      onClick={handlePreview(prev.id)}
+                      key={prev.id}>
+                      <img src={prev.src} alt={`sub-item ${prev.id}`} />
+                    </div>
+                  ))}
                 </div>
               </div>
             </motion.div>

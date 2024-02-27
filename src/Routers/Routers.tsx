@@ -40,8 +40,6 @@ function Routers() {
   return (
     <Router>
       <div className="global-box">
-        {/* {console.log("activeCollection", activeCollection)} */}
-        {/* {console.log("selectedCollections", selectedCollections)} */}
         <Sidebar handleActive={handleActive} selectedCollections={selectedCollections} />
         <Routes>
           <Route path="/" element={<Home activeCollection={activeCollection} />} />
