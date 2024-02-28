@@ -15,6 +15,17 @@ import PaginationArrows from "@/components/PaginationArrows/PaginationArrows";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
+interface SelectedDesign {
+  id: number;
+  src: string;
+  selected: boolean;
+}
+interface SelectedPreview {
+  id: number;
+  src: string;
+  selected: boolean;
+}
+
 const defaultColors = [
   { id: 1, colorCode: "#11a5f1", selected: false },
   { id: 2, colorCode: "#ff6347", selected: false },
@@ -45,8 +56,8 @@ const Construct = () => {
   const [colors, setColors] = useState(defaultColors);
   const [images, setImages] = useState(defaultImages);
   const [previews, setPreviews] = useState(defaultPreviews);
-  const [selectedDesign, setSelectedDesign] = useState(null);
-  const [selectedPreview, setSelectedPreview] = useState(null);
+  const [selectedDesign, setSelectedDesign] = useState<SelectedDesign | null>(null);
+  const [selectedPreview, setSelectedPreview] = useState<SelectedPreview | null>(null);
 
   const handleColorChange = (selectedColorId: number) => {
     const updatedColors = colors.map((color) => {
@@ -97,14 +108,11 @@ const Construct = () => {
               initial={{ opacity: 0, x: +50 }}
               animate={{ opacity: 1, x: 0, transition: { duration: 0.78, delay: 0.2 } }}>
               <img src={CreateShirt} alt="Create-Shirt" />
-              {/* <div className="color-div">
-
-              </div> */}
               <div className="design-div">
-                <img src={selectedDesign?.src} className="" />
+                {selectedDesign && <img src={selectedDesign?.src} className="" />}
               </div>
               <div className="preview-div">
-                <img src={selectedPreview?.src} className="" />
+                {selectedPreview && <img src={selectedPreview?.src} className="" />}
               </div>
             </motion.div>
             <div className="pagination-box">

@@ -26,5 +26,5 @@ dist-ssr
 # Ignore package-lock.json file
 package-lock.json
 
-.css
-.css.map
+*.css
+*.css.map
