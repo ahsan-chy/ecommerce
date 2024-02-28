@@ -73,7 +73,7 @@ const Construct = () => {
   const handleImageDesign = (selectedImage: number) => () => {
     const updatedImages = images.map((image) => {
       if (image.id === selectedImage) {
-        setSelectedDesign(image);
+        // setSelectedDesign(image);
         return { ...image, selected: true };
       } else {
         return { ...image, selected: false };
@@ -84,7 +84,7 @@ const Construct = () => {
   const handlePreview = (selectedPrev: number) => () => {
     const updatedPrev = previews.map((prev) => {
       if (prev.id === selectedPrev) {
-        setSelectedPreview(prev);
+        // setSelectedPreview(prev);
         return { ...prev, selected: true };
       } else {
         return { ...prev, selected: false };

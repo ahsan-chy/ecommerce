@@ -144,7 +144,7 @@
      object-fit: contain;
 }
 .construct-wrapper .constructor-description .right-constructor .constructor-details .design-section .images-row .image-selected {
-  border: 1px solid #4f9098;
+  background-color: #64626a;
 }
 .construct-wrapper .constructor-description .right-constructor .constructor-details .preview-section h4 {
   font-family: "Montserrat", sans-serif;
@@ -181,7 +181,7 @@
      object-fit: contain;
 }
 .construct-wrapper .constructor-description .right-constructor .constructor-details .preview-section .images-row .prev-selected {
-  border: 1px solid #4f9098;
+  background-color: #64626a;
 }
 
 @media (max-width: 1715px) {
