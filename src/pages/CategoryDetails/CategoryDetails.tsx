@@ -99,7 +99,7 @@ function CategoryDetails() {
             </div>
             <div className="details-wrapper">
               <button className="new-btn">New</button>
-              <p>{product.category}</p>
+              <p className='sub-p'>{product.category}</p>
               <h2>{product.name}</h2>
               <p>{product.description}</p>
               <div className="card-footer">

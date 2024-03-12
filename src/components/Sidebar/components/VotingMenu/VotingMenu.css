@@ -1,1 +1,100 @@
-/*# sourceMappingURL=VotingMenu.css.map */
+.voting-menu-wrapper {
+  width: 100%;
+  padding: 24px;
+}
+.voting-menu-wrapper .current-ratings {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+}
+.voting-menu-wrapper .current-ratings .star-wrapper {
+  width: 41.41px;
+}
+.voting-menu-wrapper .current-ratings .star-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.voting-menu-wrapper .current-ratings h3 {
+  font-size: 60px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 73.14px;
+  color: #35363a;
+}
+.voting-menu-wrapper p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 300;
+  color: #8d8e96;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+.voting-menu-wrapper .stars-box {
+  display: flex;
+  justify-content: center;
+  gap: 13px;
+  margin-top: 42px;
+}
+.voting-menu-wrapper .stars-box .star-wrapper {
+  width: 39px;
+  cursor: pointer;
+}
+.voting-menu-wrapper .stars-box .star-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.voting-menu-wrapper .voting-navigation-wrapper {
+  margin-top: 90px;
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .voting-menu-wrapper {
+    padding: 24px;
+  }
+  .voting-menu-wrapper .current-ratings {
+    gap: 12px;
+  }
+  .voting-menu-wrapper .current-ratings .star-wrapper {
+    width: 24px;
+  }
+  .voting-menu-wrapper .current-ratings .star-wrapper img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .voting-menu-wrapper .current-ratings h3 {
+    font-size: 20px;
+    line-height: 28px;
+  }
+  .voting-menu-wrapper p {
+    font-size: 1rem;
+    line-height: 24px;
+    font-weight: 400;
+    margin-top: 0.5rem;
+  }
+  .voting-menu-wrapper .stars-box {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  .voting-menu-wrapper .stars-box .star-wrapper {
+    width: 24px;
+  }
+  .voting-menu-wrapper .stars-box .star-wrapper img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .voting-menu-wrapper .voting-navigation-wrapper {
+    margin-top: 24px;
+  }
+}/*# sourceMappingURL=VotingMenu.css.map */

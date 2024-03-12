@@ -42,7 +42,16 @@ function Routers() {
       <div className="global-box">
         <Sidebar handleActive={handleActive} selectedCollections={selectedCollections} />
         <Routes>
-          <Route path="/" element={<Home activeCollection={activeCollection} />} />
+          <Route
+            path="/"
+            element={
+              <Home
+                activeCollection={activeCollection}
+                handleActive={handleActive}
+                selectedCollections={selectedCollections}
+              />
+            }
+          />
           <Route path="/products" element={<Products />} />
           <Route path="/category-details" element={<CategoryDetails />} />
           <Route path="/product-details" element={<ProductDetails />} />

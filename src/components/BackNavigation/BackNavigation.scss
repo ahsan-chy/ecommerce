@@ -34,14 +34,15 @@
 
 @media (max-width: 768px) {
   .back-pagination {
-    margin: 10px 0;
-    gap: 5px;
+    gap: 16px;
     img {
-      width: 15px;
+      width: 40px;
     }
     .name-wrapper {
       span {
-        font-size: 10px;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
       }
     }
   }

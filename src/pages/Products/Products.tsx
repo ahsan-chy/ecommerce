@@ -50,6 +50,13 @@ const Products = () => {
             </motion.div>
           </div>
         </div>
+        <div className="mobile-products-left-title">
+          <h2>All Clothes</h2>
+          <p>
+            Collection of youth elongated T-shirts with cuffs on the sleeves. Style that will give
+            you confidence in a big city.{" "}
+          </p>
+        </div>
 
         <motion.div
           className="product-category-root"
@@ -86,7 +93,6 @@ const Products = () => {
           </div>
         </motion.div>
       </div>
-      
     </motion.div>
   );
 };

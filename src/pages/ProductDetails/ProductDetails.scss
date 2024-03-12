@@ -376,72 +376,100 @@
 
 @media (max-width: 768px) {
   .product-details-container {
-    padding: 10px;
+    padding: 0px;
 
     .category-title {
-
-      h2 {
-        line-height: 14px;
-        font-size: 22px;
-      }
-      p {
-        font-size: 10px;
-      }
+      display: none;
     }
     .filter-category {
-      flex-wrap: wrap;
+      display: none;
     }
     .products-wrapper {
       grid-template-columns: 1fr;
 
       .right-product-details-wrapper {
-
+        p:first-child {
+          margin-top: 24px;
+          font-weight: 400;
+          font-size: 12.08px;
+          line-height: 16.11px;
+        }
         h2 {
-          font-size: 22px;
-          line-height: 30px;
+          font-size: 20.13px;
+          line-height: 28px;
+          font-weight: 700;
+          margin-top: 1rem;
         }
         p {
-          font-size: 10px;
-          line-height: 15px;
+          margin-top: 0.5rem;
+          font-size: 14.09px;
+          line-height: 24.16px;
         }
 
         .row {
-          margin-top: 5px;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-top: 1.5rem;
+          gap: 1.5rem;
           .col {
+            h6 {
+              height: 1rem;
+              font-weight: 600;
+              line-height: 1.5rem;
+            }
+            ul {
+              gap: 1.5rem;
+              margin-top: 1rem;
+              li {
+                font-size: 12.08px;
+                line-height: 1rem;
+              }
+            }
             .color-wrapper {
-              height: 15px;
+              height: 28px;
             }
             .color-box {
-              width: 10px;
-              height: 10px;
+              width: 14.06px;
+              height: 14.06px;
             }
             .color-box:hover {
-              height: 15px;
+              height: 28px;
             }
           }
         }
+        .other-section {
+          display: none;
+        }
         .buy-wrapper {
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: start;
+          gap: 4rem;
           h2 {
             font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
           }
           .buy-btns-wrapper {
             .buy-btn {
-              width: 65px;
-              height: 25px;
-              font-size: 9px;
+              width: 231px;
+              height: 48px;
+              font-size: 14.09px;
+              font-weight: 600;
+              line-height: 23.15px;
             }
             .bucket {
-              width: 28px;
-              height: 24px;
+              width: 48px;
+              height: 48px;
               img {
-                width: 13px;
+                width: 24.58px;
               }
             }
             .wishlist {
-              width: 28px;
-              height: 24px;
+              width: 48px;
+              height: 48px;
               img {
-                width: 13px;
+                width: 24.58px;
               }
             }
           }

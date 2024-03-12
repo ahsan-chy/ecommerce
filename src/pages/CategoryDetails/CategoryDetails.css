@@ -253,4 +253,88 @@ li {
   .category-details-container .category-wrapper .product-card .details-wrapper .card-footer button img {
     width: 19px;
   }
+}
+@media (max-width: 768px) {
+  .category-details-container {
+    padding: 1rem;
+  }
+  .category-details-container .scroller-wrapper {
+    display: none;
+  }
+  .category-details-container .category-title {
+    margin-top: 1.5rem;
+  }
+  .category-details-container .category-title h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+  .category-details-container .category-title p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 0.5rem;
+  }
+  .category-details-container .filter-category {
+    display: none;
+  }
+  .category-details-container .category-wrapper {
+    grid-template-columns: 1fr;
+    max-height: unset;
+    overflow-y: unset;
+  }
+  .category-details-container .category-wrapper .product-card {
+    width: 100%;
+    flex-direction: column;
+  }
+  .category-details-container .category-wrapper .product-card .image-wrapper {
+    width: 100%;
+    height: 208px;
+  }
+  .category-details-container .category-wrapper .product-card .image-wrapper img {
+    width: 100%;
+    height: 208px;
+  }
+  .category-details-container .category-wrapper .product-card .details-wrapper {
+    padding-left: 0;
+  }
+  .category-details-container .category-wrapper .product-card .details-wrapper .new-btn {
+    width: 54px;
+    height: 28px;
+    line-height: 14px;
+  }
+  .category-details-container .category-wrapper .product-card .details-wrapper p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .category-details-container .category-wrapper .product-card .details-wrapper .sub-p {
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 8px;
+  }
+  .category-details-container .category-wrapper .product-card .details-wrapper h2 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-top: 8px;
+  }
+  .category-details-container .category-wrapper .product-card .details-wrapper .card-footer {
+    flex-direction: column;
+    align-items: unset;
+    gap: 1rem;
+  }
+  .category-details-container .category-wrapper .product-card .details-wrapper .card-footer h3 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  .category-details-container .category-wrapper .product-card .details-wrapper .card-footer button {
+    height: 32px;
+    width: 136px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+  }
 }/*# sourceMappingURL=CategoryDetails.css.map */

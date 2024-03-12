@@ -27,13 +27,14 @@
 }
 @media (max-width: 768px) {
   .back-pagination {
-    margin: 10px 0;
-    gap: 5px;
+    gap: 16px;
   }
   .back-pagination img {
-    width: 15px;
+    width: 40px;
   }
   .back-pagination .name-wrapper span {
-    font-size: 10px;
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 400;
   }
 }/*# sourceMappingURL=BackNavigation.css.map */

@@ -95,6 +95,9 @@
         }
       }
     }
+    .mobile-products-left-title {
+      display: none;
+    }
 
     .product-category-root {
       margin-top: 60px;
@@ -364,51 +367,37 @@
 
 @media (max-width: 768px) {
   .products-container {
+    padding: 24px;
     display: flex;
     flex-direction: column;
     gap: 0px;
 
     .products-left-wrapper {
-      padding: 10px 0 0 10px;
-      .products-header-text {
-        p {
-          font-size: 10px;
-          line-height: 14px;
-        }
-      }
-      .products-left-title {
-        h2 {
-          font-size: 30px;
-          line-height: 30px;
-          margin-top: 20px;
-          letter-spacing: 2px;
-        }
-      }
-      .products-left-title {
-        p {
-          font-size: 10px;
-          line-height: 18px;
-        }
-      }
+      padding: 0;
+
+      display: none;
     }
     .products-right-wrapper {
-      padding: 10px 10px;
+      padding: 0;
 
       .right-top-box-wrapper {
-        margin-top: 10px;
+        margin-top: 0px;
         flex-wrap: wrap;
 
         .right-top-text-wrapper {
-          p {
-            font-size: 10px;
-            font-weight: 400;
+          p:first-child {
+            display: none;
           }
           h3 {
-            font-size: 22px;
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 28px;
           }
           p:last-child {
-            font-size: 10px;
-            line-height: 15px;
+            font-size: 14px;
+            line-height: 24px;
+            font-weight: 400;
+            width: 100%;
           }
         }
 
@@ -417,12 +406,35 @@
             width: 100%;
           }
           button {
-            width: 75px;
-            height: 25px;
-            padding-left: 5px;
-            padding-right: 5px;
-            font-size: 8px;
+            width: 115px;
+            height: 32px;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 14px;
+            bottom: 4px;
           }
+        }
+      }
+
+      .mobile-products-left-title {
+        margin-top: 24px;
+        display: block;
+        h2 {
+          font-family: $secondary-font;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 28px;
+          color: $dark-color;
+        }
+        p {
+          font-family: $primary-font;
+          font-size: 14px;
+          line-height: 24px;
+          color: $dark-color;
+          font-weight: 400;
+          margin-top: 8px;
         }
       }
 
@@ -433,12 +445,13 @@
           flex-wrap: wrap;
           justify-content: space-between;
           .product-card {
-         
             .title {
-              height: 20px;
+              height: 25px;
 
               p {
-                font-size: 10px;
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 14px;
               }
             }
           }

@@ -169,11 +169,10 @@
 }
 @media (max-width: 768px) {
   .create-wrapper {
-    padding: 10px 0 0 10px;
+    padding: 0;
   }
-  .create-wrapper .top-wrapper .products-header-text p {
-    font-size: 10px;
-    line-height: 14px;
+  .create-wrapper .top-wrapper {
+    display: none;
   }
   .create-wrapper .creater-box {
     margin-top: 32px;
@@ -188,26 +187,31 @@
     right: 54px;
     width: 160px;
   }
+  .create-wrapper .creater-box .description-wrapper {
+    margin-top: 80px;
+  }
   .create-wrapper .creater-box .description-wrapper p {
-    font-size: 9px;
-    line-height: 15px;
-    max-width: 212px;
+    font-size: 14px;
+    line-height: 24px;
   }
-  .create-wrapper .creater-box .description-wrapper button {
-    width: 90px;
-    height: 23px;
-    font-size: 7px;
-    padding: 4px;
-  }
-  .create-wrapper .creater-box .description-wrapper .view-btn {
-    width: 90px;
-    height: 23px;
-    font-size: 7px;
-    padding: 4px 6px;
+  .create-wrapper .creater-box .description-wrapper .description-btns {
+    align-items: center;
     gap: 10px;
   }
-  .create-wrapper .creater-box .description-wrapper .view-btn img {
-    width: 15px;
+  .create-wrapper .creater-box .description-wrapper button {
+    width: 167.5px;
+    height: 48px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.63px;
+  }
+  .create-wrapper .creater-box .description-wrapper .view-btn {
+    font-size: 12px;
+    padding: 0px;
+    gap: 7px;
+    line-height: 14px;
+    font-weight: 700;
+    justify-content: unset;
   }
 }
 @media (max-width: 480px) {
@@ -223,10 +227,5 @@
     top: -20%;
     right: 34px;
     width: 150px;
-  }
-  .create-wrapper .creater-box .description-wrapper p {
-    font-size: 8px;
-    line-height: 13px;
-    max-width: 190px;
   }
 }/*# sourceMappingURL=Create.css.map */

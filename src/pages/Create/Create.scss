@@ -215,15 +215,10 @@
 
 @media (max-width: 768px) {
   .create-wrapper {
-    padding: 10px 0 0 10px;
+    padding: 0;
 
     .top-wrapper {
-      .products-header-text {
-        p {
-          font-size: 10px;
-          line-height: 14px;
-        }
-      }
+      display: none;
     }
     .creater-box {
       margin-top: 32px;
@@ -243,36 +238,38 @@
       }
 
       .description-wrapper {
+        margin-top: 80px;
         p {
-          font-size: 9px;
-          line-height: 15px;
-          max-width: 212px;
+          font-size: 14px;
+          line-height: 24px;
         }
         .description-btns {
+          align-items: center;
+          gap: 10px;
         }
         button {
-          width: 90px;
-          height: 23px;
-          font-size: 7px;
-          padding: 4px;
+          width: 167.5px;
+          height: 48px;
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 14.63px;
           img {
           }
         }
         .view-btn {
-          width: 90px;
-          height: 23px;
-          font-size: 7px;
-          padding: 4px 6px;
-          gap: 10px;
-          img{
-            width: 15px;
+          font-size: 12px;
+          padding: 0px;
+          gap: 7px;
+          line-height: 14px;
+          font-weight: 700;
+          justify-content: unset;
+          img {
           }
         }
       }
     }
   }
 }
-
 
 @media (max-width: 480px) {
   .create-wrapper {
@@ -291,14 +288,6 @@
           right: 34px;
           width: 150px;
         }
-      }
-
-      .description-wrapper {
-        p {
-          font-size: 8px;
-          line-height: 13px;
-          max-width: 190px;
-        }       
       }
     }
   }

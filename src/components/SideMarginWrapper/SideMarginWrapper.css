@@ -12,5 +12,6 @@
 @media (max-width: 768px) {
   .side-margin-wrapper {
     margin-right: 0;
+    padding: 24px;
   }
 }/*# sourceMappingURL=SideMarginWrapper.css.map */
