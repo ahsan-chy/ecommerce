@@ -58,19 +58,24 @@
 @media (max-width: 768px) {
   .constructor-menu-wrapper {
     width: 100%;
+    display: flex;
+    gap: 0.5rem;
     .confirm-construct-menu {
-      height: 85px;
-      padding-left: 15px;
+      height: 62px;
+      width: 100%;
+      padding-left: 5px;
       h3 {
-        font-size: 12px !important;
+        font-size: 16px !important;
+        font-weight: 600;
+        line-height: 24px;
         img {
           margin-left: 10px;
-          width: 40px;
+          width: 30px;
         }
       }
       p {
-        font-size: 9px !important;
-        margin-top: 10px;
+        font-size: 10px !important;
+        margin-top: 0px;
         white-space: break-spaces;
         line-height: 14px;
       }

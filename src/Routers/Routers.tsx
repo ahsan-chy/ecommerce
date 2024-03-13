@@ -56,8 +56,21 @@ function Routers() {
           <Route path="/category-details" element={<CategoryDetails />} />
           <Route path="/product-details" element={<ProductDetails />} />
           <Route path="/create" element={<Create />} />
-          <Route path="/construct" element={<Construct />} />
-          <Route path="/confirm-construct" element={<ConfirmConstruct />} />
+          <Route
+            path="/construct"
+            element={
+              <Construct handleActive={handleActive} selectedCollections={selectedCollections} />
+            }
+          />
+          <Route
+            path="/confirm-construct"
+            element={
+              <ConfirmConstruct
+                handleActive={handleActive}
+                selectedCollections={selectedCollections}
+              />
+            }
+          />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/special-offer" element={<SpecialOffer />} />
           <Route path="/special-product" element={<SpecialProduct />} />

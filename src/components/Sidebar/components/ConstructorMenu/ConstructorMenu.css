@@ -49,4 +49,31 @@
     font-size: 11px;
     line-height: 20px;
   }
+}
+@media (max-width: 768px) {
+  .constructor-menu-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .constructor-menu-wrapper .confirm-construct-menu {
+    height: 62px;
+    width: 100%;
+    padding-left: 5px;
+  }
+  .constructor-menu-wrapper .confirm-construct-menu h3 {
+    font-size: 16px !important;
+    font-weight: 600;
+    line-height: 24px;
+  }
+  .constructor-menu-wrapper .confirm-construct-menu h3 img {
+    margin-left: 10px;
+    width: 30px;
+  }
+  .constructor-menu-wrapper .confirm-construct-menu p {
+    font-size: 10px !important;
+    margin-top: 0px;
+    white-space: break-spaces;
+    line-height: 14px;
+  }
 }/*# sourceMappingURL=ConstructorMenu.css.map */

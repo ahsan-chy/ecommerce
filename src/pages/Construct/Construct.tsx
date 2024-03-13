@@ -10,10 +10,17 @@ import design2 from "@/assets/images/design2.png";
 import design3 from "@/assets/images/design3.png";
 import design4 from "@/assets/images/design4.png";
 import design5 from "@/assets/images/design5.png";
+import eye from "@/assets/icons/eye.svg";
+import leftAdd from "@/assets/icons/left-add.svg";
+import add from "@/assets/icons/add.svg";
+import rightAdd from "@/assets/icons/right-add.svg";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import PaginationArrows from "@/components/PaginationArrows/PaginationArrows";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
+import HomeMenu from "@/components/Sidebar/components/HomeMenu/HomeMenu";
+import ConstructorMenu from "@/components/Sidebar/components/ConstructorMenu/ConstructorMenu";
 
 interface SelectedDesign {
   id: number;
@@ -52,12 +59,34 @@ const defaultPreviews = [
   { id: 5, src: subimg5, selected: false },
 ];
 
-const Construct = () => {
+const AddDesignBtns = () => {
+  return (
+    <div className="add-design-btns">
+      <div className="left-add">
+        <img src={leftAdd} alt="leftAdd" />
+      </div>
+      <div className="add">
+        <img src={add} alt="add" />
+      </div>
+      <div className="right-add">
+        <img src={rightAdd} alt="rightAdd" />
+      </div>
+    </div>
+  );
+};
+
+const Construct = (props: { handleActive: any; selectedCollections: any }) => {
+  const { handleActive, selectedCollections } = props;
+
   const [colors, setColors] = useState(defaultColors);
   const [images, setImages] = useState(defaultImages);
   const [previews, setPreviews] = useState(defaultPreviews);
   const [selectedDesign, setSelectedDesign] = useState<SelectedDesign | null>(null);
   const [selectedPreview, setSelectedPreview] = useState<SelectedPreview | null>(null);
+
+  const location = useLocation();
+
+  const pathnames = location.pathname.substring(1);
 
   const handleColorChange = (selectedColorId: number) => {
     const updatedColors = colors.map((color) => {
@@ -93,91 +122,117 @@ const Construct = () => {
     setPreviews(updatedPrev);
   };
   return (
-    <SideMarginWrapper>
-      <div className="construct-wrapper">
-        <div className="top-wrapper">
-          <div className="products-header-text">
-            <p>Clothes</p>
-            <p>Designer</p>
-          </div>
-        </div>
-        <div className="constructor-description">
-          <div className="left-constructor">
-            <motion.div
-              className="constructor-img-wrapper"
-              initial={{ opacity: 0, x: +50 }}
-              animate={{ opacity: 1, x: 0, transition: { duration: 0.78, delay: 0.2 } }}>
-              <img src={CreateShirt} alt="Create-Shirt" />
-              <div className="design-div">
-                {selectedDesign && <img src={selectedDesign?.src} className="" />}
-              </div>
-              <div className="preview-div">
-                {selectedPreview && <img src={selectedPreview?.src} className="" />}
-              </div>
-            </motion.div>
-            <div className="pagination-box">
-              <PaginationArrows current={"0"} length={"30"} />
+    <>
+      <SideMarginWrapper>
+        <div className="construct-wrapper">
+          <div className="top-wrapper">
+            <div className="products-header-text">
+              <p>Clothes</p>
+              <p>Designer</p>
             </div>
           </div>
-          <div className="right-constructor">
-            <motion.div
-              className="constructor-details"
-              initial={{ opacity: 0, x: +50 }}
-              animate={{ opacity: 1, x: 0, transition: { duration: 0.78 } }}>
-              <h3>Design Constructor</h3>
-              <p>
-                Design your clothes using the colors. Choose a preview for the presentation and send
-                it to the contest.
-              </p>
+          <div className="construct-top-menu">
+            <HomeMenu collectionNav={selectedCollections} handleActive={handleActive} />
+          </div>
+          <div className="mobile-category-wrappers">
+            <button className="active-mobile-cat-btn">T-Shirt</button>
+            <button className="deActive-mobile-cat-btn">Hoodie</button>
+            <button className="deActive-mobile-cat-btn">Long sleeve</button>
+          </div>
+          <div className="preview-button">
+            <img src={eye} alt="preview-eye" />
+            <span>Preview</span>
+          </div>
 
-              <div className="color-section">
-                <h4>T-Shirt Color</h4>
-                <p>Create the color of your shirt</p>
-                <div className="colors-row">
-                  {colors.map((color, index) => (
-                    <div
-                      key={index}
-                      className={`color-block ${color.selected ? "color-selected" : ""}`}
-                      style={{ backgroundColor: color.colorCode }}
-                      onClick={() => handleColorChange(color.id)}></div>
-                  ))}
+          <div className="constructor-description">
+            <div className="left-constructor">
+              <motion.div
+                className="constructor-img-wrapper"
+                initial={{ opacity: 0, x: +50 }}
+                animate={{ opacity: 1, x: 0, transition: { duration: 0.78, delay: 0.2 } }}>
+                <img src={CreateShirt} alt="Create-Shirt" />
+                <div className="design-div">
+                  {selectedDesign && <img src={selectedDesign?.src} className="" />}
                 </div>
-              </div>
-              <div className="divider"></div>
-              <div className="design-section">
-                <h4>Design</h4>
-                <p>Apply design, Use our section, or load your</p>
-                <div className="images-row">
-                  {images.map((image) => (
-                    <div
-                      className={`design-image-wrapper  ${image.selected ? "image-selected" : ""}`}
-                      onClick={handleImageDesign(image.id)}
-                      key={image.id}>
-                      <img src={image.src} alt={`sub-item ${image.id}`} />
-                    </div>
-                  ))}
+                <div className="preview-div">
+                  {selectedPreview && <img src={selectedPreview?.src} className="" />}
                 </div>
+              </motion.div>
+              <div className="pagination-box">
+                <PaginationArrows current={"0"} length={"30"} />
               </div>
-              <div className="preview-section">
+            </div>
+            <div className="right-constructor">
+              <motion.div
+                className="constructor-details"
+                initial={{ opacity: 0, x: +50 }}
+                animate={{ opacity: 1, x: 0, transition: { duration: 0.78 } }}>
+                <h3>Design Constructor</h3>
+                <p>
+                  Design your clothes using the colors. Choose a preview for the presentation and
+                  send it to the contest.
+                </p>
+
+                <div className="color-section">
+                  <h4>T-Shirt Color</h4>
+                  <p>Create the color of your shirt</p>
+                  <div className="colors-row">
+                    {colors.map((color, index) => (
+                      <div
+                        key={index}
+                        className={`color-block ${color.selected ? "color-selected" : ""}`}
+                        style={{ backgroundColor: color.colorCode }}
+                        onClick={() => handleColorChange(color.id)}></div>
+                    ))}
+                  </div>
+                </div>
                 <div className="divider"></div>
-                <h4>Preview</h4>
-                <p>Apply design, Use our section, or load your</p>
-                <div className="images-row">
-                  {previews.map((prev) => (
-                    <div
-                      className={`preview-image-wrapper ${prev.selected ? "prev-selected" : ""}`}
-                      onClick={handlePreview(prev.id)}
-                      key={prev.id}>
-                      <img src={prev.src} alt={`sub-item ${prev.id}`} />
+                <>
+                  <div className="design-section">
+                    <h4>Design</h4>
+                    <p>Apply design, Use our section, or load your</p>
+                    <div className="images-row">
+                      {images.map((image) => (
+                        <div
+                          className={`design-image-wrapper  ${
+                            image.selected ? "image-selected" : ""
+                          }`}
+                          onClick={handleImageDesign(image.id)}
+                          key={image.id}>
+                          <img src={image.src} alt={`sub-item ${image.id}`} />
+                        </div>
+                      ))}
+                      <AddDesignBtns />
                     </div>
-                  ))}
+                  </div>
+                </>
+                <div className="preview-section">
+                  <div className="divider"></div>
+                  <h4>Preview</h4>
+                  <p>Apply design, Use our section, or load your</p>
+                  <div className="images-row">
+                    {previews.map((prev) => (
+                      <div
+                        className={`preview-image-wrapper ${prev.selected ? "prev-selected" : ""}`}
+                        onClick={handlePreview(prev.id)}
+                        key={prev.id}>
+                        <img src={prev.src} alt={`sub-item ${prev.id}`} />
+                      </div>
+                    ))}
+                  </div>
                 </div>
+              </motion.div>
+              <div className="mobile-pagination-box">
+                <PaginationArrows current={"0"} length={"30"} />
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
+      </SideMarginWrapper>
+      <div className="mobile-cart-btns-wrapper">
+        <ConstructorMenu />
       </div>
-    </SideMarginWrapper>
+    </>
   );
 };
 

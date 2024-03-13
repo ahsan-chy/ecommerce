@@ -54,6 +54,14 @@ const VotingAll = () => {
             </motion.div>
           </div>
         </div>
+        <div className="vottings-left-title">
+          <div className="sub-head-box">
+            <div className="spacer"></div>
+            <p>Voting</p>
+          </div>
+          <h2>Vote For A New Style</h2>
+          <p>Black modern style for self-confident. Challenge society, find out who is who !!!</p>
+        </div>
 
         <motion.div
           className="votting-category-root"

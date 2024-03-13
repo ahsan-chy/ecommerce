@@ -402,45 +402,27 @@
   .about-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 0px;
-    padding: 10px 0 0 10px;
+    // gap: 0px;
+    padding: 24px 16px;
 
-    padding: 10px 10px 0;
     .about-left {
-      .top-wrapper {
-        .about-header-text {
-          p {
-            font-size: 10px;
-            line-height: 14px;
-          }
-        }
-      }
-      .about-left-title {
-        margin-bottom: 20px;
-        .about-wrap {
-          h1 {
-            font-size: 30px;
-            line-height: 30px;
-            margin-top: 20px;
-            letter-spacing: 2px;
-          }
-          p {
-            font-size: 10px;
-            line-height: 18px;
-          }
-        }
-      }
+      display: none;
     }
 
     .about-box {
       column-gap: 80px;
 
       .about-right {
+        > h3 {
+          font-size: 20px;
+          line-height: 28px;
+          font-weight: 700;
+        }
         > p {
-          font-size: 13px;
-          line-height: 20px;
+          font-size: 14px;
+          line-height: 24px;
           font-weight: 400;
-          max-width: 100%;
+          margin-top: 0.5rem;
         }
         .sub-menus-wrapper {
           gap: 15px;
@@ -455,6 +437,37 @@
         }
         .our-team {
           grid-template-columns: 1fr;
+          .team-left {
+            h3 {
+              font-size: 20px;
+              line-height: 28px;
+              font-weight: 700;
+            }
+            p {
+              font-size: 14px;
+              line-height: 24px;
+              text-align: left;
+            }
+            .team-images-wrapper{
+              gap: 1.3rem;
+              justify-content: space-between;
+              .team-card
+              {
+
+                .team-image-wrapper 
+                {
+                  width: 150px;
+                  min-height: 150px;
+                }
+              }
+            }
+          }
+          .team-right{
+            .our-team-img-wrapper{
+              width: 100%;
+              height: 469px;
+            }
+          }
         }
       }
     }
