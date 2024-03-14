@@ -3,6 +3,7 @@ import Input from "@/components/TextInput/TextInput";
 import "./ShipPayment.scss";
 import FilterDropdown from "@/components/FilterDropdown/FilterDropdown";
 import { countries } from "@/db/countries";
+import ShippingPaymentMenu from "@/components/Sidebar/components/ShippingPaymentMenu/ShippingPaymentMenu";
 
 const paymentType = [
   { value: "bank card", label: "Bank card" },
@@ -21,13 +22,13 @@ const ShipPayment = () => {
           </div>
         </div>
         <div className="ship-details">
-          <h2>Cart</h2>
-          <p>Here you can check your order with further confirmation and payment.</p>
+          <h2>Shipping and Payment</h2>
+          <p>Specify the delivery address and payment method</p>
 
           <div className="shipping-inputs">
             <div className="shipping">
               <h3>Shipping </h3>
-              <div className="input-row double-inputs">
+              <div className="input-row double-inputs mobile-two">
                 <Input label="First Name" type="text" placeholder="John" required={true} />
                 <Input label="Last Name" type="text" placeholder="Smith" required={true} />
               </div>
@@ -94,6 +95,9 @@ const ShipPayment = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="mobile-order-details">
+      <ShippingPaymentMenu />
       </div>
     </SideMarginWrapper>
   );

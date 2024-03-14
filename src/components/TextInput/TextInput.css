@@ -13,17 +13,25 @@
   margin-left: 10px;
 }
 .inputs-wrapper input {
-  flex: 1;
   border: none;
   border-bottom: 1px solid #35363a;
   outline: none;
   background-color: transparent;
   padding: 5px;
+  color: #35363A;
+  width: 100%;
+}
+.inputs-wrapper input::-moz-placeholder {
+  color: #35363A;
+}
+.inputs-wrapper input::placeholder {
+  color: #35363A;
 }
 
 @media (max-width: 1400px) {
-  .inputs-wrapper label {
-    font-size: 13px;
-    line-height: 30px;
+  .inputs-wrapper input {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
   }
 }/*# sourceMappingURL=TextInput.css.map */

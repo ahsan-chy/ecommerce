@@ -1,6 +1,9 @@
 import "./SpecialProductMenu.scss";
 import { motion } from "framer-motion";
 
+import bucket from "@/assets/icons/bucket.svg";
+import wishlist from "@/assets/icons/white-wishlist.svg";
+
 const SpecialProductMenu = () => {
   return (
     <motion.div
@@ -37,7 +40,18 @@ const SpecialProductMenu = () => {
         </div>
         <h2>$52.99</h2>
       </div>
-      <button>BUY NOW</button>
+      <button className="desktop-buy-btn">BUY NOW</button>
+      <div className="mobile-buy-btn-wrapper">
+        <div className="buy-btns-wrapper">
+          <div className="buy-btn">BUY NOW</div>
+          <div className="bucket">
+            <img src={bucket} alt="" />
+          </div>
+          <div className="wishlist">
+            <img src={wishlist} alt="" />
+          </div>
+        </div>
+      </div>
     </motion.div>
   );
 };

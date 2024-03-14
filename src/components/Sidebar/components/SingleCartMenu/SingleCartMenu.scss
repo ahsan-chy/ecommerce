@@ -83,16 +83,27 @@
 
 @media (max-width: 768px) {
   .single-cart-menu-wrapper {
-
+    margin-top: 1.5rem;
     .single-cart-menu-details {
+      min-height: 202px;
+      height: 100%;
       ul {
+        padding: 1rem;
+        align-content: unset;
+        justify-content: unset;
+        width: 100%;
         li {
           span {
-            font-size: 10px;
-            line-height: 15px;
+            font-size: 14px;
+            line-height: 24px;
           }
           .total-price {
             font-size: 12px;
+          }
+          span:last-child {
+            margin-left: auto;
+            font-size: 16px;
+            font-weight: 600;
           }
         }
       }

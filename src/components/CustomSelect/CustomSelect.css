@@ -96,9 +96,6 @@
   .select-header {
     padding-bottom: 4px;
   }
-  .select-header label {
-    font-size: 11px;
-  }
   .options {
     font-size: 11px;
   }
@@ -114,7 +111,10 @@
     padding-bottom: 2px;
   }
   .select-header label {
-    font-size: 9px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #35363A;
   }
   .options {
     font-size: 8px;

@@ -44,9 +44,9 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
+  font-family: "Montserrat", sans-serif;
 }
 .receipt-menu .receipt-wrappers .total-charges .total-price {
-  font-family: "Montserrat", sans-serif;
   font-size: 22px;
   font-weight: 500;
   margin-top: 15px;
@@ -135,6 +135,48 @@
   .receipt-menu button {
     height: 85px;
     font-size: 16px;
+  }
+  .receipt-menu button img {
+    width: 35px;
+  }
+}
+@media (max-width: 768px) {
+  .receipt-menu .receipt-wrappers {
+    padding: 0 8px;
+  }
+  .receipt-menu .receipt-wrappers h3 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  .receipt-menu .receipt-wrappers ul li span {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 1rem;
+  }
+  .receipt-menu .receipt-wrappers ul li span:last-child {
+    margin-left: auto;
+    font-weight: 600;
+  }
+  .receipt-menu .receipt-wrappers .payment-status {
+    padding: 0;
+  }
+  .receipt-menu .receipt-wrappers .payment-type {
+    padding: 0;
+  }
+  .receipt-menu .receipt-wrappers .total-charges {
+    padding: 0;
+    margin-top: 1.5rem;
+  }
+  .receipt-menu .receipt-wrappers .total-charges .total-price {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-top: 0;
+  }
+  .receipt-menu button {
+    height: 60px;
+    font-size: 14px;
   }
   .receipt-menu button img {
     width: 35px;

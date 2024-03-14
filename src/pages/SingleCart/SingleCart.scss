@@ -1,5 +1,9 @@
 @import "../../assets/Variables/Variables.scss";
 
+.mobile-cart-back-wrapper {
+  display: none;
+}
+
 .cart-wrapper {
   padding: 44.4px 0 0 65.4px;
 
@@ -265,6 +269,38 @@
                   cursor: pointer;
                   width: 12px;
                   width: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+      .cart-back-wrapper {
+        margin-top: 30px;
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .mobile-cart-back-wrapper {
+    display: block;
+  }
+  .cart-wrapper {
+
+    .cart-details {
+      .cart-card-wrapper {
+        grid-template-columns: 1fr;
+      }
+      .cart-list {
+        ul {
+          li {
+            height: 93px;
+            .cart-data {
+              .cart-color {
+                .color-box {
+                  width: 14px !important;
+                  height: 14px !important;
+                  margin-top: 7px;
                 }
               }
             }

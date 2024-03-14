@@ -1,15 +1,78 @@
+@import "../../../../assets/Variables/Variables.scss";
+
 .mobile-menu-wrapper {
   display: none;
 }
 @media (max-width: 768px) {
   .mobile-menu-wrapper {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+    width: 100%;
+    // border: 1px solid #4F9098;
+    background-color: #4f9098;
+    padding: 1rem;
     .mobile-burger {
-      width: 14px;
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+    }
+    .page-title {
+      h5 {
+        font-family: $primary-font;
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff;
+        font-weight: 600;
+      }
+    }
+    .right-options {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      cursor: pointer;
+
+      .star-box {
+        width: 24px;
+        height: 24px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .cart-count-box {
+        width: 24px;
+        height: 24px;
+        position: relative;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        p {
+          position: absolute;
+          bottom: -4px;
+          right: -4px;
+
+          width: 16px;
+          height: 16px;
+          padding: 1px;
+          background-color: $dark-color;
+          color: #00e4ff;
+          border-radius: 50%;
+
+          font-size: 12px;
+          text-align: center;
+        }
       }
     }
   }

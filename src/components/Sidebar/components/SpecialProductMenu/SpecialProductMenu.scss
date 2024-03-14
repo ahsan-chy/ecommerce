@@ -25,7 +25,7 @@
         ul li {
           font-family: $primary-font;
           font-size: 16px;
-          color: $dark-color;
+          color: #8d8e96;
           font-weight: 400;
         }
         .color-wrapper {
@@ -40,7 +40,7 @@
           transition: height 0.3s ease-in-out;
         }
         .color-box:hover {
-          height: 28px;
+          height: 25px;
         }
       }
     }
@@ -62,6 +62,9 @@
     font-size: 26px;
     line-height: 40px;
     font-weight: 500;
+  }
+  .desktop-buy-btn{
+    display: block;
   }
 }
 
@@ -98,36 +101,41 @@
 
 @media (max-width: 768px) {
   .product-menu-wrapper {
-    background-color: #fff;
+    margin-top: 61px;
     padding-top: 26px;
 
     .varients {
       .row {
+        justify-content: unset;
         .col {
           h6 {
-            font-size: 14px;
+            font-size: 16px;
+            line-height: 24px;
+            font-weight: 600;
           }
           ul {
-            gap: 14px;
+            gap: 24px;
           }
 
           ul li {
-            font-size: 11px;
+            font-size: 12px;
+            line-height: 16px;
           }
           .color-box {
-            width: 10px;
-            height: 10px;
+            width: 14px;
+            height: 14px;
           }
-         
         }
       }
       h2 {
-        font-size: 25px;
+        font-size: 20px;
+        text-align: left;
+        line-height: 28px;
+        font-weight: 800;
       }
     }
-    button {
-      height: 60px;
-      font-size: 14px;
+    .desktop-buy-btn{
+      display: none;
     }
   }
 }

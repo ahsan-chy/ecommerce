@@ -6,6 +6,13 @@ import { motion } from "framer-motion";
 const Receipt = () => {
   return (
     <SideMarginWrapper>
+      <motion.div
+        className="mobile-receipt-back-wrapper"
+        initial={{ opacity: 0, x: "-10%" }}
+        animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
+        exit={{ opacity: 0, x: "-10%" }}>
+        <BackNavigation navigateTo={"/"} pageName={"Back to home"} />
+      </motion.div>
       <div className="receipt-wrapper">
         <div className="top-wrapper">
           <div className="receipt-header-text">

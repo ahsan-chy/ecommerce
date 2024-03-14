@@ -329,7 +329,6 @@
       background-color: #254549;
     }
 
-
     .active-right-nav::before {
       content: "";
       position: absolute;
@@ -761,9 +760,7 @@
 @media (max-width: 768px) {
   .navbar-container {
     width: 100%;
-    height: 30px;
-    border: 1px solid gray;
-    padding: 3px;
+    height: 72px;
     font-family: $primary-font;
     position: relative;
 
@@ -783,12 +780,12 @@
           opacity: 0;
         }
         100% {
-          width: 150px;
+          width: 310px;
         }
       }
       @keyframes closeLeftbar {
         0% {
-          width: 150px;
+          width: 310px;
         }
         100% {
           width: 0;
@@ -806,17 +803,20 @@
           li {
             .menuItem-text {
               margin-left: 35px !important;
+              font-size: 16px;
+              line-height: 24px;
+              font-weight: 600;
             }
           }
         }
 
         .x-btn {
           display: block;
-          width: 10px;
-          height: 10px;
+          width: 16.67px;
+          height: 16.67px;
           position: absolute;
-          right: 13px;
-          top: 8px;
+          right: 16px;
+          top: 16px;
           cursor: pointer;
           img {
             width: 100%;
@@ -838,11 +838,11 @@
           }
         }
         h3 {
-          margin-left: 25px;
-          font-size: 12px;
+          display: none;
         }
 
         .primary-menu-options {
+          margin-top: 56px;
           .favourites-icon {
             img {
               width: 11px;
@@ -850,12 +850,16 @@
             }
           }
         }
+        .gap-top{
+          margin-top: 0px !important;
+        }
 
         .creative-user-options {
           h4 {
             margin-left: 25px;
             margin-bottom: 8px;
-            font-size: 13px;
+            font-size: 16px;
+            line-height: 24px;
           }
           ul {
             li {
@@ -870,48 +874,55 @@
           margin-left: 25px;
 
           h4 {
-            font-size: 13px;
-            margin-bottom: 15px;
+            font-size: 16px;
+            margin-bottom: 24px;
           }
 
           .steps {
             width: 100px;
 
             p {
-              font-size: 6px;
-              width: 15px;
-              height: 15px;
+              font-size: 12px;
+              width: 23.5px;
+              height: 23.5px;
               border: 1px solid white;
+              line-height: 16px;
+              font-weight: 500;
             }
           }
         }
 
         ul {
-          row-gap: 10px;
+          row-gap: 24px;
+          margin-top: 1rem;
           li {
             font-size: 10px;
 
             .active {
-              width: 40px;
+              width: 75px;
             }
 
             .menuItem-text {
-              margin-left: 30px !important; /* Default margin */
+              margin-left: 30px !important;
             }
 
             .menuItem-text.isActive {
-              margin-left: 45px !important; /* Applied when isActive is true */
+              margin-left: 85px !important;
             }
           }
         }
         button {
-          width: 120px;
-          height: 25px;
-          font-size: 10px;
+          width: 100%;
+          height: 48px;
+          font-size: 12px;
+          line-height: 14px;
+          font-weight: 700;
         }
       }
       .noflex {
         gap: 30px;
+        // width: 310px !important;
+        padding: 16px 16px 0 32px;
       }
 
       .leftbar-2-open {
@@ -980,12 +991,8 @@
         }
       }
     }
-    .right-2-open {
-      animation: openRightbar 0.3s linear forwards;
-    }
-    .right-2-close {
-      animation: closeRightbar 0.3s linear forwards;
-      overflow: hidden;
+    .right-2 {
+      display: none;
     }
   }
 }

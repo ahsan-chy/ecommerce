@@ -4,7 +4,6 @@ import "./Sidebar.scss";
 
 import Cart from "@/assets/icons/cart.svg";
 import cross from "@/assets/icons/x-button.png";
-import burgericon from "@/assets/icons/right-burger.png";
 import MenuBurger from "@/assets/icons/menu-burger.svg";
 import Heart from "@/assets/icons/heart.svg";
 import ConstructorMenu from "./components/ConstructorMenu/ConstructorMenu";
@@ -272,7 +271,7 @@ const Sidebar = (props: { handleActive: any; selectedCollections: any }) => {
               </ul>
             </div>
           ) : (
-            <div className="primary-menu-options">
+            <div className={`primary-menu-options ${pathnames && "gap-top"}   `}>
               <ul>
                 {SelectedRoute.map((menuItem, index) => (
                   <li key={index} onClick={() => handleActiveRoute(menuItem)}>
@@ -317,15 +316,10 @@ const Sidebar = (props: { handleActive: any; selectedCollections: any }) => {
           )}
         </div>
         <MobileSidebar setIsMenuOpen={setIsMenuOpen} isMenuOpen={isMenuOpen} />
-        <MobileSidebar
-          setIsMenuOpen={setRightIsMenuOpen}
-          isMenuOpen={rightIsMenuOpen}
-          icon={burgericon}
-        />
       </div>
 
       <motion.div
-        className={`rightbar right-2 ${rightIsMenuOpen ? "right-2-open" : "right-2-close"}`}
+        className={`rightbar right-2`}
         initial={{ opacity: 0, x: +100 }}
         animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.7 } }}
         exit={{ opacity: 0, x: +100 }}>

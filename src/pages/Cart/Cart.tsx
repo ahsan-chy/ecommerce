@@ -5,10 +5,14 @@ import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper"
 import BackNavigation from "@/components/BackNavigation/BackNavigation";
 import { products } from "@/db/products";
 import { motion } from "framer-motion";
+import CartMenu from "@/components/Sidebar/components/CartMenu/CartMenu";
 
 const Cart = () => {
   return (
     <SideMarginWrapper>
+      <div className="mobile-cart-back-wrapper">
+        <BackNavigation navigateTo={"products"} pageName={"Back to Products"} />
+      </div>
       <div className="cart-wrapper">
         <div className="top-wrapper">
           <div className="cart-header-text">
@@ -61,6 +65,9 @@ const Cart = () => {
                       <img src={deleteIcon} alt="" />
                     </div>
                   </div>
+                  <div className="mobile-close-box">
+                    <img src={deleteIcon} alt="" />
+                  </div>
                 </motion.li>
               ))}
             </ul>
@@ -70,6 +77,9 @@ const Cart = () => {
             <BackNavigation navigateTo={"products"} pageName={"Back to Products"} />
           </div>
         </div>
+      </div>
+      <div className="mobile-cart-menu">
+        <CartMenu />
       </div>
     </SideMarginWrapper>
   );

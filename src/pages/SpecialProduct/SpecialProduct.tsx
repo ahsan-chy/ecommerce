@@ -1,5 +1,7 @@
 import "./SpecialProduct.scss";
 import bucket from "@/assets/icons/bucket.svg";
+import leftArrow from "@/assets/icons/left-white-arrow.svg";
+import rightArrow from "@/assets/icons/right-white-arrow.svg";
 import wishlist from "@/assets/icons/white-wishlist.svg";
 import specialPreview from "@/assets/images/special-preview-img.png";
 import specialFirst from "@/assets/images/special-first.png";
@@ -7,6 +9,7 @@ import specialSub from "@/assets/images/special-sub-img.png";
 import BackNavigation from "@/components/BackNavigation/BackNavigation";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import { motion } from "framer-motion";
+import SpecialProductMenu from "@/components/Sidebar/components/SpecialProductMenu/SpecialProductMenu";
 
 const SpecialProduct = () => {
   return (
@@ -40,7 +43,9 @@ const SpecialProduct = () => {
               initial={{ opacity: 0, x: +100 }}
               animate={{ opacity: 1, x: 0, transition: { duration: 1, delay: 0.2 } }}
               exit={{ opacity: 0, x: +100 }}>
-              <h1>Who Are You? Collections</h1>
+              <h1>
+                Who Are You? <br /> Collections
+              </h1>
               <p>
                 New collections at a special price. Only the first two weeks since the appearance of
                 the collection is a special offer.
@@ -82,10 +87,17 @@ const SpecialProduct = () => {
                     </div>
                   </div>
                 </div>
+                <div className="special-arrows-wrapper">
+                  <img src={leftArrow} alt="" />
+                  <img src={rightArrow} alt="" />
+                </div>
               </div>
             </motion.div>
           </div>
         </div>
+      </div>
+      <div className="special-mobile-menu-wrapper">
+        <SpecialProductMenu />
       </div>
     </SideMarginWrapper>
   );

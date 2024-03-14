@@ -1,5 +1,8 @@
 @import "../../assets/Variables/Variables.scss";
 
+.mobile-receipt-back-wrapper {
+  display: none;
+}
 .receipt-wrapper {
   padding: 44.4px 0 0 65.4px;
   font-family: $primary-font;
@@ -37,8 +40,10 @@
       .receipt-left {
         width: 387px;
         background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
         .receipt-wrapper-left {
           padding: 34px;
+
           h4 {
             font-size: 26px;
             line-height: 28px;
@@ -146,6 +151,7 @@
       }
       .receipt-right {
         .receipt-back-wrapper {
+          display: block;
         }
         h1 {
           font-size: 55px;
@@ -331,10 +337,6 @@
                 width: 20px;
                 height: 20px;
                 margin: 5px auto;
-                img {
-                }
-              }
-              p {
               }
             }
           }
@@ -366,14 +368,11 @@
                   .offer-footer {
                     width: 160px;
                     .offer-content {
-                      p {
-                      }
                       h3 {
                         font-size: 18px;
                         line-height: 25px;
                       }
-                      p:last-child {
-                      }
+                     
                     }
                   }
                 }
@@ -478,10 +477,7 @@
                 width: 20px;
                 height: 20px;
                 margin: 5px auto;
-                img {
-                }
-              }
-              p {
+               
               }
             }
           }
@@ -515,12 +511,9 @@
                     width: 107px;
                     padding: 0 10px 10px 10px;
                     .offer-content {
-                      p {
-                      }
+                     
                       h3 {
                         font-size: 15px;
-                      }
-                      p:last-child {
                       }
                     }
                   }
@@ -535,63 +528,168 @@
 }
 
 @media (max-width: 768px) {
+  .mobile-receipt-back-wrapper {
+    display: block;
+  }
   .receipt-wrapper {
-    padding: 10px 10px 0;
+    padding: 0;
+    margin-top: 1.5rem;
 
     .top-wrapper {
-      .receipt-header-text {
-        p {
-          font-size: 10px;
-          line-height: 14px;
-        }
-      }
+      display: none;
     }
 
     .receipt-details {
-      padding: 10px 10px 0;
+      padding: 0;
 
       h2 {
         font-size: 20px;
+        line-height: 28px;
+        font-weight: 700;
       }
       > p {
-        font-size: 10px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 0.5rem;
       }
 
       .receipt-box {
         flex-direction: column;
-        margin-top: 15px;
+        margin-top: 43px;
+
         .receipt-left {
           width: 100%;
+          .receipt-wrapper-left {
+            h4 {
+              font-size: 20px;
+              line-height: 28px;
+              font-weight: 700;
+            }
+            p {
+              font-size: 14px;
+              line-height: 24px;
+              font-weight: 400;
+              margin-top: 0.5rem;
+            }
+            .top-divider {
+              margin-top: 18px;
+              border-top: unset;
+            }
+            ul {
+              li {
+                padding-top: 15px;
+                span {
+                  font-size: 14px;
+                  line-height: 24px;
+                  font-weight: 400;
+                }
+                span:last-child {
+                  font-weight: 600;
+                }
+              }
+            }
+            .discount-row {
+              border-top: unset;
+              margin-top: 41px;
+              span {
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 400;
+              }
+              span:last-child {
+                font-weight: 600;
+              }
+            }
+            .payment-type {
+              margin-top: 41px;
+              ul {
+                border-top: unset;
+                li {
+                  span {
+                    font-size: 14px;
+                    line-height: 24px;
+                    font-weight: 400;
+                  }
+                  span:last-child {
+                    font-weight: 600;
+                  }
+                }
+              }
+            }
+            .total-charges {
+              margin-top: 24px;
+              span {
+                font-size: 14px;
+                line-height: 24px;
+                font-weight: 400;
+              }
+              span:last-child {
+                font-weight: 600;
+              }
+            }
+            .receipt-double-divider {
+              display: none;
+            }
+            .qr-code-box {
+              .qr-code {
+                margin: 24px auto;
+              }
+            }
+          }
         }
         .receipt-right {
+          .receipt-back-wrapper {
+            display: none;
+          }
           h1 {
-            font-size: 30px;
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
             letter-spacing: 0px;
           }
           > p {
-            font-size: 10px;
-            line-height: 18px;
+            font-size: 14px;
+            line-height: 23px;
+            font-weight: 600;
+            color: #8d8e96;
+            margin-top: 0.5rem;
           }
           .bottom-description {
+            margin-top: 1.5rem;
             h5 {
               font-size: 20px;
-              line-height: 30px;
+              line-height: 28px;
+              font-weight: 700;
             }
-           
+            p {
+              margin-top: 0.5rem;
+              font-size: 14px;
+              line-height: 24px;
+              font-weight: 400;
+            }
+
             .offer-right {
               .offer-row {
-                flex-wrap: wrap;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
                 gap: 10px;
                 .offer-column {
                   .offer-footer {
+                    height: 235px;
+                    width: 100%;
                     .offer-content {
+                      p{
+                        font-size: 10px;
+                        line-height: 14px;
+                      }
                       h3 {
-                        font-size: 13px;
-                        line-height: 18px;
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 600;
                       }
                       p:last-child {
-                        font-size: 7px;
+                        font-size: 12px;
+                        line-height: 16px;
                       }
                     }
                   }

@@ -15,20 +15,25 @@
     }
   }
   input {
-    flex: 1;
     border: none;
     border-bottom: 1px solid $dark-color;
     outline: none;
     background-color: transparent;
     padding: 5px;
+    color: #35363A;
+    width: 100%;
+  }
+  input::placeholder {
+    color: #35363A;
   }
 }
 
 @media (max-width: 1400px) {
   .inputs-wrapper {
-    label {
-      font-size: 13px;
-      line-height: 30px;
+    input {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 24px;
     }
   }
 }

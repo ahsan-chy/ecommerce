@@ -24,7 +24,7 @@
 .product-menu-wrapper .varients .row .col ul li {
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
-  color: #35363a;
+  color: #8d8e96;
   font-weight: 400;
 }
 .product-menu-wrapper .varients .row .col .color-wrapper {
@@ -39,7 +39,7 @@
   transition: height 0.3s ease-in-out;
 }
 .product-menu-wrapper .varients .row .col .color-box:hover {
-  height: 28px;
+  height: 25px;
 }
 .product-menu-wrapper .varients h2 {
   font-family: "Poppins", sans-serif;
@@ -58,6 +58,9 @@
   font-size: 26px;
   line-height: 40px;
   font-weight: 500;
+}
+.product-menu-wrapper .desktop-buy-btn {
+  display: block;
 }
 
 @media (max-width: 1715px) {
@@ -83,5 +86,39 @@
   .product-menu-wrapper button {
     height: 105px;
     font-size: 18px;
+  }
+}
+@media (max-width: 768px) {
+  .product-menu-wrapper {
+    margin-top: 61px;
+    padding-top: 26px;
+  }
+  .product-menu-wrapper .varients .row {
+    justify-content: unset;
+  }
+  .product-menu-wrapper .varients .row .col h6 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .product-menu-wrapper .varients .row .col ul {
+    gap: 24px;
+  }
+  .product-menu-wrapper .varients .row .col ul li {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .product-menu-wrapper .varients .row .col .color-box {
+    width: 14px;
+    height: 14px;
+  }
+  .product-menu-wrapper .varients h2 {
+    font-size: 20px;
+    text-align: left;
+    line-height: 28px;
+    font-weight: 800;
+  }
+  .product-menu-wrapper .desktop-buy-btn {
+    display: none;
   }
 }/*# sourceMappingURL=SpecialProductMenu.css.map */

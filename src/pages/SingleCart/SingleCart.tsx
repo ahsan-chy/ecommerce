@@ -3,10 +3,14 @@ import "./SingleCart.scss";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import BackNavigation from "@/components/BackNavigation/BackNavigation";
 import CartProduct from "@/components/CartProduct/CartProduct";
+import SingleCartMenu from "@/components/Sidebar/components/SingleCartMenu/SingleCartMenu";
 
 const SingleCart = () => {
   return (
     <SideMarginWrapper>
+       <div className="mobile-cart-back-wrapper">
+        <BackNavigation navigateTo={"products"} pageName={"Back to Products"} />
+      </div>
       <div className="cart-wrapper">
         <div className="top-wrapper">
           <div className="cart-header-text">
@@ -24,6 +28,9 @@ const SingleCart = () => {
             <BackNavigation navigateTo={"products"} pageName={"Back to Products"} />
           </div>
         </div>
+      </div>
+      <div className="single-cart-menu">
+        <SingleCartMenu />
       </div>
     </SideMarginWrapper>
   );

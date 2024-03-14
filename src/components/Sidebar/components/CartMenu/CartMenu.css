@@ -27,7 +27,7 @@
   font-weight: 400;
   margin-top: 15px;
 }
-.cart-menu-wrapper .cart-menu-details ul li .total-price {
+.cart-menu-wrapper .cart-menu-details ul li .cart-total-price {
   font-family: "Montserrat", sans-serif;
   font-size: 24px;
   font-weight: 400;
@@ -51,6 +51,10 @@
   width: 60px;
 }
 
+.single-cart-menu {
+  display: none;
+}
+
 @media (max-width: 1714px) {
   .cart-menu-wrapper .cart-menu-details {
     height: 202px;
@@ -67,5 +71,42 @@
   }
   .cart-menu-wrapper button img {
     width: 45px;
+  }
+}
+@media (max-width: 768px) {
+  .cart-menu-wrapper {
+    margin-top: 1.5rem;
+  }
+  .cart-menu-wrapper .cart-menu-details {
+    min-height: 202px;
+    height: 100%;
+  }
+  .cart-menu-wrapper .cart-menu-details ul {
+    padding: 1rem;
+    align-content: unset;
+    justify-content: unset;
+    width: 100%;
+  }
+  .cart-menu-wrapper .cart-menu-details ul li span {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .cart-menu-wrapper .cart-menu-details ul li .cart-total-price {
+    font-size: 12px;
+  }
+  .cart-menu-wrapper .cart-menu-details ul li span:last-child {
+    margin-left: auto;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .cart-menu-wrapper button {
+    height: 60px;
+    font-size: 14px;
+  }
+  .cart-menu-wrapper button img {
+    width: 35px;
+  }
+  .single-cart-menu {
+    display: block;
   }
 }/*# sourceMappingURL=CartMenu.css.map */

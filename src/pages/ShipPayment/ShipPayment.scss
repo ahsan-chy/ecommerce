@@ -1,5 +1,8 @@
 @import "../../assets/Variables/Variables.scss";
 
+.mobile-order-details{
+  display: none;
+}
 .ship-wrapper {
   padding: 44.4px 0 0 65.4px;
 
@@ -21,7 +24,7 @@
     h2 {
       font-family: $primary-font;
       font-size: 40px;
-      line-height: 60px;
+      line-height: 48px;
       font-weight: 500;
       color: $dark-color;
     }
@@ -31,6 +34,7 @@
       line-height: 26px;
       font-weight: 400;
       color: $dark-color;
+      margin-top: 1rem;
     }
     .shipping-inputs {
       display: flex;
@@ -78,70 +82,55 @@
 
     .ship-details {
       padding: 30px 0px 0 65px;
-      h2 {
-        font-size: 25px;
-        line-height: 30px;
-      }
-      > p {
-        font-size: 12px;
-        line-height: 26px;
-      }
-      .shipping-inputs {
-        .shipping {
-          h3 {
-            font-size: 20px;
-            line-height: 40px;
-          }
-          .input-row {
-            margin-top: 20px;
-          }
-        }
-        .payment {
-          h3 {
-            font-size: 20px;
-            line-height: 40px;
-          }
-        }
-      }
     }
   }
 }
 
 @media (max-width: 768px) {
+  .mobile-order-details{
+    display: block
+  }
   .ship-wrapper {
-    padding: 10px 10px 0;
+    padding: 0;
 
     .top-wrapper {
-      .ship-header-text {
-        p {
-          font-size: 10px;
-          line-height: 14px;
-        }
-      }
+      display: none;
     }
     .ship-details {
       padding: 10px 0 10px 0;
 
       h2 {
         font-size: 20px;
+        font-weight: 700;
       }
       > p {
-        font-size: 10px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 24px;
+        margin-top: 0.5rem;
       }
       .shipping-inputs {
         flex-direction: column;
         .shipping {
           gap: 15px;
-
+          h3 {
+            font-size: 20px;
+            line-height: 28px;
+            font-weight: 700;
+            margin-top: 1.5rem;
+          }
           .input-row {
-            margin-top: 10px;
+            margin-top: 1rem;
+          }
+          .mobile-two {
+            grid-template-columns: 1fr 1fr;
+          }
+          .triple-inputs {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 5px;
           }
         }
         .payment {
-          .input-row {
-            margin-top: 10px;
-          }
+          display: none;
         }
       }
     }

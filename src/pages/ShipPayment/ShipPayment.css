@@ -1,3 +1,7 @@
+.mobile-order-details {
+  display: none;
+}
+
 .ship-wrapper {
   padding: 44.4px 0 0 65.4px;
 }
@@ -15,7 +19,7 @@
 .ship-wrapper .ship-details h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 40px;
-  line-height: 60px;
+  line-height: 48px;
   font-weight: 500;
   color: #35363a;
 }
@@ -25,6 +29,7 @@
   line-height: 26px;
   font-weight: 400;
   color: #35363a;
+  margin-top: 1rem;
 }
 .ship-wrapper .ship-details .shipping-inputs {
   display: flex;
@@ -63,43 +68,28 @@
   .ship-wrapper .ship-details {
     padding: 30px 0px 0 65px;
   }
-  .ship-wrapper .ship-details h2 {
-    font-size: 25px;
-    line-height: 30px;
-  }
-  .ship-wrapper .ship-details > p {
-    font-size: 12px;
-    line-height: 26px;
-  }
-  .ship-wrapper .ship-details .shipping-inputs .shipping h3 {
-    font-size: 20px;
-    line-height: 40px;
-  }
-  .ship-wrapper .ship-details .shipping-inputs .shipping .input-row {
-    margin-top: 20px;
-  }
-  .ship-wrapper .ship-details .shipping-inputs .payment h3 {
-    font-size: 20px;
-    line-height: 40px;
-  }
 }
 @media (max-width: 768px) {
-  .ship-wrapper {
-    padding: 10px 10px 0;
+  .mobile-order-details {
+    display: block;
   }
-  .ship-wrapper .top-wrapper .ship-header-text p {
-    font-size: 10px;
-    line-height: 14px;
+  .ship-wrapper {
+    padding: 0;
+  }
+  .ship-wrapper .top-wrapper {
+    display: none;
   }
   .ship-wrapper .ship-details {
     padding: 10px 0 10px 0;
   }
   .ship-wrapper .ship-details h2 {
     font-size: 20px;
+    font-weight: 700;
   }
   .ship-wrapper .ship-details > p {
-    font-size: 10px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 0.5rem;
   }
   .ship-wrapper .ship-details .shipping-inputs {
     flex-direction: column;
@@ -107,10 +97,23 @@
   .ship-wrapper .ship-details .shipping-inputs .shipping {
     gap: 15px;
   }
-  .ship-wrapper .ship-details .shipping-inputs .shipping .input-row {
-    margin-top: 10px;
+  .ship-wrapper .ship-details .shipping-inputs .shipping h3 {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 700;
+    margin-top: 1.5rem;
   }
-  .ship-wrapper .ship-details .shipping-inputs .payment .input-row {
-    margin-top: 10px;
+  .ship-wrapper .ship-details .shipping-inputs .shipping .input-row {
+    margin-top: 1rem;
+  }
+  .ship-wrapper .ship-details .shipping-inputs .shipping .mobile-two {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ship-wrapper .ship-details .shipping-inputs .shipping .triple-inputs {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+  }
+  .ship-wrapper .ship-details .shipping-inputs .payment {
+    display: none;
   }
 }/*# sourceMappingURL=ShipPayment.css.map */

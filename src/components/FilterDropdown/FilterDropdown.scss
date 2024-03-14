@@ -22,7 +22,7 @@
   p {
     font-family: $secondary-font;
     font-size: 17px;
-    line-height: 40px;
+    line-height: 20px;
     font-weight: 400;
     color: $dark-color;
     span {
@@ -37,12 +37,6 @@
     gap: 10px;
     p {
       font-size: 10px;
-    }
-  }
-  .default {
-    p {
-      font-size: 13px;
-      line-height: 30px;
     }
   }
 }
