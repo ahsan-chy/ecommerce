@@ -106,6 +106,9 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.special-root .special-right .special-row .special-column .special-footer .special-arrows-wrapper {
+  display: none;
+}
 .special-root .special-right .special-row .special-column .special-first {
   background-image: url(../../assets/images/special-main.png);
 }

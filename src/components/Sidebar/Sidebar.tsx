@@ -162,7 +162,6 @@ const Sidebar = (props: { handleActive: any; selectedCollections: any }) => {
   const [leftIsMenuOpen, setleftIsMenuOpen] = useState(false);
   const [SelectedRoute, setSelectedRoute] = useState(sidebarData);
   const [subMenu, setSubMenu] = useState(constructorMenu);
-  const [rightIsMenuOpen, setRightIsMenuOpen] = useState(false);
 
   const pathnames = location.pathname.substring(1);
 

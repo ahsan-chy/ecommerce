@@ -18,7 +18,6 @@ import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper"
 import PaginationArrows from "@/components/PaginationArrows/PaginationArrows";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { useLocation } from "react-router-dom";
 import HomeMenu from "@/components/Sidebar/components/HomeMenu/HomeMenu";
 import ConstructorMenu from "@/components/Sidebar/components/ConstructorMenu/ConstructorMenu";
 
@@ -81,12 +80,8 @@ const Construct = (props: { handleActive: any; selectedCollections: any }) => {
   const [colors, setColors] = useState(defaultColors);
   const [images, setImages] = useState(defaultImages);
   const [previews, setPreviews] = useState(defaultPreviews);
-  const [selectedDesign, setSelectedDesign] = useState<SelectedDesign | null>(null);
-  const [selectedPreview, setSelectedPreview] = useState<SelectedPreview | null>(null);
-
-  const location = useLocation();
-
-  const pathnames = location.pathname.substring(1);
+  const [selectedDesign] = useState<SelectedDesign | null>(null);
+  const [selectedPreview] = useState<SelectedPreview | null>(null);
 
   const handleColorChange = (selectedColorId: number) => {
     const updatedColors = colors.map((color) => {
