@@ -74,7 +74,9 @@ function Routers() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/special-offer" element={<SpecialOffer />} />
           <Route path="/special-product" element={<SpecialProduct />} />
-          <Route path="/voting" element={<Voting activeCollection={activeCollection} />} />
+          <Route path="/voting" element={<Voting activeCollection={activeCollection} 
+                handleActive={handleActive}
+                selectedCollections={selectedCollections} />} />
           <Route path="/voting-all" element={<VotingAll />} />
           <Route path="/cart" element={<Cart />} />
           <Route path="/single-cart" element={<SingleCart />} />

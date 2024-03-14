@@ -36,16 +36,17 @@ const Home = (props: {
       return () => clearTimeout(delayTimeout);
     }
   }, [activeCollection.mainImage]);
-
+  console.log(pathnames);
   return (
     <SideMarginWrapper>
-      {pathnames === "" && (
+      <>
+      {pathnames !== "voting" && (
         <div className="home-top-menu">
           <HomeMenu collectionNav={selectedCollections} handleActive={handleActive} />
         </div>
       )}
+      </>
 
-      {/* <div className={`home-container ${pathnames} === "voting" && voting-container `}> */}
       <div className={`home-container ${pathnames === "voting" && "voting-container"}`}>
         <div className="home-left-wrapper">
           <div className="home-header-text">
@@ -103,11 +104,13 @@ const Home = (props: {
           </motion.div>
         </AnimatePresence>
       </div>
+      <>
       {pathnames === "voting" && (
         <div className="voting-reviews">
           <VotingMenu />
         </div>
       )}
+      </>
     </SideMarginWrapper>
   );
 };
