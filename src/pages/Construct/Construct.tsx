@@ -154,7 +154,7 @@ const Construct = (props: { handleActive: any; selectedCollections: any }) => {
                 </div>
               </motion.div>
               <div className="pagination-box">
-                <PaginationArrows current={"0"} length={"30"} />
+                <PaginationArrows current={0} length={30} />
               </div>
             </div>
             <div className="right-constructor">
@@ -218,7 +218,7 @@ const Construct = (props: { handleActive: any; selectedCollections: any }) => {
                 </div>
               </motion.div>
               <div className="mobile-pagination-box">
-                <PaginationArrows current={"0"} length={"30"} />
+                <PaginationArrows current={0} length={30} />
               </div>
             </div>
           </div>

@@ -36,15 +36,14 @@ const Home = (props: {
       return () => clearTimeout(delayTimeout);
     }
   }, [activeCollection.mainImage]);
-  console.log(pathnames);
   return (
     <SideMarginWrapper>
       <>
-      {pathnames !== "voting" && (
-        <div className="home-top-menu">
-          <HomeMenu collectionNav={selectedCollections} handleActive={handleActive} />
-        </div>
-      )}
+        {pathnames === "" && (
+          <div className="home-top-menu">
+            <HomeMenu collectionNav={selectedCollections} handleActive={handleActive} />
+          </div>
+        )}
       </>
 
       <div className={`home-container ${pathnames === "voting" && "voting-container"}`}>
@@ -105,11 +104,11 @@ const Home = (props: {
         </AnimatePresence>
       </div>
       <>
-      {pathnames === "voting" && (
-        <div className="voting-reviews">
-          <VotingMenu />
-        </div>
-      )}
+        {pathnames === "voting" && (
+          <div className="voting-reviews">
+            <VotingMenu />
+          </div>
+        )}
       </>
     </SideMarginWrapper>
   );

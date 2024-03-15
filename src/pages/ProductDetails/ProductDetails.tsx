@@ -148,7 +148,7 @@ function ProductDetails() {
           </div>
         </motion.div>
         <div className="product_details-pagination">
-          <PaginationArrows current={"0"} length={"30"} />
+          <PaginationArrows current={0} length={30} />
         </div>
       </div>
     </SideMarginWrapper>

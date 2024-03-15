@@ -31,7 +31,7 @@ const VotingMenu = () => {
         </div>
       </div>
       <div className="voting-navigation-wrapper">
-        <PaginationArrows current={"01"} length={"30"} />
+        <PaginationArrows current={1} length={30} />
       </div>
     </div>
   );
