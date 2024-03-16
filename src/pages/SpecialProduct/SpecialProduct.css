@@ -109,9 +109,6 @@
 .special-root .special-right .special-row .special-column .special-footer .special-arrows-wrapper {
   display: none;
 }
-.special-root .special-right .special-row .special-column .special-first {
-  background-image: url(../../assets/images/special-main.png);
-}
 
 @media (max-width: 1400px) {
   .special-root {
@@ -219,8 +216,8 @@
     height: 100%;
     padding: 0 24px;
   }
-  .special-root .special-right .special-row .special-column .special-first {
-    background-image: url(../../assets/images/special-main.png);
+  .special-root .special-right .special-row .special-column .special-footer .special-arrows-wrapper img {
+    cursor: pointer;
   }
   .mobile-buy-btn-wrapper {
     display: block;

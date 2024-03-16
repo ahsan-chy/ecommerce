@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import "./Construct.scss";
 import CreateShirt from "@/assets/images/create-shirt.png";
 import subimg from "@/assets/images/subimg.png";
@@ -76,12 +77,18 @@ const AddDesignBtns = () => {
 
 const Construct = (props: { handleActive: any; selectedCollections: any }) => {
   const { handleActive, selectedCollections } = props;
+  const categories = ["T-Shirt", "Hoodie", "Long sleeve"];
 
   const [colors, setColors] = useState(defaultColors);
   const [images, setImages] = useState(defaultImages);
   const [previews, setPreviews] = useState(defaultPreviews);
   const [selectedDesign] = useState<SelectedDesign | null>(null);
   const [selectedPreview] = useState<SelectedPreview | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string>(categories[0]);
+
+  const handleCategoryClick = (subCategory: string) => {
+    setActiveCategory(subCategory);
+  };
 
   const handleColorChange = (selectedColorId: number) => {
     const updatedColors = colors.map((color) => {
@@ -130,9 +137,18 @@ const Construct = (props: { handleActive: any; selectedCollections: any }) => {
             <HomeMenu collectionNav={selectedCollections} handleActive={handleActive} />
           </div>
           <div className="mobile-category-wrappers">
-            <button className="active-mobile-cat-btn">T-Shirt</button>
-            <button className="deActive-mobile-cat-btn">Hoodie</button>
-            <button className="deActive-mobile-cat-btn">Long sleeve</button>
+            {categories.map((subCategory) => (
+              <button
+                key={subCategory}
+                className={
+                  activeCategory === subCategory
+                    ? "active-mobile-cat-btn"
+                    : "deActive-mobile-cat-btn"
+                }
+                onClick={() => handleCategoryClick(subCategory)}>
+                {subCategory}
+              </button>
+            ))}
           </div>
           <div className="preview-button">
             <img src={eye} alt="preview-eye" />
@@ -223,10 +239,10 @@ const Construct = (props: { handleActive: any; selectedCollections: any }) => {
             </div>
           </div>
         </div>
+        <div className="mobile-cart-btns-wrapper">
+          <ConstructorMenu />
+        </div>
       </SideMarginWrapper>
-      <div className="mobile-cart-btns-wrapper">
-        <ConstructorMenu />
-      </div>
     </>
   );
 };

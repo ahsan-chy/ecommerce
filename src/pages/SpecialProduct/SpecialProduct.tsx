@@ -4,14 +4,28 @@ import leftArrow from "@/assets/icons/left-white-arrow.svg";
 import rightArrow from "@/assets/icons/right-white-arrow.svg";
 import wishlist from "@/assets/icons/white-wishlist.svg";
 import specialPreview from "@/assets/images/special-preview-img.png";
+import img1 from "@/assets/images/special-main.png";
+import img3 from "@/assets/images/special-main.png";
 import specialFirst from "@/assets/images/special-first.png";
 import specialSub from "@/assets/images/special-sub-img.png";
 import BackNavigation from "@/components/BackNavigation/BackNavigation";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import { motion } from "framer-motion";
 import SpecialProductMenu from "@/components/Sidebar/components/SpecialProductMenu/SpecialProductMenu";
+import { useState } from "react";
 
 const SpecialProduct = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [img1, specialPreview, img3];
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  };
+
   return (
     <SideMarginWrapper>
       <div className="special-root">
@@ -75,7 +89,9 @@ const SpecialProduct = () => {
               initial={{ opacity: 0, x: "10%" }}
               animate={{ opacity: 1, x: 0, transition: { duration: 1 } }}
               exit={{ opacity: 0, x: "10%" }}>
-              <div className="special-footer special-first">
+              <div
+                className="special-footer special-first"
+                style={{ backgroundImage: `url(${images[currentIndex]})` }}>
                 <div className="special-overlay"></div>
                 <div className="hovered-special">
                   <div className="special-icons-wrapper">
@@ -88,8 +104,8 @@ const SpecialProduct = () => {
                   </div>
                 </div>
                 <div className="special-arrows-wrapper">
-                  <img src={leftArrow} alt="" />
-                  <img src={rightArrow} alt="" />
+                  <img src={leftArrow} alt="" onClick={prevSlide} />
+                  <img src={rightArrow} alt="" onClick={nextSlide} />
                 </div>
               </div>
             </motion.div>

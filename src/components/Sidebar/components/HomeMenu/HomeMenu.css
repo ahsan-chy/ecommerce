@@ -29,4 +29,17 @@
 .collection-nav h3 {
   margin-top: 5px;
   font-size: 22px;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media (max-width: 768px) {
+  .collection-nav div {
+    padding-left: 15px !important;
+  }
+  .collection-nav p {
+    font-size: 10px !important;
+  }
+  .collection-nav h3 {
+    font-size: 12px !important;
+  }
 }/*# sourceMappingURL=HomeMenu.css.map */

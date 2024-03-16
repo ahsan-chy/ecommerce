@@ -2,7 +2,10 @@ import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import "./ProductDetails.scss";
 import Wishlist from "@/assets/icons/wishlist.svg";
 import Bucket from "@/assets/icons/bucket.svg";
+import leftArrow from "@/assets/icons/left-black.svg";
+import rightArrow from "@/assets/icons/right-black.svg";
 import ProductDetailsImg from "@/assets/images/product-details.png";
+import specialPreview from "@/assets/images/special-preview-img.png";
 import subimg from "@/assets/images/subimg.png";
 import subimg2 from "@/assets/images/subimg2.png";
 import subimg3 from "@/assets/images/subimg3.png";
@@ -12,6 +15,7 @@ import PaginationArrows from "@/components/PaginationArrows/PaginationArrows";
 import FilterDropdown from "@/components/FilterDropdown/FilterDropdown";
 import SideMarginWrapper from "@/components/SideMarginWrapper/SideMarginWrapper";
 import { motion } from "framer-motion";
+import { useState } from "react";
 
 const sortBy = [
   { value: "new", label: "New" },
@@ -40,6 +44,16 @@ const size = [
 ];
 
 function ProductDetails() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [ProductDetailsImg, specialPreview, ProductDetailsImg];
+
+  const nextSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+  };
   return (
     <SideMarginWrapper>
       <div className="product-details-container">
@@ -60,11 +74,17 @@ function ProductDetails() {
           <FilterDropdown title="Color" options={color} />
           <FilterDropdown title="Size" options={size} />
         </div>
-        <motion.div className="products-wrapper"  initial={{ opacity: 0, x: +100 }}
-        animate={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
-        exit={{ opacity: 0, x: +100 }}>
+        <motion.div
+          className="products-wrapper"
+          initial={{ opacity: 0, x: +100 }}
+          animate={{ opacity: 1, x: 0, transition: { duration: 0.7 } }}
+          exit={{ opacity: 0, x: +100 }}>
           <div className="left-img-wrapper">
-            <img src={ProductDetailsImg} alt="" />
+            <img src={images[currentIndex]} alt="" />
+            <div className="product-arros-wrapper">
+              <img src={leftArrow} alt="" onClick={prevSlide} />
+              <img src={rightArrow} alt="" onClick={nextSlide} />
+            </div>
           </div>
           <div className="right-product-details-wrapper">
             <p>Man Collections</p>

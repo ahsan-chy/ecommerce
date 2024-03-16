@@ -1,6 +1,7 @@
 .voting-menu-wrapper {
   width: 100%;
   padding: 24px;
+  margin-top: auto;
 }
 .voting-menu-wrapper .current-ratings {
   display: flex;

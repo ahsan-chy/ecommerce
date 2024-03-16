@@ -332,6 +332,23 @@
   .product-details-container .products-wrapper {
     grid-template-columns: 1fr;
   }
+  .product-details-container .products-wrapper .left-img-wrapper {
+    position: relative;
+  }
+  .product-details-container .products-wrapper .left-img-wrapper .product-arros-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    top: 0;
+  }
+  .product-details-container .products-wrapper .left-img-wrapper .product-arros-wrapper img {
+    width: 20px;
+    cursor: pointer;
+  }
   .product-details-container .products-wrapper .right-product-details-wrapper p:first-child {
     margin-top: 24px;
     font-weight: 400;

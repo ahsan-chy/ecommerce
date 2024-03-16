@@ -1,5 +1,8 @@
 @import "../../assets/Variables/Variables.scss";
 
+.mobile-cart-btns-wrapper {
+  display: none;
+}
 .construct-wrapper {
   padding: 44.4px 0 0 65.4px;
   width: 100%;
@@ -207,7 +210,7 @@
           }
         }
       }
-      .mobile-pagination-box{
+      .mobile-pagination-box {
         display: none;
       }
     }
@@ -411,7 +414,7 @@
 
 @media (max-width: 768px) {
   .construct-wrapper {
-    padding: 0;
+    padding: 0 0 70px;
 
     .construct-top-menu {
       display: flex;
@@ -623,5 +626,10 @@
     }
   }
   .mobile-cart-btns-wrapper {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
   }
 }

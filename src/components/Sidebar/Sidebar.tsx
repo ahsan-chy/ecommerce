@@ -127,7 +127,7 @@ const creativeUserOptions = [
   },
 ];
 
-const constructorMenu = [
+const constructorSubMenu = [
   {
     key: 1,
     text: "Gender",
@@ -161,7 +161,7 @@ const Sidebar = (props: { handleActive: any; selectedCollections: any }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [leftIsMenuOpen, setleftIsMenuOpen] = useState(false);
   const [SelectedRoute, setSelectedRoute] = useState(sidebarData);
-  const [subMenu, setSubMenu] = useState(constructorMenu);
+  const [subMenu, setSubMenu] = useState(constructorSubMenu);
 
   const pathnames = location.pathname.substring(1);
 
